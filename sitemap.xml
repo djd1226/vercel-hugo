@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hugo.123450908.xyz/</loc>
-    <lastmod>2024-04-04T06:13:10+00:00</lastmod>
+    <lastmod>2024-04-05T06:28:40+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://hugo.123450908.xyz/post/</loc>
-    <lastmod>2024-04-04T06:13:10+00:00</lastmod>
+    <lastmod>2024-04-05T06:28:40+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hugo.123450908.xyz/post/24_04_05/</loc>
+    <lastmod>2024-04-05T06:28:40+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

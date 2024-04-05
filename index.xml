@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© Djd1226</copyright>
-    <lastBuildDate>Thu, 04 Apr 2024 06:13:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2024 06:28:40 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>模板</title>
+      <link>https://hugo.123450908.xyz/post/24_04_05/</link>
+      <pubDate>Fri, 05 Apr 2024 06:28:40 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_04_05/</guid>
+      <description>&lt;p&gt;主题&lt;/p&gt;</description>
+    </item>
     <item>
       <title>部署免费的GPT-API，实现GPT自由！</title>
       <link>https://hugo.123450908.xyz/post/24_04_04/</link>
