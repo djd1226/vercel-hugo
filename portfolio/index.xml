@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日志 on 雨过天晴</title>
+    <link>https://hugo.123450908.xyz/portfolio/</link>
+    <description>Recent content in 日志 on 雨过天晴</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© Djd1226</copyright>
+    <lastBuildDate>Sat, 02 Dec 2023 15:10:09 +0200</lastBuildDate>
+    <atom:link href="https://hugo.123450908.xyz/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>模板-工作</title>
+      <link>https://hugo.123450908.xyz/portfolio/example1/</link>
+      <pubDate>Sat, 02 Dec 2023 15:10:09 +0200</pubDate>
+      <guid>https://hugo.123450908.xyz/portfolio/example1/</guid>
+      <description>我相信生活中的每一刻都有着故事，而视频是记录这些故事的最好方式之一。通过这个博客，我希望与你分享生活的点滴，让你感受到生命中那些温暖、有趣、感人的瞬间。这里不仅是我的日志，更是一个与你互动、分享心情的平台。&#xA;我是一个热爱生活的普通人，喜欢用镜头记录下生活中的美好瞬间。我的博客不追求完美，而是追求真实，因为真实才是最打动人心的。&#xA;一起分享生活的点滴吧！ </description>
+    </item>
+  </channel>
+</rss>

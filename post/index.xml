@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章 on 雨过天晴</title>
+    <link>https://hugo.123450908.xyz/post/</link>
+    <description>Recent content in 文章 on 雨过天晴</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© Djd1226</copyright>
+    <lastBuildDate>Thu, 04 Apr 2024 06:13:10 +0000</lastBuildDate>
+    <atom:link href="https://hugo.123450908.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>部署免费的GPT-API，实现GPT自由！</title>
+      <link>https://hugo.123450908.xyz/post/24_04_04/</link>
+      <pubDate>Thu, 04 Apr 2024 06:13:10 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_04_04/</guid>
+      <description>&lt;p&gt;render部署GPT-API教程&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-登录render-1点击-new选择web-service&#34;&gt;1 登录render 1，点击 New，选择Web Service&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-c1f712328d3c408c9b94b67eb316fc7b.r2.dev/photo/2024/04/7b0c7b37a7ced283bd712c2e6724bb8d.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>学习部署FreeGPT35</title>
+      <link>https://hugo.123450908.xyz/post/24_04_03/</link>
+      <pubDate>Wed, 03 Apr 2024 13:23:51 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_04_03/</guid>
+      <description>&lt;p&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35&lt;font color=red size=5&gt;（Glitch和Render)&lt;/font&gt;,但可是我不会用，先做个记录把！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>与GitHub仓库同步</title>
+      <link>https://hugo.123450908.xyz/post/24_03_07/</link>
+      <pubDate>Thu, 07 Mar 2024 12:21:20 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_03_07/</guid>
+      <description>&lt;p&gt;在本地建立一个与GitHub仓库同步的仓库，你可以按照以下步骤操作：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-c1f712328d3c408c9b94b67eb316fc7b.r2.dev/photo/2024/03/ab4d7bae650ab0ff8f19d1a60cb5abc6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>旅游日志制作：PR（Adobe Premiere R）</title>
+      <link>https://hugo.123450908.xyz/post/24_03_02/</link>
+      <pubDate>Sat, 02 Mar 2024 13:17:54 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_03_02/</guid>
+      <description>&lt;p&gt;对于新手来说，PR（Adobe Premiere ）是一个功能强大的工具，帮助您制作出令人印象深刻的视频。在本文中，我将记录我制作旅游日志的学习过程。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/24331709398828582.png&#34; alt=&#34;24331709398828582.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用Python实现自动化：轻松操控Hugo和Git</title>
+      <link>https://hugo.123450908.xyz/post/24_01_051/</link>
+      <pubDate>Fri, 05 Jan 2024 13:39:59 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_01_051/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;&#xA;&lt;p&gt;在这篇博客文章中，我将分享如何使用Python实现自动化，以简化Hugo和Git命令的执行。通过这些自动化脚本，我们能够更高效地管理和发布我们的博客内容。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>面对python爬虫练习的困境与决策：一次失败与放弃的思考</title>
+      <link>https://hugo.123450908.xyz/post/24_01_05/</link>
+      <pubDate>Fri, 05 Jan 2024 13:16:57 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_01_05/</guid>
+      <description>&lt;p&gt;在最近的Python爬虫练习中，我尝试获取IPTV的m3u8播放地址，然而，我最终放弃了。这篇博客将分享我面对困境时的思考和决策过程。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2415-cf7eaf48de4b451294e6e7b0d149839a.jpeg&#34; alt=&#34;2415-cf7eaf48de4b451294e6e7b0d149839a.jpeg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>编写一个简单的Shell脚本来执行Hugo任务</title>
+      <link>https://hugo.123450908.xyz/post/23_12_31/</link>
+      <pubDate>Sun, 31 Dec 2023 12:53:50 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23_12_31/</guid>
+      <description>&lt;p&gt;请将以下内容保存到一个文件（比如&lt;code&gt;myscript.sh&lt;/code&gt;）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用frp进行内网穿透并结合Cloudflare和Cloudns实现免费域名访问</title>
+      <link>https://hugo.123450908.xyz/post/23_12_30/</link>
+      <pubDate>Sat, 30 Dec 2023 12:20:26 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23_12_30/</guid>
+      <description>&lt;p&gt;随着互联网的发展，内网穿透成为许多技术爱好者和开发者解决远程访问、演示项目等问题的一种有效方式。本文将介绍如何使用frp进行内网穿透，并结合Cloudflare和Cloudns提供的免费域名服务，使你的内网服务能够通过互联网访问。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/231230-images.png&#34; alt=&#34;231230-images.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>提升Anki学习效率：自制卡牌的高级技巧</title>
+      <link>https://hugo.123450908.xyz/post/23_12_29/</link>
+      <pubDate>Fri, 29 Dec 2023 05:37:40 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23_12_29/</guid>
+      <description>&lt;p&gt;随着Anki在语言学习中的广泛应用，自制卡牌成为提高学习效率的关键。在本文中，我们将介绍两种高级技巧，分别适用于英文和中文文章。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用Hugo搭建个人网站并推送到GitHub Pages</title>
+      <link>https://hugo.123450908.xyz/post/23_12_27/</link>
+      <pubDate>Wed, 27 Dec 2023 05:28:31 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23_12_27/</guid>
+      <description>&lt;p&gt;Hugo是一个强大的静态网站生成器，能够帮助你快速创建个人网站。下面是使用Hugo生成网站并将其推送到GitHub Pages的简单步骤。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023对于IPTV抓包，我个人认为已经没有意义了！</title>
+      <link>https://hugo.123450908.xyz/post/23_12_26/</link>
+      <pubDate>Tue, 26 Dec 2023 11:56:52 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23_12_26/</guid>
+      <description>&lt;h3 id=&#34;揭秘iptv数据流突破局限与实用技巧&#34;&gt;揭秘IPTV数据流：突破局限与实用技巧&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/231226-images.jpeg&#34; alt=&#34;231226-images.jpeg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>X96MAX盒子折腾记 第一篇：</title>
+      <link>https://hugo.123450908.xyz/post/231221/</link>
+      <pubDate>Thu, 21 Dec 2023 17:18:46 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/231221/</guid>
+      <description>&lt;h3 id=&#34;南鲸晶晨s905x3芯片盒子刷x96-max-plus2固件slimbox&#34;&gt;南鲸晶晨S905X3芯片盒子刷X96 MAX PLUS2固件（SLIMBOX）&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-c1f712328d3c408c9b94b67eb316fc7b.r2.dev/photo/2023/12/92a45ba55c2f369b8de2b333ed0a4b3f.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>贵州小七孔游记</title>
+      <link>https://hugo.123450908.xyz/post/23-121/</link>
+      <pubDate>Thu, 07 Dec 2023 04:56:40 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23-121/</guid>
+      <description>&lt;p&gt;贵州小七孔，位于中国贵州省荔波县境内，是一处美不胜收的溶洞景区，因其七个孔道而得名。&#xA;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/231225-4b57d85fbe68d4ef1dd268677acf5079.jpg&#34; alt=&#34;231225-4b57d85fbe68d4ef1dd268677acf5079.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>折腾了两天免费图床，最终还是选了Github</title>
+      <link>https://hugo.123450908.xyz/post/23-12/</link>
+      <pubDate>Wed, 06 Dec 2023 04:56:40 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/23-12/</guid>
+      <description>&lt;p&gt;最近，我陷入了一个新的兴趣领域：折腾免费图床。&#xA;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/231225-IMG_20230127_122228.jpg&#34; alt=&#34;231225-IMG_20230127_122228.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>模板-短代码</title>
+      <link>https://hugo.123450908.xyz/post/example3/</link>
+      <pubDate>Sat, 02 Dec 2023 14:44:12 +0100</pubDate>
+      <guid>https://hugo.123450908.xyz/post/example3/</guid>
+      <description>&lt;p&gt;在主题中插入短代码&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>模板-无图</title>
+      <link>https://hugo.123450908.xyz/post/example1/</link>
+      <pubDate>Sat, 02 Dec 2023 14:55:30 +0200</pubDate>
+      <guid>https://hugo.123450908.xyz/post/example1/</guid>
+      <description>&lt;p&gt;这是一份简单的模板示例&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>模板-简历</title>
+      <link>https://hugo.123450908.xyz/post/example2/</link>
+      <pubDate>Sat, 02 Dec 2023 14:49:05 +0200</pubDate>
+      <guid>https://hugo.123450908.xyz/post/example2/</guid>
+      <description>&lt;p&gt;这是一份个人简历的模板示例，下列代码是文件标头&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://hugo.123450908.xyz/post/images/portfolio-example.png&#34;&#xA;    alt=&#34;Example of Portfolio page&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;p&gt;Example of Portfolio page&lt;/p&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;</description>
+    </item>
+  </channel>
+</rss>
