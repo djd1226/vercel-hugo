@@ -40,7 +40,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -118,7 +118,7 @@
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -992,27 +992,27 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl">mkdir -p app/coze-discord-proxy/data/config
 </span></span><span class="line"><span class="cl">touch app/coze-discord-proxy/data/config/bot_config.json
 </span></span></code></pre></div><p>然后回到 Panel 中，进入File manager选项卡，进入 bot_config.json 所在路径，右键点击它，选择View/Edit &gt; Source Editor，进行编辑：</p>
-<pre tabindex="0"><code>[
-  {
-    &#34;proxySecret&#34;: &#34;123&#34;, // 接口请求密钥(PROXY_SECRET)(注意:此密钥在环境变量PROXY_SECRET中存在时该Bot才可以被匹配到!)
-    &#34;cozeBotId&#34;: &#34;12***************31&#34;, // coze托管的机器人ID
-    &#34;model&#34;: [&#34;gpt-3.5&#34;,&#34;gpt-3.5-16k&#34;], // 模型名称(数组格式)(与请求参数中的model对应,如请求中的model在该json中未匹配到则会抛出异常)
-    &#34;channelId&#34;: &#34;12***************56&#34;  // [可选]discord频道ID(机器人必须在此频道所在的服务器)(目前版本下该参数仅用来活跃机器人)
-  },
-  {
-    &#34;proxySecret&#34;: &#34;456&#34;,
-    &#34;cozeBotId&#34;: &#34;12***************64&#34;,
-    &#34;model&#34;: [&#34;gpt-4&#34;,&#34;gpt-4-16k&#34;],
-    &#34;channelId&#34;: &#34;12***************78&#34;
-  },
-  {
-    &#34;proxySecret&#34;: &#34;789&#34;,
-    &#34;cozeBotId&#34;: &#34;12***************12&#34;,
-    &#34;model&#34;: [&#34;dall-e-3&#34;],
-    &#34;channelId&#34;: &#34;12***************24&#34;
-  }
-]
-</code></pre><p>使用 pm2 管理运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxySecret&#34;</span>: <span class="s2">&#34;123&#34;</span>, // 接口请求密钥<span class="o">(</span>PROXY_SECRET<span class="o">)(</span>注意:此密钥在环境变量PROXY_SECRET中存在时该Bot才可以被匹配到!<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;cozeBotId&#34;</span>: <span class="s2">&#34;12***************31&#34;</span>, // coze托管的机器人ID
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;model&#34;</span>: <span class="o">[</span><span class="s2">&#34;gpt-3.5&#34;</span>,<span class="s2">&#34;gpt-3.5-16k&#34;</span><span class="o">]</span>, // 模型名称<span class="o">(</span>数组格式<span class="o">)(</span>与请求参数中的model对应,如请求中的model在该json中未匹配到则会抛出异常<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;channelId&#34;</span>: <span class="s2">&#34;12***************56&#34;</span>  // <span class="o">[</span>可选<span class="o">]</span>discord频道ID<span class="o">(</span>机器人必须在此频道所在的服务器<span class="o">)(</span>目前版本下该参数仅用来活跃机器人<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxySecret&#34;</span>: <span class="s2">&#34;456&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;cozeBotId&#34;</span>: <span class="s2">&#34;12***************64&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;model&#34;</span>: <span class="o">[</span><span class="s2">&#34;gpt-4&#34;</span>,<span class="s2">&#34;gpt-4-16k&#34;</span><span class="o">]</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;channelId&#34;</span>: <span class="s2">&#34;12***************78&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">  <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;proxySecret&#34;</span>: <span class="s2">&#34;789&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;cozeBotId&#34;</span>: <span class="s2">&#34;12***************12&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;model&#34;</span>: <span class="o">[</span><span class="s2">&#34;dall-e-3&#34;</span><span class="o">]</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;channelId&#34;</span>: <span class="s2">&#34;12***************24&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">]</span>
+</span></span></code></pre></div><p>使用 pm2 管理运行：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start bash --name coze-discord-proxy -- start.sh
 </span></span></code></pre></div><h3 id="memos">Memos</h3>
 <p>一款开源、轻量级的笔记服务。轻松捕捉并分享您的精彩想法。</p>
@@ -1163,90 +1163,90 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></code></pre></div><p>Cloudreve 在首次启动时，会创建初始管理员账号，请注意保管管理员密码，此密码只会在首次启动时出现。如果您忘记初始管理员密码，需要删除同级目录下的 cloudreve.db ，重新启动主程序以初始化新的管理员账户。</p>
 <p>Cloudreve 默认会监听 5212 端口。首次启动时，Cloudreve 会在同级目录下创建名为 conf.ini 的配置文件，你可以修改此文件进行一些参数的配置（比如端口），保存后需要重新启动 Cloudreve 生效。</p>
 <p>一个完整的配置文件示例如下：</p>
-<pre tabindex="0"><code>INI
-[System]
-; 运行模式
-Mode = master
-; 监听端口
-Listen = :5212
-; 是否开启 Debug
-Debug = false
-; Session 密钥, 一般在首次启动时自动生成
-SessionSecret = 23333
-; Hash 加盐, 一般在首次启动时自动生成
-HashIDSalt = something really hard to guss
-; 呈递客户端 IP 时使用的 Header
-ProxyHeader = X-Forwarded-For
-
-; SSL 相关
-[SSL]
-; SSL 监听端口
-Listen = :443
-; 证书路径
-CertPath = C:\Users\i\Documents\fullchain.pem
-; 私钥路径
-KeyPath = C:\Users\i\Documents\privkey.pem
-
-; 启用 Unix Socket 监听
-[UnixSocket]
-Listen = /run/cloudreve/cloudreve.sock
-; 设置产生的 socket 文件的权限
-Perm = 0666
-
-; 数据库相关，如果你只想使用内置的 SQLite 数据库，这一部分直接删去即可
-[Database]
-; 数据库类型，目前支持 sqlite/mysql/mssql/postgres
-Type = mysql
-; MySQL 端口
-Port = 3306
-; 用户名
-User = root
-; 密码
-Password = root
-; 数据库地址
-Host = 127.0.0.1
-; 数据库名称
-Name = v3
-; 数据表前缀
-TablePrefix = cd_
-; 字符集
-Charset = utf8mb4
-; SQLite 数据库文件路径
-DBFile = cloudreve.db
-; 进程退出前安全关闭数据库连接的缓冲时间
-GracePeriod = 30
-; 使用 Unix Socket 连接到数据库
-UnixSocket = false
-
-; 从机模式下的配置
-[Slave]
-; 通信密钥
-Secret = 1234567891234567123456789123456712345678912345671234567891234567
-; 回调请求超时时间 (s)
-CallbackTimeout = 20
-; 签名有效期
-SignatureTTL = 60
-
-; 跨域配置
-[CORS]
-AllowOrigins = *
-AllowMethods = OPTIONS,GET,POST
-AllowHeaders = *
-AllowCredentials = false
-SameSite = Default
-Secure = lse
-
-; Redis 相关
-[Redis]
-Server = 127.0.0.1:6379
-Password =
-DB = 0
-
-; 从机配置覆盖
-[OptionOverwrite]
-; 可直接使用 `设置名称 = 值` 的格式覆盖
-max_worker_num = 50
-</code></pre><p>你可以使用 vim 或者 Panel 中的 File manager 选项卡，进入 conf.ini 所在路径路径，右键点击，选择 View/Edit &gt; Source Editor ，进行编辑。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">INI
+</span></span><span class="line"><span class="cl"><span class="o">[</span>System<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 运行模式
+</span></span><span class="line"><span class="cl"><span class="nv">Mode</span> <span class="o">=</span> master
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 监听端口
+</span></span><span class="line"><span class="cl"><span class="nv">Listen</span> <span class="o">=</span> :5212
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 是否开启 Debug
+</span></span><span class="line"><span class="cl"><span class="nv">Debug</span> <span class="o">=</span> <span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> Session 密钥, 一般在首次启动时自动生成
+</span></span><span class="line"><span class="cl"><span class="nv">SessionSecret</span> <span class="o">=</span> <span class="m">23333</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> Hash 加盐, 一般在首次启动时自动生成
+</span></span><span class="line"><span class="cl"><span class="nv">HashIDSalt</span> <span class="o">=</span> something really hard to guss
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 呈递客户端 IP 时使用的 Header
+</span></span><span class="line"><span class="cl"><span class="nv">ProxyHeader</span> <span class="o">=</span> X-Forwarded-For
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> SSL 相关
+</span></span><span class="line"><span class="cl"><span class="o">[</span>SSL<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> SSL 监听端口
+</span></span><span class="line"><span class="cl"><span class="nv">Listen</span> <span class="o">=</span> :443
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 证书路径
+</span></span><span class="line"><span class="cl"><span class="nv">CertPath</span> <span class="o">=</span> C:<span class="se">\U</span>sers<span class="se">\i\D</span>ocuments<span class="se">\f</span>ullchain.pem
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 私钥路径
+</span></span><span class="line"><span class="cl"><span class="nv">KeyPath</span> <span class="o">=</span> C:<span class="se">\U</span>sers<span class="se">\i\D</span>ocuments<span class="se">\p</span>rivkey.pem
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 启用 Unix Socket 监听
+</span></span><span class="line"><span class="cl"><span class="o">[</span>UnixSocket<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Listen</span> <span class="o">=</span> /run/cloudreve/cloudreve.sock
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 设置产生的 socket 文件的权限
+</span></span><span class="line"><span class="cl"><span class="nv">Perm</span> <span class="o">=</span> <span class="m">0666</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 数据库相关，如果你只想使用内置的 SQLite 数据库，这一部分直接删去即可
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Database<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 数据库类型，目前支持 sqlite/mysql/mssql/postgres
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span> <span class="o">=</span> mysql
+</span></span><span class="line"><span class="cl"><span class="p">;</span> MySQL 端口
+</span></span><span class="line"><span class="cl"><span class="nv">Port</span> <span class="o">=</span> <span class="m">3306</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 用户名
+</span></span><span class="line"><span class="cl"><span class="nv">User</span> <span class="o">=</span> root
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 密码
+</span></span><span class="line"><span class="cl"><span class="nv">Password</span> <span class="o">=</span> root
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 数据库地址
+</span></span><span class="line"><span class="cl"><span class="nv">Host</span> <span class="o">=</span> 127.0.0.1
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 数据库名称
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span> <span class="o">=</span> v3
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 数据表前缀
+</span></span><span class="line"><span class="cl"><span class="nv">TablePrefix</span> <span class="o">=</span> cd_
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 字符集
+</span></span><span class="line"><span class="cl"><span class="nv">Charset</span> <span class="o">=</span> utf8mb4
+</span></span><span class="line"><span class="cl"><span class="p">;</span> SQLite 数据库文件路径
+</span></span><span class="line"><span class="cl"><span class="nv">DBFile</span> <span class="o">=</span> cloudreve.db
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 进程退出前安全关闭数据库连接的缓冲时间
+</span></span><span class="line"><span class="cl"><span class="nv">GracePeriod</span> <span class="o">=</span> <span class="m">30</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 使用 Unix Socket 连接到数据库
+</span></span><span class="line"><span class="cl"><span class="nv">UnixSocket</span> <span class="o">=</span> <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 从机模式下的配置
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Slave<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 通信密钥
+</span></span><span class="line"><span class="cl"><span class="nv">Secret</span> <span class="o">=</span> <span class="m">1234567891234567123456789123456712345678912345671234567891234567</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 回调请求超时时间 <span class="o">(</span>s<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CallbackTimeout</span> <span class="o">=</span> <span class="m">20</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 签名有效期
+</span></span><span class="line"><span class="cl"><span class="nv">SignatureTTL</span> <span class="o">=</span> <span class="m">60</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 跨域配置
+</span></span><span class="line"><span class="cl"><span class="o">[</span>CORS<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">AllowOrigins</span> <span class="o">=</span> *
+</span></span><span class="line"><span class="cl"><span class="nv">AllowMethods</span> <span class="o">=</span> OPTIONS,GET,POST
+</span></span><span class="line"><span class="cl"><span class="nv">AllowHeaders</span> <span class="o">=</span> *
+</span></span><span class="line"><span class="cl"><span class="nv">AllowCredentials</span> <span class="o">=</span> <span class="nb">false</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SameSite</span> <span class="o">=</span> Default
+</span></span><span class="line"><span class="cl"><span class="nv">Secure</span> <span class="o">=</span> lse
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> Redis 相关
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Redis<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> 127.0.0.1:6379
+</span></span><span class="line"><span class="cl"><span class="nv">Password</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DB</span> <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 从机配置覆盖
+</span></span><span class="line"><span class="cl"><span class="o">[</span>OptionOverwrite<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">;</span> 可直接使用 <span class="sb">`</span><span class="nv">设置名称</span> <span class="o">=</span> 值<span class="sb">`</span> 的格式覆盖
+</span></span><span class="line"><span class="cl"><span class="nv">max_worker_num</span> <span class="o">=</span> <span class="m">50</span>
+</span></span></code></pre></div><p>你可以使用 vim 或者 Panel 中的 File manager 选项卡，进入 conf.ini 所在路径路径，右键点击，选择 View/Edit &gt; Source Editor ，进行编辑。</p>
 <p>修改完配置文件后，测试启动：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./cloudreve
 </span></span></code></pre></div><p>使用 pm2 管理：</p>
