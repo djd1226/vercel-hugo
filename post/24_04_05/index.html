@@ -29,7 +29,7 @@
   <meta itemprop="name" content="Serv00搭建各种服务">
 <meta itemprop="description" content="Exaplanation on the shortcodes with personal-web"><meta itemprop="datePublished" content="2024-04-05T06:28:40+00:00" />
 <meta itemprop="dateModified" content="2024-04-05T06:28:40+00:00" />
-<meta itemprop="wordCount" content="4323">
+<meta itemprop="wordCount" content="4273">
 <meta itemprop="keywords" content="" />
 </head>
 <body>
@@ -40,7 +40,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -118,7 +118,7 @@
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -277,41 +277,41 @@
 <h3 id="pm2">Pm2</h3>
 <p>这个是重中之重，如果不是成功安装了 pm2 ，我甚至不会尝试探索 Serv00 这个玩具有什么用，所以 pm2 的安装方法记录在开头。</p>
 <p>在 SSH 连接 serv00 之后，直接使用一键脚本安装 pm2 ：</p>
-<p>`bash</p>
-<p>bash &lt;(curl -s <a href="https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)%60">https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh)`</a>
-如果安装完成后执行 pm2 提示命令未找到，你可以断开 SSH 连接，再重新连接，即可。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bash &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh<span class="o">)</span>
+</span></span></code></pre></div><p>如果安装完成后执行 pm2 提示命令未找到，你可以断开 SSH 连接，再重新连接，即可。</p>
 <h3 id="cloudflared">Cloudflared</h3>
 <p>Cloudflared 官方仓库并没有构建 FreeBSD 系统上能够使用的二进制文件，但是同样的，我找到了第三方的构筑。使用第三方构筑的二进制文件，就能愉快的使用隧道了。</p>
 <p>关于 Cloudflared 是什么，有什么用，ARGO_TOKEN 如何获取等部分，这里不再赘述，详细可以查看我的关于 CodeSandbox 和 Hax 的文章。</p>
 <p>创建并进入Cloudflared 的工作目录：</p>
-<p><code>bash mkdir -p ~/domains/cloudflared &amp;&amp; cd ~/domains/cloudflared</code>
-下载 Cloudflared：</p>
-<p><code>bash wget https://cloudflared.bowring.uk/binaries/cloudflared-freebsd-latest.7z &amp;&amp; 7z x cloudflared-freebsd-latest.7z &amp;&amp; rm cloudflared-freebsd-latest.7z &amp;&amp; mv -f ./temp/* ./cloudflared &amp;&amp; rm -rf temp</code>
-测试运行：</p>
-<p><code>bash ./cloudflared tunnel --edge-ip-version auto --protocol http2 --heartbeat-interval 10s run --token ARGO_TOKEN</code>
-其中 ARGO_TOKEN 要替换成自己的。确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/domains/cloudflared <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/domains/cloudflared
+</span></span></code></pre></div><p>下载 Cloudflared：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://cloudflared.bowring.uk/binaries/cloudflared-freebsd-latest.7z <span class="o">&amp;&amp;</span> 7z x cloudflared-freebsd-latest.7z <span class="o">&amp;&amp;</span> rm cloudflared-freebsd-latest.7z <span class="o">&amp;&amp;</span> mv -f ./temp/* ./cloudflared <span class="o">&amp;&amp;</span> rm -rf temp
+</span></span></code></pre></div><p>测试运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./cloudflared tunnel --edge-ip-version auto --protocol http2 --heartbeat-interval 10s run --token ARGO_TOKEN
+</span></span></code></pre></div><p>其中 ARGO_TOKEN 要替换成自己的。确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用 pm2 启动 Cloudflared：</p>
-<p><code>bash pm2 start ./cloudflared -- tunnel --edge-ip-version auto --protocol http2 --heartbeat-interval 10s run --token ARGO_TOKEN</code>
-其中 ARGO_TOKEN 要替换成自己的。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./cloudflared -- tunnel --edge-ip-version auto --protocol http2 --heartbeat-interval 10s run --token ARGO_TOKEN
+</span></span></code></pre></div><p>其中 ARGO_TOKEN 要替换成自己的。</p>
 <p>接着去 CLoudflare 的面板中设置域名对应端口，即可使用域名访问自己搭建的服务了。</p>
 <h3 id="安装-go122">安装 go1.22</h3>
 <p>如果你有安装自己使用 go build 构建的需求，你可以选择安装最新的 go1.22 ，这里记录其安装过程。</p>
 <p>由于 Serv00 服务器上并未提供 go1.22 ，只提供了 go1.20.3 ，无法正常进行构建工作，所以需要手动安装 go1.22 环境。</p>
-<pre tabindex="0"><code># 创建安装目录
-mkdir -p ~/local/soft &amp;&amp; cd ~/local/soft
-# 下载编译好的 go1.22 的程序包
-wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz
-# 解压
-tar -xzvf go1.22.0.freebsd-amd64.tar.gz
-# 删除压缩文件
-rm go1.22.0.freebsd-amd64.tar.gz
-# 修改 .profile 文件
-echo &#39;export PATH=$PATH:~/local/soft/go/bin&#39; &gt;&gt; ~/.profile
-# 使 .profile 的修改生效
-source ~/.profile
-# 检查 go 版本
-go version
-</code></pre><h2 id="部署自己的应用">部署自己的应用</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 创建安装目录</span>
+</span></span><span class="line"><span class="cl">mkdir -p ~/local/soft <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/local/soft
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载编译好的 go1.22 的程序包</span>
+</span></span><span class="line"><span class="cl">wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 解压</span>
+</span></span><span class="line"><span class="cl">tar -xzvf go1.22.0.freebsd-amd64.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除压缩文件</span>
+</span></span><span class="line"><span class="cl">rm go1.22.0.freebsd-amd64.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改 .profile 文件</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s1">&#39;export PATH=$PATH:~/local/soft/go/bin&#39;</span> &gt;&gt; ~/.profile
+</span></span><span class="line"><span class="cl"><span class="c1"># 使 .profile 的修改生效</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> ~/.profile
+</span></span><span class="line"><span class="cl"><span class="c1"># 检查 go 版本</span>
+</span></span><span class="line"><span class="cl">go version
+</span></span></code></pre></div><h2 id="部署自己的应用">部署自己的应用</h2>
 <p>关于设定 PHP 版本、插件、参数等配置均可参考文档的 .htaccess 部分进行配置，由于 PHP 的应用部署实在是太简单，故本文不会过多介绍。</p>
 <h3 id="wordpress">WordPress</h3>
 <p>实际上在 serv00 的文档中有搭建网站的示例，没错，示例就有 WordPress ，实际上 WordPress 确实可以搭建，十分简单好用。这里不做过多介绍，按照文档一步步操作即可。</p>
@@ -378,10 +378,10 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl">rm -rf public_html <span class="o">&amp;&amp;</span> git clone https://github.com/qwer-search/serv00-vless public_html <span class="o">&amp;&amp;</span> <span class="nb">cd</span> public_html <span class="o">&amp;&amp;</span> rm -f README.md
 </span></span></code></pre></div><p>使用vim编辑或者直接去 Panel 中的 File Manager 选项卡在线编辑 app.js 文件，修改端口为刚刚放行的端口。</p>
 <p>安装依赖：</p>
-<p><code>bash npm install</code>
-安装完毕后，使用pm2启动并守护vless进程：</p>
-<p><code>bash pm2 start app.js --name vless</code>
-接着去你的代理客户端软件中手动添加 vless 配置即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install
+</span></span></code></pre></div><p>安装完毕后，使用pm2启动并守护vless进程：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start app.js --name vless
+</span></span></code></pre></div><p>接着去你的代理客户端软件中手动添加 vless 配置即可：</p>
 <p>Key	Value
 地址	Panel中WWW Websites 选项卡里的你的 Domain name
 端口	你放行的端口
@@ -404,8 +404,8 @@ DNS support	True
 <p>Type	Domain
 Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一致（如果是原有的USERNAME.serv00.net ，可以省略此步）
 接着SSH登入，并进入刚刚你新建的域名目录下的 public_html 路径下，再使用 npm 命令安装 3Kmfi6HP/nodejs-proxy ：</p>
-<p><code>bash npm install 3Kmfi6HP/nodejs-proxy</code>
-再使用 pm2 启动：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install 3Kmfi6HP/nodejs-proxy
+</span></span></code></pre></div><p>再使用 pm2 启动：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 记得把 PORT 替换成自己放行的端口。</span>
 </span></span><span class="line"><span class="cl">pm2 start npx --name vless -- nodejs-proxy -p PORT
@@ -440,11 +440,11 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 <p>最新版本的 Alist 如果不想开启 S3 Server，请把对应的配置文件中的端口配置为 0 。</p>
 <p>改完之后，点击 save 保存，接着回到 SSH 窗口中进行操作：</p>
 <p>测试启动 Alist：</p>
-<p><code>bash ./alist server</code>
-确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./alist server
+</span></span></code></pre></div><p>确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用 pm2 启动并管理 alist：</p>
-<p><code>bash pm2 start ./alist -- server</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./alist -- server
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="synctv">Synctv</h3>
 <p>群友仿照 alist-freebsd 的仓库的 workflow 进行构筑的。部署简单，与 alist 类似。首先在 Panel 中放行一个端口，接着按照下表 Add a New Website ：</p>
 <p>Key	Value
@@ -475,13 +475,13 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">exec ./synctv server --data-dir ./
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>添加可执行权限：</p>
-<p><code>bash chmod +x start.sh</code>
-测试运行：</p>
-<p><code>bash ./start.sh</code>
-确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x start.sh
+</span></span></code></pre></div><p>测试运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./start.sh
+</span></span></code></pre></div><p>确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用pm2启动并管理：</p>
-<p><code>bash pm2 start ./start.sh --name synctv</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./start.sh --name synctv
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="one-api">One-api</h3>
 <p>源仓库没有提供freebsd平台的二进制文件，需要自己构建，但是很简单。我已经写了一个仓库用于自动化构建 freebsd 版本的 one-api 二进制文件，可以直接下载使用。</p>
 <p>如果你想使用 New-API ，可以使用这个仓库k0baya/new-api-freebsd，用法与本节介绍的 One-API 基本一致，对比One-API添加了一些更方便的功能。也许之后 One-API 也会加入这些功能。</p>
@@ -515,13 +515,13 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">exec ./one-api --port PORT --log-dir ./logs
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>添加可执行权限：</p>
-<p><code>bash chmod +x start.sh</code>
-保存后回到 terminal 中，测试运行：</p>
-<p><code>bash ./start.sh</code>
-确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x start.sh
+</span></span></code></pre></div><p>保存后回到 terminal 中，测试运行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./start.sh
+</span></span></code></pre></div><p>确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用pm2启动并管理：</p>
-<p><code>bash pm2 start ./start.sh --name one-api</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./start.sh --name one-api
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="uptime-kuma">Uptime-Kuma</h3>
 <p>受限于 FreeBSD 的平台限制，1.23版本内置了 PlayWright ，无法运行，所以只能安装 1.22 版本。切记先去 Panel 中放行 TCP 端口。</p>
 <p>首先在 Panel 中放行一个端口，接着按照下表 Add a New Website ：</p>
@@ -541,40 +541,40 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl"><span class="c1"># 下载 v1.22.1 版本的源代码</span>
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/domains <span class="o">&amp;&amp;</span> wget https://github.com/louislam/uptime-kuma/archive/refs/tags/1.22.1.zip <span class="o">&amp;&amp;</span> unzip 1.22.1.zip <span class="o">&amp;&amp;</span> rm -rf public_html <span class="o">&amp;&amp;</span> mv -f uptime-kuma-1.22.1 public_html <span class="o">&amp;&amp;</span> rm -f 1.22.1.zip <span class="o">&amp;&amp;</span> <span class="nb">cd</span> public_html
 </span></span></code></pre></div><p>设置生产模式：</p>
-<p><code>bash npm ci --production</code>
-下载dist文件：</p>
-<p><code>bash wget https://github.com/louislam/uptime-kuma/releases/download/1.22.1/dist.tar.gz &amp;&amp; tar -xzvf dist.tar.gz &amp;&amp; rm dist.tar.gz</code>
-安装补充依赖：</p>
-<p><code>bash npm install</code>
-安装过程中多少会有报错，无视就好，实际上最后可以正常运行。内置的Cloudflared反向代理在FreeBSD平台上无法使用，但是可以使用上述的外置的Cloudflared进行反代，使用自己的域名。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm ci --production
+</span></span></code></pre></div><p>下载dist文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://github.com/louislam/uptime-kuma/releases/download/1.22.1/dist.tar.gz <span class="o">&amp;&amp;</span> tar -xzvf dist.tar.gz <span class="o">&amp;&amp;</span> rm dist.tar.gz
+</span></span></code></pre></div><p>安装补充依赖：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install
+</span></span></code></pre></div><p>安装过程中多少会有报错，无视就好，实际上最后可以正常运行。内置的Cloudflared反向代理在FreeBSD平台上无法使用，但是可以使用上述的外置的Cloudflared进行反代，使用自己的域名。</p>
 <p>测试运行：</p>
-<p><code>bash node server/server.js --port=PORT</code>
-记得把PORT替换成你放行的端口。确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node server/server.js --port<span class="o">=</span>PORT
+</span></span></code></pre></div><p>记得把PORT替换成你放行的端口。确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用pm2管理后台运行：</p>
-<p><code>bash pm2 start server/server.js --name uptime-kuma -- --port=PORT</code>
-记得把PORT替换成你放行的端口。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start server/server.js --name uptime-kuma -- --port<span class="o">=</span>PORT
+</span></span></code></pre></div><p>记得把PORT替换成你放行的端口。</p>
 <p>如果你不希望自己的Uptime-Kuma被人使用 http://IP:PORT的方式访问，你可以在最后的执行命令添加 &ndash;host=127.0.0.1的尾缀，这样就只能通过反向代理的域名进行访问了:</p>
-<p><code>bash pm2 start server/server.js --name uptime-kuma -- --port=PORT --host=127.0.0.1</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start server/server.js --name uptime-kuma -- --port<span class="o">=</span>PORT --host<span class="o">=</span>127.0.0.1
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="bingo暂时无法正常使用">Bingo（暂时无法正常使用）</h3>
 <p>先放行一个端口。在 Panel 中进入 File manager 选项卡，点击左侧的 My Files 进入你的用户根目录，找到 .profile文件，右键选择 View/Edit &gt; Choose other &gt;Source Editor 进行编辑，在最末加上以上两行并保存：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">node</span><span class="o">=</span><span class="s1">&#39;node20&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">npm</span><span class="o">=</span><span class="s1">&#39;npm20&#39;</span>
 </span></span></code></pre></div><p>应用更改：</p>
-<p><code>bash source ~/.profile</code>
-先新建一个目录用于存放 Bingo 的相关文件，进入目录后执行下述操作。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.profile
+</span></span></code></pre></div><p>先新建一个目录用于存放 Bingo 的相关文件，进入目录后执行下述操作。</p>
 <p>下载源码：</p>
-<p><code>bash git clone https://github.com/weaigc/bingo</code>
-进入源码所在目录：</p>
-<p><code>bash cd bingo</code>
-安装依赖：</p>
-<p><code>bash npm20 install</code>
-下载build好的 .next资源：</p>
-<p><code>bash wget -O next.tar.gz https://pan.saika.free.hr/d/local/next.tar.gz &amp;&amp; tar -xzvf next.tar.gz &amp;&amp; rm next.tar.gz</code>
-添加环境变量文件：</p>
-<p><code>bash cp .env.example .env</code>
-接着在 Panel 中进入 File manager 选项卡，进入Bingo 源码所在的目录，找到 server.js文件，右键选择 View/Edit &gt; Choose other &gt;Source Editor 进行编辑，修改第7行中的端口为你放行的端口。再编辑 .env文件，添加你的 BING_HEADER。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/weaigc/bingo
+</span></span></code></pre></div><p>进入源码所在目录：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> bingo
+</span></span></code></pre></div><p>安装依赖：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm20 install
+</span></span></code></pre></div><p>下载build好的 .next资源：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -O next.tar.gz https://pan.saika.free.hr/d/local/next.tar.gz <span class="o">&amp;&amp;</span> tar -xzvf next.tar.gz <span class="o">&amp;&amp;</span> rm next.tar.gz
+</span></span></code></pre></div><p>添加环境变量文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp .env.example .env
+</span></span></code></pre></div><p>接着在 Panel 中进入 File manager 选项卡，进入Bingo 源码所在的目录，找到 server.js文件，右键选择 View/Edit &gt; Choose other &gt;Source Editor 进行编辑，修改第7行中的端口为你放行的端口。再编辑 .env文件，添加你的 BING_HEADER。</p>
 <p>测试启动：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">npm20 run start
@@ -601,8 +601,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl"><span class="c1"># 下载 refresh-gpt-chat</span>
 </span></span><span class="line"><span class="cl">wget -O refresh-gpt-chat.jar https://github.com/Yanyutin753/refresh-gpt-chat/releases/download/v0.0.3/refresh-gpt-chat-0.0.3-SNAPSHOT.jar
 </span></span></code></pre></div><p>使用 pm2 启动：</p>
-<p><code>bash pm2 start java19 --name refresh-gpt-chat -- -jar refresh-gpt-chat.jar --server.port=端口 --server.servlet.context-path=/ --getAccessTokenUrl=https://你的ninja地址/auth/refresh_token --chatUrl=https://你的ninja地址/v1/chat/completions</code>
-再套域名，接下来就可以直接使用 https://你套的域名/v1/chat/completions/ 当作API端点，使用 refresh_token 做 API_Keys ，使用 ChatGPT 了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start java19 --name refresh-gpt-chat -- -jar refresh-gpt-chat.jar --server.port<span class="o">=</span>端口 --server.servlet.context-path<span class="o">=</span>/ --getAccessTokenUrl<span class="o">=</span>https://你的ninja地址/auth/refresh_token --chatUrl<span class="o">=</span>https://你的ninja地址/v1/chat/completions
+</span></span></code></pre></div><p>再套域名，接下来就可以直接使用 https://你套的域名/v1/chat/completions/ 当作API端点，使用 refresh_token 做 API_Keys ，使用 ChatGPT 了。</p>
 <p>然后在 one-api 中添加自定义渠道， Base URL 填写你 https://你套的域名，模型填入你的 refresh_token 对应的账号所支持的模型，如果和我一样手持大把 3.5 的账号想用来做 API 用，可以选择全部 GPT3.5 的相关模型，然后在 模型重定向中填入以下内容：</p>
 <pre tabindex="0"><code>JSON
 {
@@ -643,8 +643,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl">java19 -jar gpt4-copilot-java.jar --server.port<span class="o">=</span>PORT --server.servlet.context-path<span class="o">=</span>/
 </span></span></code></pre></div><p>测试没有问题之后，按 Ctrl+c即可停止运行。</p>
 <p>使用 pm2 启动并管理：</p>
-<p><code>bash pm2 start java19 --name gpt4-copilot-java -- -jar gpt4-copilot-java.jar --server.port=PORT --server.servlet.context-path=/</code>
-始皇的公车：ghu_ThisIsARealFreeCopilotKeyByCoCopilot （已失效）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start java19 --name gpt4-copilot-java -- -jar gpt4-copilot-java.jar --server.port<span class="o">=</span>PORT --server.servlet.context-path<span class="o">=</span>/
+</span></span></code></pre></div><p>始皇的公车：ghu_ThisIsARealFreeCopilotKeyByCoCopilot （已失效）</p>
 <p>免费公车白嫖请求示例：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">curl --location <span class="s1">&#39;http(s)://ip:port_or_URL/cocopilot/v1/chat/completions&#39;</span> 
@@ -673,11 +673,11 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl"><span class="c1"># 下载 fat jar 包</span>
 </span></span><span class="line"><span class="cl">wget --no-check-certificate -O zfile.jar https://c.jun6.net/ZFILE/zfile-release.jar
 </span></span></code></pre></div><p>测试运行：</p>
-<p><code>bash java19 -jar -Duser.timezone=Asia/Shanghai zfile.jar --zfile.log.path=$PWD/logs --zfile.db.path=$PWD/zfile --server.port=PORT</code>
-记得把端口改成自己的。测试没有问题之后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java19 -jar -Duser.timezone<span class="o">=</span>Asia/Shanghai zfile.jar --zfile.log.path<span class="o">=</span><span class="nv">$PWD</span>/logs --zfile.db.path<span class="o">=</span><span class="nv">$PWD</span>/zfile --server.port<span class="o">=</span>PORT
+</span></span></code></pre></div><p>记得把端口改成自己的。测试没有问题之后，按 Ctrl+c即可停止运行。</p>
 <p>使用pm2启动并管理：</p>
-<p><code>bash pm2 start java19 --name zfile -- -jar -Duser.timezone=Asia/Shanghai zfile.jar --zfile.log.path=$PWD/logs --zfile.db.path=$PWD/zfile --server.port=PORT</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start java19 --name zfile -- -jar -Duser.timezone<span class="o">=</span>Asia/Shanghai zfile.jar --zfile.log.path<span class="o">=</span><span class="nv">$PWD</span>/logs --zfile.db.path<span class="o">=</span><span class="nv">$PWD</span>/zfile --server.port<span class="o">=</span>PORT
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="halo">Halo</h3>
 <p>慎重部署，内存会超100%，不知道会不会封号</p>
 <p>halo 自从升级 2.0 版本开始，很长时间内都没有提供构筑好的 jar 包，甚至于在GitHub上都出现了第三方的，使用 GitHub workflow 自动化构筑 jar 包的仓库。但是，自从2.12.0-alpha.1版本开始，halo 的官方仓库又开始提供构筑好的 jar 包了，刚好这些天在玩 Serv00 ，遂尝试部署了一下，成功。现记录一下：</p>
@@ -733,11 +733,11 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">exec java17 -server -Xms128m -Xmx256m -jar -Duser.timezone=Asia/Shanghai $PWD/halo.jar --spring.config.additional-location=$PWD/.halo2/application.yaml
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>测试运行：</p>
-<p><code>bash chmod +x run.sh &amp;&amp; ./run.sh</code>
-确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x run.sh <span class="o">&amp;&amp;</span> ./run.sh
+</span></span></code></pre></div><p>确定运行没有问题后，按 Ctrl+c即可停止运行。</p>
 <p>使用pm2管理运行：</p>
-<p><code>bash chmod +x run.sh &amp;&amp; pm2 start ./run.sh --name halo</code>
-同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x run.sh <span class="o">&amp;&amp;</span> pm2 start ./run.sh --name halo
+</span></span></code></pre></div><p>同样的，你还可以使用 Cloudflared 隧道添加域名，而不选择使用 Proxy 。</p>
 <h3 id="go-proxy-bingai">Go-proxy-bingai</h3>
 <p>这个仓库是 Bingo 的前身，当初玩 Replit 时我便有在使用，只可惜作者早已弃坑，所以当初我才找到了当时还能用的 Bingo 使用。</p>
 <p>在 Bingo 也长期未更新，无法正常使用的如今，我的目光转向了另一个二改仓库。Harry-zklcdc 维护的 Go-proxy-bingai 的分支仓库目前还能够正常使用。而且在与开发者反馈了几个 bug 之后，开发者都会花时间认真复现，并快速修复，其体验实在是不错。</p>
@@ -837,11 +837,11 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">chmod +x pentaract &amp;&amp; exec ./pentaract
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>给启动脚本赋权：</p>
-<p><code>bash chmod +x start.sh</code>
-前端的 index-22eec6d1.js 文件内的 http://localhost:8000 需要更改为 serv00 的 url 或者 ip:port 。你可以去文件管理中编辑，查找替换即可，也可以使用sed命令简单更改一下： 已经重新构建前端并替换，现无需此步。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x start.sh
+</span></span></code></pre></div><p>前端的 index-22eec6d1.js 文件内的 http://localhost:8000 需要更改为 serv00 的 url 或者 ip:port 。你可以去文件管理中编辑，查找替换即可，也可以使用sed命令简单更改一下： 已经重新构建前端并替换，现无需此步。</p>
 <p>测试运行：</p>
-<p><code>bash ./start.sh</code>
-使用 pm2 管理：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./start.sh
+</span></span></code></pre></div><p>使用 pm2 管理：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">pm2 start ./start.sh --name pentaract
 </span></span></code></pre></div><h3 id="onelist">OneList</h3>
@@ -893,8 +893,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl"><span class="nv">KeyDb</span><span class="o">=</span>22f10ca52f109158ac7fe064ebbcf697
 </span></span></code></pre></div><p>你可以按照自己的需求配置端口、管理员账户、数据库。 MySQL 性能更好哦~</p>
 <p>测试运行：</p>
-<p><code>bash ./onelist -run server</code>
-使用 pm2 管理：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./onelist -run server
+</span></span></code></pre></div><p>使用 pm2 管理：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">pm2 start ./onelist -- -run server
 </span></span></code></pre></div><h3 id="warpgpt">WarpGPT</h3>
@@ -924,8 +924,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">chmod +x warpgpt &amp;&amp; exec ./warpgpt
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>给启动脚本赋权：</p>
-<p><code>bash chmod +x start.sh</code>
-配置环境变量：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x start.sh
+</span></span></code></pre></div><p>配置环境变量：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">cat &gt; .env <span class="s">&lt;&lt; EOF
 </span></span></span><span class="line"><span class="cl"><span class="s">proxy = &#34;http://127.0.0.1:10809&#34;   #代理地址 （选填）
@@ -986,8 +986,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">chmod +x coze-discord-proxy &amp;&amp; exec ./coze-discord-proxy
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>给启动脚本赋权：</p>
-<p><code>bash chmod +x coze-discord-proxy</code>
-添加多机器人配置文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x coze-discord-proxy
+</span></span></code></pre></div><p>添加多机器人配置文件：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">mkdir -p app/coze-discord-proxy/data/config
 </span></span><span class="line"><span class="cl">touch app/coze-discord-proxy/data/config/bot_config.json
@@ -1013,8 +1013,8 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
   }
 ]
 </code></pre><p>使用 pm2 管理运行：</p>
-<p><code>bash pm2 start bash --name coze-discord-proxy -- start.sh</code></p>
-<h3 id="memos">Memos</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start bash --name coze-discord-proxy -- start.sh
+</span></span></code></pre></div><h3 id="memos">Memos</h3>
 <p>一款开源、轻量级的笔记服务。轻松捕捉并分享您的精彩想法。</p>
 <p>这个仓库比较难受的是，其在源码的这个位置强制要求其 gRPC 服务的端口为 Memos 监听端口+1，故这个应用需要占用两个端口，而且必须是两个连续的端口。</p>
 <p>同样的，我写了一个用于构建 FreeBSD 版本的仓库。</p>
@@ -1132,10 +1132,10 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span><span class="line"><span class="cl">unzip rclone-freebsd-amd64.zip
 </span></span><span class="line"><span class="cl">mv <span class="s2">&#34;</span><span class="nv">$outer_folder</span><span class="s2">&#34;</span>/* . <span class="o">&amp;&amp;</span> rm -rf <span class="s2">&#34;</span><span class="nv">$outer_folder</span><span class="s2">&#34;</span> rclone-freebsd-amd64.zip
 </span></span></code></pre></div><p>配置 Rclone 的存储：</p>
-<p><code>bash ./rclone config</code>
-启动 web ui：</p>
-<p><code>bash ./rclone rcd --rc-web-gui --rc-user 用户名 --rc-pass 密码 --rc-addr :端口</code>
-pm2 管理 web ui：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./rclone config
+</span></span></code></pre></div><p>启动 web ui：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./rclone rcd --rc-web-gui --rc-user 用户名 --rc-pass 密码 --rc-addr :端口
+</span></span></code></pre></div><p>pm2 管理 web ui：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">pm2 start ./rclone -- rcd --rc-web-gui --rc-user 用户名 --rc-pass 密码 --rc-addr :端口
 </span></span></code></pre></div><h3 id="cloudreve">Cloudreve</h3>
@@ -1248,10 +1248,10 @@ DB = 0
 max_worker_num = 50
 </code></pre><p>你可以使用 vim 或者 Panel 中的 File manager 选项卡，进入 conf.ini 所在路径路径，右键点击，选择 View/Edit &gt; Source Editor ，进行编辑。</p>
 <p>修改完配置文件后，测试启动：</p>
-<p><code>bash ./cloudreve</code>
-使用 pm2 管理：</p>
-<p><code>bash pm2 start ./cloudreve</code></p>
-<h3 id="panindex">PanIndex</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./cloudreve
+</span></span></code></pre></div><p>使用 pm2 管理：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./cloudreve
+</span></span></code></pre></div><h3 id="panindex">PanIndex</h3>
 <p>一个简易的网盘目录列表。</p>
 <p>同样的，我编写了一个用于自动化构建 FreeBSD 版本的 PanIndex 的仓库：k0baya/panindex-freebsd。</p>
 <p>后台地址（默认）：http://ip:port/admin
@@ -1292,10 +1292,10 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>数据库支持 sqlite (默认)、mysql、postgres ，如果需要接入 MySQL 或者 PostgreSQL ，请写成数据库链接的方式填入 dsn 。注意，如果是 Serv00 自带的 PostgreSQL ，请在数据库链接最末加上 ?sslmode=disable 以禁用 SSL 连接。</p>
 <p>编写好配置文件后，测试运行：</p>
-<p><code>bash ./panindex -c=config.json</code>
-使用 pm2 管理：</p>
-<p><code>bash pm2 start ./panindex -- -c=config.json</code></p>
-<h2 id="收尾工作">收尾工作</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./panindex -c<span class="o">=</span>config.json
+</span></span></code></pre></div><p>使用 pm2 管理：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./panindex -- -c<span class="o">=</span>config.json
+</span></span></code></pre></div><h2 id="收尾工作">收尾工作</h2>
 <p>听说 Serv00 会不定时重启机器，所以我们把 pm2 添加开机自启，可以保证每次重启都能由 pm2 调动 Alist 和 Cloudflared 。而且 Serv00 每三个月内必须要有一次登录面板或者 SSH 连接，不然会删号，也可以通过一个脚本解决问题，接下来我会详细说明。</p>
 <h3 id="自动续期">自动续期</h3>
 <p>可以用青龙面板的自动任务定期登录SSH解决。在青龙面板中添加Linux依赖 sshpass，然后添加定时任务：名称随意，命令/脚本 sshpass -p &lsquo;密码&rsquo; ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt 用户名地址 &ldquo;exit&rdquo;，定时规则 1 1 1 * *。这样就会每个月自动ssh连接一次，实现续期。</p>
@@ -1312,18 +1312,18 @@ Generate Let’s Encrypted certificate	与刚刚添加的站点域名保持一�
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></div><p>记得把其中的密码、用户名、ssh的地址修改为你自己的。</p>
 <p>给 auto-renew.sh添加可执行权限：</p>
-<p><code>bash chmod +x auto-renew.sh</code>
-使用pm2启动：</p>
-<p><code>bash pm2 start ./auto-renew.sh</code>
-这样就会每隔一个月自动执行一次SSH连接，自己SSH自己进行续期。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x auto-renew.sh
+</span></span></code></pre></div><p>使用pm2启动：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 start ./auto-renew.sh
+</span></span></code></pre></div><p>这样就会每隔一个月自动执行一次SSH连接，自己SSH自己进行续期。</p>
 <h3 id="自动启动">自动启动</h3>
 <p>听说 Serv00 的主机会不定时重启，所以需要添加自启任务。</p>
 <p>在 Panel 中找到 Cron jobs 选项卡，使用 Add cron job 功能添加任务，Specify time 选择 After reboot，即为重启后运行。Form type 选择 Advanced，Command 写：</p>
-<p><code>bash /home/你的用户名/.npm-global/bin/pm2 resurrect</code>
-记得把你的用户名改为你的用户名</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/home/你的用户名/.npm-global/bin/pm2 resurrect
+</span></span></code></pre></div><p>记得把你的用户名改为你的用户名</p>
 <p>添加完之后，在 SSH 窗口保存 pm2 的当前任务列表快照：</p>
-<p><code>bash pm2 save</code>
-这样每次 serv00 不定时重启任务时，都能自动调用 pm2 读取保存的任务列表快照，恢复任务列表。如果在保存了任务列表快照后又改变了任务 pm2 的任务列表，需要重新执行 pm2 save 以更新任务列表。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pm2 save
+</span></span></code></pre></div><p>这样每次 serv00 不定时重启任务时，都能自动调用 pm2 读取保存的任务列表快照，恢复任务列表。如果在保存了任务列表快照后又改变了任务 pm2 的任务列表，需要重新执行 pm2 save 以更新任务列表。</p>
 <p>欢迎进群讨论，一起学习探讨：受虐滑稽</p>
 <p>转自： Serv00搭建各种服务
 <a href="https://blog.rappit.site/2024/01/27/serv00_logs/">https://blog.rappit.site/2024/01/27/serv00_logs/</a>
