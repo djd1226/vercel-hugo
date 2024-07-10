@@ -4,11 +4,18 @@
     <title>HOME on 雨过天晴</title>
     <link>https://hugo.123450908.xyz/</link>
     <description>Recent content in HOME on 雨过天晴</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>© Djd1226</copyright>
-    <lastBuildDate>Thu, 18 Apr 2024 00:53:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2024 07:59:31 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《星际争霸1》常用的编队技巧：</title>
+      <link>https://hugo.123450908.xyz/post/24_07_10/</link>
+      <pubDate>Wed, 10 Jul 2024 07:59:31 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_07_10/</guid>
+      <description>&lt;p&gt;《星际争霸1》常用的编队技巧：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/247101720598241203.jpg&#34; alt=&#34;247101720598241203.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>vim添加美化样式插件</title>
       <link>https://hugo.123450908.xyz/post/24_04_18/</link>

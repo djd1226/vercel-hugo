@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'><head>
-  <title>vim添加美化样式插件 - 雨过天晴</title>
-  <link rel='canonical' href='https://hugo.123450908.xyz/post/24_04_18/' />
+  <title>《星际争霸1》常用的编队技巧： - 雨过天晴</title>
+  <link rel='canonical' href='https://hugo.123450908.xyz/post/24_07_10/' />
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <meta name='description' content='Exaplanation on the shortcodes with personal-web' />
@@ -19,22 +19,22 @@
 <link rel="stylesheet" href="https://hugo.123450908.xyz/sass/style.min.eabe1aa4bd266a15f7b39b122bd6a5cc75cb067e5373631ac21d7815d6240d6f.css" integrity="sha256-6r4apL0mahX3s5sSK9alzHXLBn5Tc2Mawh14FdYkDW8=" media="screen">
 <link rel="stylesheet" href="https://hugo.123450908.xyz/syntax.min.css" integrity="" media="screen">
 
-  <meta property="og:url" content="https://hugo.123450908.xyz/post/24_04_18/">
+  <meta property="og:url" content="https://hugo.123450908.xyz/post/24_07_10/">
   <meta property="og:site_name" content="雨过天晴">
-  <meta property="og:title" content="vim添加美化样式插件">
+  <meta property="og:title" content="《星际争霸1》常用的编队技巧：">
   <meta property="og:description" content="Exaplanation on the shortcodes with personal-web">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2024-04-18T00:53:35+00:00">
-    <meta property="article:modified_time" content="2024-04-18T00:53:35+00:00">
+    <meta property="article:published_time" content="2024-07-10T07:59:31+00:00">
+    <meta property="article:modified_time" content="2024-07-10T07:59:31+00:00">
 
   
-  <meta itemprop="name" content="vim添加美化样式插件">
+  <meta itemprop="name" content="《星际争霸1》常用的编队技巧：">
   <meta itemprop="description" content="Exaplanation on the shortcodes with personal-web">
-  <meta itemprop="datePublished" content="2024-04-18T00:53:35+00:00">
-  <meta itemprop="dateModified" content="2024-04-18T00:53:35+00:00">
-  <meta itemprop="wordCount" content="206">
+  <meta itemprop="datePublished" content="2024-07-10T07:59:31+00:00">
+  <meta itemprop="dateModified" content="2024-07-10T07:59:31+00:00">
+  <meta itemprop="wordCount" content="92">
 </head>
 <body>
 
@@ -209,7 +209,7 @@
 
 
 <span  class="active">
-  <a href="https://hugo.123450908.xyz/post/24_04_18/">vim添加美化样式插件</a>
+  <a href="https://hugo.123450908.xyz/post/24_07_10/">《星际争霸1》常用的编队技巧：</a>
   
 </span>
 
@@ -218,7 +218,7 @@
     
     <main id="content" class="post">
 
-<h1>vim添加美化样式插件</h1>
+<h1>《星际争霸1》常用的编队技巧：</h1>
 <div class="reading-time">
   <div class="icon">
   <svg width="18px" height="18px" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
@@ -240,87 +240,210 @@
   </svg>
 </div>
 
-  <span>April 18, 2024</span>
+  <span>July 10, 2024</span>
 </div>
 
-<p>本文的基础目的是配置一个好用的vim可以替代普通的文本编辑器，最终目的是可以在vim流畅开发</p>
-<p>安装vim-plug（插件管理工具）</p>
-<p>安装方式:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -fLo ~/.vim/autoload/plug.vim --create-dirs <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-</span></span></code></pre></div><p>目前为止的vimrc配置文件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">let</span> <span class="nv">mapleader</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> number  			<span class="s2">&#34; 显示行号
-</span></span></span><span class="line"><span class="cl"><span class="s2">set incsearch           &#34;</span> 实时开启搜索高亮
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> hlsearch			<span class="s2">&#34; 搜索结果高亮
-</span></span></span><span class="line"><span class="cl"><span class="s2">set autoindent			&#34;</span> 自动缩进
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> smartindent			<span class="s2">&#34; 智能缩进
-</span></span></span><span class="line"><span class="cl"><span class="s2">set tabstop=4			&#34;</span> 设置tab制表符号所占宽度为4
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">softtabstop</span><span class="o">=</span>4		<span class="s2">&#34; 设置按tab时缩进宽度为4
-</span></span></span><span class="line"><span class="cl"><span class="s2">set shiftwidth=4		&#34;</span> 设置自动缩进宽度为4
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> expandtab			<span class="s2">&#34; 缩进时将tab制表服转为空格
-</span></span></span><span class="line"><span class="cl"><span class="s2">set smartcase           &#34;</span> 开启智能大小写查找
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">encoding</span><span class="o">=</span>utf-8      <span class="s2">&#34; Use UTF-8.
-</span></span></span><span class="line"><span class="cl"><span class="s2">set showcmd             &#34;</span> Display incomplete commands.
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">clipboard</span><span class="o">=</span>unnamedplus <span class="s2">&#34; 开启系统剪切板
-</span></span></span><span class="line"><span class="cl"><span class="s2">set cursorline          &#34;</span> 高亮当前行
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> ignorecase          <span class="s2">&#34; 设置忽略大小写
-</span></span></span><span class="line"><span class="cl"><span class="s2">set smartcase           &#34;</span> 设置智能大小写
-</span></span><span class="line"><span class="cl"><span class="nb">set</span> ruler               <span class="s2">&#34; 设置显示当前位置
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> <span class="nb">set</span> autoread
-</span></span><span class="line"><span class="cl">filetype on			<span class="s2">&#34; 开启文件类型检测
-</span></span></span><span class="line"><span class="cl"><span class="s2">filetype plugin indent on  &#34;</span> 开启文件类型插件检测
-</span></span><span class="line"><span class="cl">syntax on 			<span class="s2">&#34; 开启语法高亮
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> 插件管理
-</span></span><span class="line"><span class="cl">call plug#begin<span class="o">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; style start
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;vim-airline/vim-airline&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;vim-airline/vim-airline-themes&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;mhinz/vim-startify&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;morhetz/gruvbox&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> style end
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; markdown start
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;suan/vim-instant-markdown&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">Plug &#39;tpope/vim-markdown&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> markdown end
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; syntax start
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> 语法补全插件
-</span></span><span class="line"><span class="cl">Plug <span class="s1">&#39;valloric/youcompleteme&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; syntax end
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> code start
-</span></span><span class="line"><span class="cl">Plug <span class="s1">&#39;yggdroot/indentline&#39;</span>
-</span></span><span class="line"><span class="cl">Plug <span class="s1">&#39;pangloss/vim-javascript&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; code end
-</span></span></span><span class="line"><span class="cl"><span class="s2">call plug#end()
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> 设置主题
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;set background=dark
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nb">let</span> g:gruvbox_italic<span class="o">=</span><span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;colorscheme gruvbox
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> vim-instant-markdown
-</span></span><span class="line"><span class="cl"><span class="nb">let</span> g:instant_markdown_allow_unsafe_content <span class="o">=</span> <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="nb">let</span> g:instant_markdown_autoscroll <span class="o">=</span> <span class="m">0</span> <span class="s2">&#34; 自动滚动到输入位置
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> tpope/vim-markdown
-</span></span><span class="line"><span class="cl"><span class="nb">let</span> g:markdown_fenced_languages <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;html&#39;</span>, <span class="s1">&#39;python&#39;</span>, <span class="s1">&#39;bash=sh&#39;</span>,<span class="s1">&#39;javascript&#39;</span>,<span class="s1">&#39;css&#39;</span>,<span class="s1">&#39;java&#39;</span>,<span class="s1">&#39;c&#39;</span><span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">let</span> g:markdown_minlines <span class="o">=</span> <span class="m">100</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34; airline
-</span></span></span><span class="line"><span class="cl"><span class="s2">let g:airline#extensions#tabline#enabled = 1                &#34;</span> 设置允许修改默认tab样式
-</span></span><span class="line"><span class="cl"><span class="nb">let</span> g:airline#extensions#tabline#formatter <span class="o">=</span> <span class="s1">&#39;jsformatter&#39;</span>  <span class="s2">&#34; 设置默认tab栏样式
-</span></span></span><span class="line"><span class="cl"><span class="s2">
-</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;</span> airline-theme
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;let g:airline_theme=&#39;solarized&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s2">let g:airline_theme=&#39;angr&#39;              &#34;</span> 好像还是比较喜欢这个颜色
-</span></span></code></pre></div>
+<p>《星际争霸1》常用的编队技巧：</p>
+<p><img src="https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/247101720598241203.jpg" alt="247101720598241203.jpg"></p>
+<ol>
+<li>
+<p><strong>基本编队（Control Groups）</strong>：</p>
+<ul>
+<li><strong>创建编队</strong>：选中一群单位，按住<code>Ctrl</code>键并按下数字键（1-0），将这些单位分配到一个编队中。</li>
+<li><strong>选择编队</strong>：按下对应的数字键即可选择该编队的所有单位。</li>
+<li><strong>添加单位到编队</strong>：选中新的单位，按住<code>Shift</code>键并按下之前设置好的编队数字键。</li>
+<li><strong>移除单位</strong>：选中编队中的部分单位，再次按住<code>Ctrl</code>键并按数字键，即可将选中的单位设置为新编队，旧编队则不会包括这些单位。</li>
+</ul>
+</li>
+<li>
+<p><strong>编队管理</strong>：</p>
+<ul>
+<li><strong>多种单位编队</strong>：将不同类型的单位编入同一个编队中，可以在战斗中更灵活地进行操作。例如，将坦克和医疗兵编在同一个编队中，确保攻击和支援的协调。</li>
+<li><strong>分组编队</strong>：根据战术需要，可以将相同类型的单位分成多个编队。例如，分散控制几组飞龙，以便进行更精细的操作和多线作战。</li>
+<li><strong>建筑编队</strong>：也可以将建筑分配到编队中，快速选中建筑进行生产。例如，将生产建筑分配到数字键上，快速调动兵力。</li>
+</ul>
+</li>
+<li>
+<p><strong>微操技巧</strong>：</p>
+<ul>
+<li><strong>拉扯（Micro）</strong>：将受伤的单位拉到编队后方，避免损失，特别是在对战时这种技巧尤为重要。</li>
+<li><strong>分散操作</strong>：通过不同编队快速切换，实现多线进攻或防守。例如，利用不同编队攻击敌方多个建筑，增加敌方防御难度。</li>
+<li><strong>技能释放</strong>：一些单位拥有特殊技能，如幽灵的核弹打击，利用编队快速选择和释放技能可以提高作战效率。</li>
+</ul>
+</li>
+<li>
+<p><strong>高级技巧</strong>：</p>
+<ul>
+<li><strong>热键合理配置</strong>：根据个人习惯和战术需要，合理配置编队热键，减少误操作。</li>
+<li><strong>快捷键循环</strong>：利用快速切换编队的技巧，在战斗中不断调整单位位置和攻击目标，最大化单位输出。</li>
+<li><strong>智能路径</strong>：利用地形和单位AI特点，通过编队指令让单位自动选择最佳路径，从而更有效地进行攻击或防守。</li>
+</ul>
+</li>
+</ol>
+<p>掌握以上这些编队技巧，可以在《星际争霸1》中更加高效地管理单位和资源，提高整体游戏水平。
+《星际争霸1》的高手在快速切换部队和生产上有着非常高效的操作技巧，主要依靠快捷键和编队管理来实现。以下是具体的操作方法和技巧：</p>
+<h3 id="快速切换部队">快速切换部队</h3>
+<ol>
+<li>
+<p><strong>编队设置</strong>：</p>
+<ul>
+<li><strong>主要攻击编队</strong>：将主力攻击部队分配到常用的数字键（如1-3）。例如，1键用于近战单位，2键用于远程单位，3键用于支援单位。</li>
+<li><strong>分队编组</strong>：将部队分成多个小队（如侦察队、侧翼攻击队），每个小队分配一个数字键。这样可以在战斗中进行多线操作。</li>
+</ul>
+</li>
+<li>
+<p><strong>快捷键切换</strong>：</p>
+<ul>
+<li><strong>快速选择</strong>：按下编队对应的数字键立即选择该编队。例如，按1键选择主力部队，按2键选择远程单位。</li>
+<li><strong>队伍调度</strong>：使用<code>Shift</code>键和数字键组合来快速调整编队。例如，选中新单位后按<code>Shift+1</code>将其加入1编队。</li>
+</ul>
+</li>
+<li>
+<p><strong>多线作战</strong>：</p>
+<ul>
+<li><strong>切换视角</strong>：按下编队数字键后，立即按下空格键，可以快速跳转到该编队的位置。这在多线作战中尤为重要，可以迅速响应不同战线的变化。</li>
+<li><strong>地图标记</strong>：使用F2-F4键设置地图标记点（按Ctrl+F2-F4设置，按F2-F4跳转），结合编队切换，实现快速的地图导航。</li>
+</ul>
+</li>
+</ol>
+<h3 id="快速生产管理">快速生产管理</h3>
+<ol>
+<li>
+<p><strong>建筑编队</strong>：</p>
+<ul>
+<li><strong>生产建筑分组</strong>：将各类生产建筑（如兵营、工厂、星港）分配到不同的数字键。例如，5键分配给兵营，6键分配给工厂，7键分配给星港。</li>
+<li><strong>快捷生产</strong>：按下对应的建筑编队键，然后使用单位生产快捷键（如Z、D、G等）快速生产单位。例如，按5键选中兵营，然后按D键生产陆战队员。</li>
+</ul>
+</li>
+<li>
+<p><strong>循环生产</strong>：</p>
+<ul>
+<li><strong>重复生产</strong>：在建筑被选中的状态下，使用Shift键可以进行批量生产。例如，按下5键选中兵营后，按住Shift键并按D键，可以连续生产多个陆战队员。</li>
+<li><strong>快速补充</strong>：在激烈战斗中，可以不断地按下生产建筑的编队键并重复生产快捷键，以确保单位的持续输出。</li>
+</ul>
+</li>
+<li>
+<p><strong>资源管理</strong>：</p>
+<ul>
+<li><strong>工人生产</strong>：始终保持基地（Nexus、Command Center、Hatchery）的工人生产。将基地分配到一个数字键（如4），定期按下4键并按S键（或相应工人生产快捷键），确保不断有工人生产。</li>
+<li><strong>基地监控</strong>：使用基地编队键（如4），快速检查资源采集和工人生产情况，及时进行调整。</li>
+</ul>
+</li>
+</ol>
+<h3 id="综合操作示例">综合操作示例</h3>
+<ol>
+<li>
+<p><strong>开局阶段</strong>：</p>
+<ul>
+<li>将主基地分配到4键，兵营分配到5键。</li>
+<li>定期按4键并按S键生产工人。</li>
+<li>按5键并按D键生产陆战队员。</li>
+</ul>
+</li>
+<li>
+<p><strong>中期战斗</strong>：</p>
+<ul>
+<li>将主力部队分配到1键，远程支援单位分配到2键。</li>
+<li>多线作战时，按1键指挥主力部队攻击，按2键支援远程打击。</li>
+<li>定期按5键和6键生产单位，确保部队不断补充。</li>
+</ul>
+</li>
+<li>
+<p><strong>后期控制</strong>：</p>
+<ul>
+<li>设置地图标记点F2（前线）、F3（资源点）、F4（主基地）。</li>
+<li>在不同战线之间快速切换，按F2检查前线，按F3调整资源采集，按F4管理基地生产。</li>
+</ul>
+</li>
+</ol>
+<p>通过以上技巧，高手可以在《星际争霸1》中实现高效的部队和生产管理，从而在激烈的对战中占据优势。
+在《星际争霸1》中保持切换的节奏是提升操作效率和战略执行力的关键。以下是一些具体的方法和建议，帮助你保持切换的节奏：</p>
+<h3 id="基础操作节奏">基础操作节奏</h3>
+<ol>
+<li>
+<p><strong>练习基本循环</strong>：</p>
+<ul>
+<li>练习一个基本的操作循环，比如“查看部队→查看生产→查看资源采集→查看地图”。不断重复这个循环，直到形成肌肉记忆。</li>
+<li>每次循环都要检查并执行必要的操作，例如在查看生产时补充生产单位，在查看资源采集时调整工人数量。</li>
+</ul>
+</li>
+<li>
+<p><strong>设定操作目标</strong>：</p>
+<ul>
+<li>在每个循环中设定明确的操作目标，例如确保每次查看生产时都要有单位在建造，确保每次查看资源采集时工人数量合适。</li>
+<li>设定小目标，例如每分钟完成一定次数的循环，以逐渐提高操作频率。</li>
+</ul>
+</li>
+</ol>
+<h3 id="高效的键位配置">高效的键位配置</h3>
+<ol>
+<li>
+<p><strong>合理分配编队键</strong>：</p>
+<ul>
+<li>将常用的编队键（如主力部队、生产建筑）分配到容易按到的数字键（如1-4），减少手指移动距离，提高切换速度。</li>
+<li>保持一致的编队键分配，例如始终将主力部队放在1键，工人生产建筑放在4键，形成稳定的操作习惯。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用快捷键</strong>：</p>
+<ul>
+<li>熟练掌握各类单位和建筑的快捷键，减少鼠标点击，提高操作速度。</li>
+<li>结合编队键和快捷键，例如按5键选中兵营后立即按D键生产陆战队员，保持连续的生产节奏。</li>
+</ul>
+</li>
+</ol>
+<h3 id="提高操作意识">提高操作意识</h3>
+<ol>
+<li>
+<p><strong>视线切换</strong>：</p>
+<ul>
+<li>学会在不同视角之间快速切换，例如通过地图标记点（F2-F4）和编队键快速跳转。</li>
+<li>每次视线切换都要有明确的目的，例如查看部队位置、监控资源采集、指挥生产。</li>
+</ul>
+</li>
+<li>
+<p><strong>保持全局意识</strong>：</p>
+<ul>
+<li>在进行具体操作时，始终保持对全局情况的关注。例如，在指挥前线战斗时，时刻注意生产和资源采集情况，确保后勤支持。</li>
+<li>通过小地图（Mini-map）快速了解整体战局，及时调整策略和操作。</li>
+</ul>
+</li>
+</ol>
+<h3 id="具体操作练习">具体操作练习</h3>
+<ol>
+<li>
+<p><strong>热键练习</strong>：</p>
+<ul>
+<li>专门练习各类热键的使用，确保在高压环境下能够快速反应。例如，反复练习从1键切换到4键生产工人，再切换回1键指挥部队。</li>
+<li>使用自定义地图或训练模式进行热键练习，专注提高单一操作的熟练度。</li>
+</ul>
+</li>
+<li>
+<p><strong>多任务处理</strong>：</p>
+<ul>
+<li>练习多任务处理，例如在进行部队操作时，间歇性地切换到生产建筑和资源采集，确保多线操作的流畅性。</li>
+<li>通过模拟实战环境，提高多任务处理能力，例如在训练对战中设定多个目标任务，逐一完成。</li>
+</ul>
+</li>
+</ol>
+<h3 id="具体案例演练">具体案例演练</h3>
+<ol>
+<li>
+<p><strong>开局操作</strong>：</p>
+<ul>
+<li>将主基地（4键）和生产建筑（5键）分配好，迅速开始工人生产和建筑建造。</li>
+<li>定期在1键（部队）、4键（基地）、5键（生产建筑）之间切换，确保持续生产和发展。</li>
+</ul>
+</li>
+<li>
+<p><strong>中期战斗</strong>：</p>
+<ul>
+<li>主力部队（1键）进行攻击时，定期切换到2键（支援部队）和5键（生产建筑），保持前线压力和后方支援。</li>
+<li>使用地图标记点（F2-F4）快速查看关键位置，确保全局控制。</li>
+</ul>
+</li>
+</ol>
+<p>通过这些方法和练习，你可以逐步提高在《星际争霸1》中保持切换节奏的能力，达到更高的操作效率和战略执行水平。</p>
 
     </main>
   </div>

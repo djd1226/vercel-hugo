@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hugo.123450908.xyz/</loc>
-    <lastmod>2024-04-18T00:53:35+00:00</lastmod>
+    <loc>https://hugo.123450908.xyz/post/24_07_10/</loc>
+    <lastmod>2024-07-10T07:59:31+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://hugo.123450908.xyz/post/24_04_18/</loc>
-    <lastmod>2024-04-18T00:53:35+00:00</lastmod>
+    <loc>https://hugo.123450908.xyz/</loc>
+    <lastmod>2024-07-10T07:59:31+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://hugo.123450908.xyz/post/</loc>
+    <lastmod>2024-07-10T07:59:31+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hugo.123450908.xyz/post/24_04_18/</loc>
     <lastmod>2024-04-18T00:53:35+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
