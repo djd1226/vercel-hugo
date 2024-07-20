@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>© Djd1226</copyright>
-    <lastBuildDate>Wed, 10 Jul 2024 07:59:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jul 2024 03:02:47 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
+      <link>https://hugo.123450908.xyz/post/24_07_20/</link>
+      <pubDate>Sat, 20 Jul 2024 03:02:47 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/24_07_20/</guid>
+      <description>&lt;h2 id=&#34;如何在serv00com服务器上使用python的虚拟环境&#34;&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; alt=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-启用自定义软件binexec&#34;&gt;1. 启用自定义软件（Binexec）&lt;/h3&gt;&#xA;&lt;p&gt;在开始之前，确保你已经启用了自定义软件功能（Binexec）。这个步骤通常需要在你的托管账户面板中完成。如果你不确定如何操作，可以咨询服务器提供商的支持团队。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-创建存放虚拟环境的目录&#34;&gt;2. 创建存放虚拟环境的目录&lt;/h3&gt;&#xA;&lt;p&gt;首先，在你的主目录中创建一个专门存放虚拟环境的目录。假设你的登录名是&lt;code&gt;LOGIN&lt;/code&gt;：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>《星际争霸1》常用的编队技巧：</title>
       <link>https://hugo.123450908.xyz/post/24_07_10/</link>
