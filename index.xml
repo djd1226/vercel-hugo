@@ -95,13 +95,6 @@
     </item>
     <item>
       <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
-      <link>https://hugo.123450908.xyz/post/24_07_20/</link>
-      <pubDate>Sat, 20 Jul 2024 03:02:47 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/post/24_07_20/</guid>
-      <description>&lt;h2 id=&#34;如何在serv00com服务器上使用python的虚拟环境&#34;&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; alt=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-启用自定义软件binexec&#34;&gt;1. 启用自定义软件（Binexec）&lt;/h3&gt;&#xA;&lt;p&gt;在开始之前，确保你已经启用了自定义软件功能（Binexec）。这个步骤通常需要在你的托管账户面板中完成。如果你不确定如何操作，可以咨询服务器提供商的支持团队。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-创建存放虚拟环境的目录&#34;&gt;2. 创建存放虚拟环境的目录&lt;/h3&gt;&#xA;&lt;p&gt;首先，在你的主目录中创建一个专门存放虚拟环境的目录。假设你的登录名是&lt;code&gt;LOGIN&lt;/code&gt;：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
       <link>https://hugo.123450908.xyz/post/2025-5-8/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-8/</guid>
@@ -136,32 +129,11 @@
       <description>&lt;p&gt;这个平台是个 Virtual Host ，没有 Root ，还是 FreeBSD 的系统，不是 Linux ，不太好用。但是优点是隔离性差， Memory 和 vCPU 能短时间内超过 100% 进行调用。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Serv00搭建各种服务</title>
-      <link>https://hugo.123450908.xyz/post/24_04_05/</link>
-      <pubDate>Fri, 05 Apr 2024 06:28:40 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/post/24_04_05/</guid>
-      <description>&lt;p&gt;这个平台是个 Virtual Host ，没有 Root ，还是 FreeBSD 的系统，不是 Linux ，不太好用。但是优点是隔离性差， Memory 和 vCPU 能短时间内超过 100% 进行调用。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>部署免费的GPT-API，实现GPT自由！</title>
-      <link>https://hugo.123450908.xyz/post/24_04_04/</link>
-      <pubDate>Thu, 04 Apr 2024 06:13:10 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/post/24_04_04/</guid>
-      <description>&lt;p&gt;render部署GPT-API教程&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-登录render-1点击-new选择web-service&#34;&gt;1 登录render 1，点击 New，选择Web Service&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-c1f712328d3c408c9b94b67eb316fc7b.r2.dev/photo/2024/04/7b0c7b37a7ced283bd712c2e6724bb8d.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>部署免费的GPT-API，实现GPT自由！</title>
       <link>https://hugo.123450908.xyz/post/2025-5-7/</link>
       <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-7/</guid>
       <description>&lt;p&gt;render部署GPT-API教程&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>学习部署FreeGPT35</title>
-      <link>https://hugo.123450908.xyz/post/24_04_03/</link>
-      <pubDate>Wed, 03 Apr 2024 13:23:51 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/post/24_04_03/</guid>
-      <description>&lt;p&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35&lt;font color=red size=5&gt;（Glitch和Render)&lt;/font&gt;,但可是我不会用，先做个记录把！&lt;/p&gt;</description>
     </item>
     <item>
       <title>学习部署FreeGPT35</title>
