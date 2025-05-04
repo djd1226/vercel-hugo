@@ -22,21 +22,7 @@
   <meta property="og:url" content="https://hugo.123450908.xyz/post/2025-5-8/">
   <meta property="og:site_name" content="雨过天晴">
   <meta property="og:title" content="如何在Serv00.com服务器上使用Python的虚拟环境">
-  <meta property="og:description" content="如何在Serv00.com服务器上使用Python的虚拟环境。 1. 启用自定义软件（Binexec） 在开始之前，确保你已经启用了自定义软件功能（Binexec）。这个步骤通常需要在你的托管账户面板中完成。如果你不确定如何操作，可以咨询服务器提供商的支持团队。
-2. 创建存放虚拟环境的目录 首先，在你的主目录中创建一个专门存放虚拟环境的目录。假设你的登录名是 LOGIN：
-`mkdir /usr/home/LOGIN/.virtualenvs` 3. 创建虚拟环境 进入刚才创建的目录，然后创建一个新的虚拟环境。这里假设你要创建名为 myenv的虚拟环境：
-`cd /usr/home/LOGIN/.virtualenvs virtualenv myenv` 默认情况下，这将使用系统的Python 3.10版本。如果你想使用其他版本的Python，比如Python 3.7，可以这样：
-`virtualenv myenv -p /usr/local/bin/python3.7` 4. 激活虚拟环境 创建好虚拟环境后，需要激活它：
-`source /usr/home/LOGIN/.virtualenvs/myenv/bin/activate` 激活后，你的命令提示符会显示虚拟环境的名称，例如：
-`(myenv) $` 这表示你已经进入了虚拟环境，现在你可以在其中安装Python包或运行Python代码，这些操作都不会影响到系统的全局Python环境。
-5. 安装Python包 在激活的虚拟环境中，你可以使用 pip来安装所需的Python包。例如，安装 requests库：
-`pip install requests` 6. 运行Python脚本 在虚拟环境中，你可以直接运行Python脚本，例如：
-`python my_script.py` 7. 退出虚拟环境 完成操作后，可以通过以下命令退出虚拟环境：
-`deactivate` 8. 在网站中使用虚拟环境 如果你想在你的WWW网站中使用这个虚拟环境，你需要指定虚拟环境的Python可执行文件路径。例如：
-`/usr/home/LOGIN/.virtualenvs/myenv/bin/python` 在托管账户面板的WWW选项卡中，添加或修改你的Python类型的WWW页面，确保使用上述路径来执行Python。
-9. 处理编译问题（可选） 有些Python包在安装时需要编译工具。如果遇到编译问题，可以使用以下命令来设置环境变量：
-`export CFLAGS=&#34;-I/usr/local/include&#34; export CXXFLAGS=&#34;-I/usr/local/include&#34; export CC=gcc export CXX=g&#43;&#43;` 如果进程超出系统限制，可以设置并发限制：
-`export MAX_CONCURRENCY=1 export CPUCOUNT=1 export MAKEFLAGS=&#34;-j1&#34;` 10.">
+  <meta property="og:description" content="如何在Serv00.com服务器上使用Python的虚拟环境。 ">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -45,21 +31,7 @@
 
   
   <meta itemprop="name" content="如何在Serv00.com服务器上使用Python的虚拟环境">
-  <meta itemprop="description" content="如何在Serv00.com服务器上使用Python的虚拟环境。 1. 启用自定义软件（Binexec） 在开始之前，确保你已经启用了自定义软件功能（Binexec）。这个步骤通常需要在你的托管账户面板中完成。如果你不确定如何操作，可以咨询服务器提供商的支持团队。
-2. 创建存放虚拟环境的目录 首先，在你的主目录中创建一个专门存放虚拟环境的目录。假设你的登录名是 LOGIN：
-`mkdir /usr/home/LOGIN/.virtualenvs` 3. 创建虚拟环境 进入刚才创建的目录，然后创建一个新的虚拟环境。这里假设你要创建名为 myenv的虚拟环境：
-`cd /usr/home/LOGIN/.virtualenvs virtualenv myenv` 默认情况下，这将使用系统的Python 3.10版本。如果你想使用其他版本的Python，比如Python 3.7，可以这样：
-`virtualenv myenv -p /usr/local/bin/python3.7` 4. 激活虚拟环境 创建好虚拟环境后，需要激活它：
-`source /usr/home/LOGIN/.virtualenvs/myenv/bin/activate` 激活后，你的命令提示符会显示虚拟环境的名称，例如：
-`(myenv) $` 这表示你已经进入了虚拟环境，现在你可以在其中安装Python包或运行Python代码，这些操作都不会影响到系统的全局Python环境。
-5. 安装Python包 在激活的虚拟环境中，你可以使用 pip来安装所需的Python包。例如，安装 requests库：
-`pip install requests` 6. 运行Python脚本 在虚拟环境中，你可以直接运行Python脚本，例如：
-`python my_script.py` 7. 退出虚拟环境 完成操作后，可以通过以下命令退出虚拟环境：
-`deactivate` 8. 在网站中使用虚拟环境 如果你想在你的WWW网站中使用这个虚拟环境，你需要指定虚拟环境的Python可执行文件路径。例如：
-`/usr/home/LOGIN/.virtualenvs/myenv/bin/python` 在托管账户面板的WWW选项卡中，添加或修改你的Python类型的WWW页面，确保使用上述路径来执行Python。
-9. 处理编译问题（可选） 有些Python包在安装时需要编译工具。如果遇到编译问题，可以使用以下命令来设置环境变量：
-`export CFLAGS=&#34;-I/usr/local/include&#34; export CXXFLAGS=&#34;-I/usr/local/include&#34; export CC=gcc export CXX=g&#43;&#43;` 如果进程超出系统限制，可以设置并发限制：
-`export MAX_CONCURRENCY=1 export CPUCOUNT=1 export MAKEFLAGS=&#34;-j1&#34;` 10.">
+  <meta itemprop="description" content="如何在Serv00.com服务器上使用Python的虚拟环境。 ">
   <meta itemprop="datePublished" content="2024-07-20T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-07-20T00:00:00+00:00">
   <meta itemprop="wordCount" content="219">
@@ -72,7 +44,7 @@
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -150,7 +122,7 @@
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -392,7 +364,6 @@
 </ol>
 <h3 id="结论-1">结论：</h3>
 <p>使用Phusion Passenger运行Flask应用时，不需要手动管理端口。你只需按照配置指南操作，Phusion Passenger会处理所有的端口管理和请求处理工作。这样不仅简化了配置，还提高了应用的可靠性和性能。</p>
-
 
     </main>
   </div>

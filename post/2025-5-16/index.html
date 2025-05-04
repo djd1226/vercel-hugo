@@ -23,23 +23,7 @@
   <meta property="og:site_name" content="雨过天晴">
   <meta property="og:title" content="Docker 部署IPTV">
   <meta property="og:description" content="iTV（Doubebly）原作者库已经不能下载 docker镜像拉取: docker pull doubebly/doube-itv:latest
-docker镜像运行:
-方法一，适用于vps 下面的运行命令中的 “50001” 可以自定义
-docker run -d –name=doube-itv –restart=always -p 50001:5000 doubebly/doube-itv:latest
-如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50001/help) 方法二，适用于软路由 下面的运行命令中的 “50101” 坚决不能修改！！！
-docker run -d –name=doube-itv –net=host –restart=always doubebly/doube-itv:latest gunicorn -w 3 -b 0.0.0.0:50101 –log-level error –timeout 60 app:app
-如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50101/help) 测试你的网络是否有问题，访问：http://127.0.0.1:5000/demo 页面响应内容是不是百度，如果响应失败表示你的网络有问题自己查找！！！
-下面是订阅地址：
-TXT订阅地址: http://127.0.0.1:5000/Sub?type=txt M3u订阅地址: http://127.0.0.1:5000/Sub?type=m3u ====================================
-allinone（Feiyang）鉴权获取下载部署和更新 1、ALLINONE部署指令生成器 打开网址：https://imgtool.v1.mk/… 全部选项默认即可（系统默认Linux、架构默认amd64、路由模式默认主路由模式），点击“生成AES密钥”，复制密匙
-2、生成Userid和专属Token 到Telegram机器人https://t.me/newallino… 那里去生成Userid和专属Token
-3、生成部署docker得一键命令 回到 https://imgtool.v1.mk/… 填入申请到的Userid和专属Token两个参数，再点击“生成部署ALLINONE命令”，点击“Docker运行”项下面的“复制指令”按钮复制生成的部署docker一键命令
-4、连接设备后打开ssh工具docker部署
-5、部署完成后的订阅地址如下：
-IPTV直播：http://你的IP:35455/tv.m3u
-虎牙一起看：http://你的IP:35455/huyayqk.m3u?url=http://你的IP:35455
-斗鱼一起看：http://你的IP:35455/douyuyqk.m3u?url=http://你的IP:35455
-YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455">
+docker镜像运行:">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,23 +33,7 @@ YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455">
   
   <meta itemprop="name" content="Docker 部署IPTV">
   <meta itemprop="description" content="iTV（Doubebly）原作者库已经不能下载 docker镜像拉取: docker pull doubebly/doube-itv:latest
-docker镜像运行:
-方法一，适用于vps 下面的运行命令中的 “50001” 可以自定义
-docker run -d –name=doube-itv –restart=always -p 50001:5000 doubebly/doube-itv:latest
-如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50001/help) 方法二，适用于软路由 下面的运行命令中的 “50101” 坚决不能修改！！！
-docker run -d –name=doube-itv –net=host –restart=always doubebly/doube-itv:latest gunicorn -w 3 -b 0.0.0.0:50101 –log-level error –timeout 60 app:app
-如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50101/help) 测试你的网络是否有问题，访问：http://127.0.0.1:5000/demo 页面响应内容是不是百度，如果响应失败表示你的网络有问题自己查找！！！
-下面是订阅地址：
-TXT订阅地址: http://127.0.0.1:5000/Sub?type=txt M3u订阅地址: http://127.0.0.1:5000/Sub?type=m3u ====================================
-allinone（Feiyang）鉴权获取下载部署和更新 1、ALLINONE部署指令生成器 打开网址：https://imgtool.v1.mk/… 全部选项默认即可（系统默认Linux、架构默认amd64、路由模式默认主路由模式），点击“生成AES密钥”，复制密匙
-2、生成Userid和专属Token 到Telegram机器人https://t.me/newallino… 那里去生成Userid和专属Token
-3、生成部署docker得一键命令 回到 https://imgtool.v1.mk/… 填入申请到的Userid和专属Token两个参数，再点击“生成部署ALLINONE命令”，点击“Docker运行”项下面的“复制指令”按钮复制生成的部署docker一键命令
-4、连接设备后打开ssh工具docker部署
-5、部署完成后的订阅地址如下：
-IPTV直播：http://你的IP:35455/tv.m3u
-虎牙一起看：http://你的IP:35455/huyayqk.m3u?url=http://你的IP:35455
-斗鱼一起看：http://你的IP:35455/douyuyqk.m3u?url=http://你的IP:35455
-YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455">
+docker镜像运行:">
   <meta itemprop="datePublished" content="2025-03-28T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-03-28T00:00:00+00:00">
   <meta itemprop="wordCount" content="74">
@@ -78,7 +46,7 @@ YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455">
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -156,7 +124,7 @@ YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455">
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -308,7 +276,6 @@ M3u订阅地址: http://127.0.0.1:5000/Sub?type=m3u
 <hr>
 <p>TG群组：<a href="https://t.me/+rgxyQeDL">https://t.me/+rgxyQeDL</a>… 订阅频道：<a href="https://t.me/tmxktg">https://t.me/tmxktg</a></p>
 <p>TMXK</p>
-
 
     </main>
   </div>

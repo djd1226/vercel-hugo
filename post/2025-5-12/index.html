@@ -22,18 +22,7 @@
   <meta property="og:url" content="https://hugo.123450908.xyz/post/2025-5-12/">
   <meta property="og:site_name" content="雨过天晴">
   <meta property="og:title" content="在共享主机serv00上安装wallabag">
-  <meta property="og:description" content="在共享主机上安装wallabag 我们提供了一个包含所有依赖项的安装包。默认配置使用MySQL作为数据库。要添加你的数据库设置，请编辑 app/config/parameters.yml 文件。注意，密码必须用单引号（’）括起来。
-我们已经创建了一个用户：登录名和密码都是 wallabag。
-使用这个安装包时，wallabag 不会检查应用程序中使用的必需扩展（这些检查是在你有专用Web服务器时通过 composer install 进行的，详见上文）。
-执行以下命令下载并解压最新的安装包：
-wget https://wllbg.org/latest-v2-package &amp;&amp; tar xvf latest-v2-package 你可以在我们的网站上找到最新安装包的 md5 哈希值。
-为了保证权限，我设置了 chmod -R 777 data 静态包要求每个命令后面都附加 --env=prod，因为静态包只能在生产环境中使用（开发环境不受支持，完全无法工作）。
-接下来，请阅读下一步来创建你的虚拟主机。
-你必须通过以下命令创建你的第一个用户：
-php bin/console wallabag:install --env=prod 如果由于错误设置导致此步骤出现错误，你必须先执行以下命令清理缓存：
-php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
-之后，你就可以访问你的 wallabag 应用了。
-后续说明 1. 不重置数据库，仅安装缺失表 php bin/console wallabag:install --env=prod --no-interaction 不加 --reset：默认行为是 --reset=no（不重置，但创建缺失表）。 2. 强制重置数据库（慎用！会清空所有 Wallabag 表） php bin/console wallabag:install --env=prod --no-interaction --reset 仅加 --reset：表示“是”，会删除所有 wallabag_* 表并重新创建。 无默认用户问题 进入会发现没有默认账户，Wallabag的默认账户密码为 wallabag/wallabag（如果能登录也请无视下方解决方法），我也不知道什么原因会造成此问题，然后搜了一下没发现类似问题，就只有找找解决办法，然后看到可以使用cli创建用户">
+  <meta property="og:description" content="在共享主机上安装wallabag">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -42,18 +31,7 @@ php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
 
   
   <meta itemprop="name" content="在共享主机serv00上安装wallabag">
-  <meta itemprop="description" content="在共享主机上安装wallabag 我们提供了一个包含所有依赖项的安装包。默认配置使用MySQL作为数据库。要添加你的数据库设置，请编辑 app/config/parameters.yml 文件。注意，密码必须用单引号（’）括起来。
-我们已经创建了一个用户：登录名和密码都是 wallabag。
-使用这个安装包时，wallabag 不会检查应用程序中使用的必需扩展（这些检查是在你有专用Web服务器时通过 composer install 进行的，详见上文）。
-执行以下命令下载并解压最新的安装包：
-wget https://wllbg.org/latest-v2-package &amp;&amp; tar xvf latest-v2-package 你可以在我们的网站上找到最新安装包的 md5 哈希值。
-为了保证权限，我设置了 chmod -R 777 data 静态包要求每个命令后面都附加 --env=prod，因为静态包只能在生产环境中使用（开发环境不受支持，完全无法工作）。
-接下来，请阅读下一步来创建你的虚拟主机。
-你必须通过以下命令创建你的第一个用户：
-php bin/console wallabag:install --env=prod 如果由于错误设置导致此步骤出现错误，你必须先执行以下命令清理缓存：
-php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
-之后，你就可以访问你的 wallabag 应用了。
-后续说明 1. 不重置数据库，仅安装缺失表 php bin/console wallabag:install --env=prod --no-interaction 不加 --reset：默认行为是 --reset=no（不重置，但创建缺失表）。 2. 强制重置数据库（慎用！会清空所有 Wallabag 表） php bin/console wallabag:install --env=prod --no-interaction --reset 仅加 --reset：表示“是”，会删除所有 wallabag_* 表并重新创建。 无默认用户问题 进入会发现没有默认账户，Wallabag的默认账户密码为 wallabag/wallabag（如果能登录也请无视下方解决方法），我也不知道什么原因会造成此问题，然后搜了一下没发现类似问题，就只有找找解决办法，然后看到可以使用cli创建用户">
+  <meta itemprop="description" content="在共享主机上安装wallabag">
   <meta itemprop="datePublished" content="2024-09-12T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-09-12T00:00:00+00:00">
   <meta itemprop="wordCount" content="100">
@@ -66,7 +44,7 @@ php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -144,7 +122,7 @@ php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -302,7 +280,6 @@ php bin/console cache:clear --env=prod 然后再次尝试前面的命令。
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -t wallabag /var/www/wallabag/bin/console fos:user:create --env<span class="o">=</span>prod wallabag email@qq.com wallabag --super-admin
 </span></span></code></pre></div><p>结果： <code>Created user wallabag</code></p>
 <h2 id="用户名密码可以自定义哈创建后就可以登录了然后就可以去调整一些系统设置了">用户名密码可以自定义哈，创建后就可以登录了！然后就可以去调整一些系统设置了</h2>
-
 
     </main>
   </div>

@@ -22,16 +22,7 @@
   <meta property="og:url" content="https://hugo.123450908.xyz/post/2025-5-5/">
   <meta property="og:site_name" content="雨过天晴">
   <meta property="og:title" content="Serv00 进程保活最终解决方案">
-  <meta property="og:description" content="Serv00 进程保活最终解决方案 这个方案已经写出来差不多一个月了，Github 上也开了源，论坛里、群里也都介绍了使用方法，但是，目前除了我重构之后的 X-for-serv00 以及 Sb-for-serv00 以外，还没有哪个项目已经用上了的。遂在博客里对于这个方案进行进一步的介绍。
-首先几个大前提，似乎还有很多人搞不清：
-Serv00 不是 VPS，是一台独立服务器，新建了很多用户，按照用户进行隔离，并没有虚拟化一个完整的 FreeBSD Server 给用户，所以没有 Root 权限，但是内置了很多独立服务器自带的软件包、服务等等，可以说是有利有弊；
-Serv00 不是 Linux 系统，是 FreeBSD 系统，虽说 Unix like 使用起来总是相似的，但是总归还是不一样的；
-Serv00 自带了一个 Web 服务器——Apache。Apache 与 Nginx 功能相似但是使用方法是不一样的，而且在没有 Root 权限的情况下，很多东西你无法进行设置；
-每个用户能够最多预留三个端口的使用权，而且端口范围在 1024-64000；
-因为是独立服务器按照用户进行隔离，所以你不能对其进行重启、重装等操作，机器的重启与重装会影响这台 Server 上的一万名用户
-And so on…
-Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用其特性，我们能够在 Serv00 上实现访问网页即对进行实现保活。已知 WWW websites 在被访问时会按照其类型被唤醒，而且通过 Phusion Passenger 托管的 Django / NodeJS / Ruby on Rails 等类型的应用是可以端口复用，在 80 /443 端口提供 Web 服务的，所以只需要在这样一个脚本或者应用内写入进程的检测与唤醒即可通过网页对进程保活。
-但是这样做还有一个问题，一个网站需要两个域名，一个用来保活，一个用来提供 Web 服务，很是不方便，但是，在 JavaScript 中，可以通过引入 chimurai/http-proxy-middleware 这个中间件将其合二为一，实现真正的访问即保活，访问即唤醒。">
+  <meta property="og:description" content="Serv00 进程保活最终解决方案">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -40,16 +31,7 @@ Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用
 
   
   <meta itemprop="name" content="Serv00 进程保活最终解决方案">
-  <meta itemprop="description" content="Serv00 进程保活最终解决方案 这个方案已经写出来差不多一个月了，Github 上也开了源，论坛里、群里也都介绍了使用方法，但是，目前除了我重构之后的 X-for-serv00 以及 Sb-for-serv00 以外，还没有哪个项目已经用上了的。遂在博客里对于这个方案进行进一步的介绍。
-首先几个大前提，似乎还有很多人搞不清：
-Serv00 不是 VPS，是一台独立服务器，新建了很多用户，按照用户进行隔离，并没有虚拟化一个完整的 FreeBSD Server 给用户，所以没有 Root 权限，但是内置了很多独立服务器自带的软件包、服务等等，可以说是有利有弊；
-Serv00 不是 Linux 系统，是 FreeBSD 系统，虽说 Unix like 使用起来总是相似的，但是总归还是不一样的；
-Serv00 自带了一个 Web 服务器——Apache。Apache 与 Nginx 功能相似但是使用方法是不一样的，而且在没有 Root 权限的情况下，很多东西你无法进行设置；
-每个用户能够最多预留三个端口的使用权，而且端口范围在 1024-64000；
-因为是独立服务器按照用户进行隔离，所以你不能对其进行重启、重装等操作，机器的重启与重装会影响这台 Server 上的一万名用户
-And so on…
-Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用其特性，我们能够在 Serv00 上实现访问网页即对进行实现保活。已知 WWW websites 在被访问时会按照其类型被唤醒，而且通过 Phusion Passenger 托管的 Django / NodeJS / Ruby on Rails 等类型的应用是可以端口复用，在 80 /443 端口提供 Web 服务的，所以只需要在这样一个脚本或者应用内写入进程的检测与唤醒即可通过网页对进程保活。
-但是这样做还有一个问题，一个网站需要两个域名，一个用来保活，一个用来提供 Web 服务，很是不方便，但是，在 JavaScript 中，可以通过引入 chimurai/http-proxy-middleware 这个中间件将其合二为一，实现真正的访问即保活，访问即唤醒。">
+  <meta itemprop="description" content="Serv00 进程保活最终解决方案">
   <meta itemprop="datePublished" content="2024-08-29T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-08-29T00:00:00+00:00">
   <meta itemprop="wordCount" content="276">
@@ -62,7 +44,7 @@ Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -140,7 +122,7 @@ Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -348,7 +330,6 @@ app.listen(port, () =&gt; console.log(`Example app listening on port ${port}!`))
     └──其它应用所需文件（比如二进制文件、配置文件、启动脚本等）
 </code></pre><p>先执行 npm22 install，再访问网页即可唤醒应用。监控网页即可对应用进行保活。</p>
 <p>此外，自动续期直接去 Serv00 自带的 Cron job 内添加每个月一次的 sshpass 命令即可，滥用 GitHub Actions 是很差劲且没有必要的行为。</p>
-
 
     </main>
   </div>

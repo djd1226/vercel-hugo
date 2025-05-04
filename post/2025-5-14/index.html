@@ -24,26 +24,7 @@
   <meta property="og:title" content="【实操篇】阿里云盘CDN直链提取">
   <meta property="og:description" content="阿里云盘cdn直链提取的教程 网上很多阿里云盘直链解析，得到的链接通常类似这样：https://cn-beijing-data.aliyundrive.net/xxxxx
 最近偶然发现了一种方式，能得到这样的直链：https://files-cdn.aliyundrive.com/xxxxx
-原理容我卖个关子，以后有空再说，搞了个demo https://alipan.wmymz.pp.ua 玩玩（随时跑路）
-下面是食用方法： 获取file_id 浏览器打开阿里云盘并登录 开启F12，随便点开一个文件夹，筛选list接口 在响应中找到你想提取直链的file_id - 获取access_token
-打开这个链接 https://alist.nn.ci/zh/guide/drivers/aliyundrive.html#%E5%88%B7%E6%96%B0%E4%BB%A4%E7%89%8C
-点击获取token按钮，会弹出一个二维码
-打开手机的阿里云盘App扫描二维码授权登录，有两种方式获取access_token（选一个你能看懂的即可）
-抓包获取 先打开浏览器F12，再点击刚刚的按钮，会出现一个ck请求，查看响应中的bizExt 2. 将得到的bizExt base64解码，可以使用在线解码，拿到access_token - 拿refresh_token自己刷新 1. 直接点击刚刚的按钮，下面会出现一行token
-2. 这个就是refresh_token，接下来可以自己请求接口得到access_token curl -X POST https://auth.alipan.com/v2/account/token ^ -H &#34;Content-Type: application/json&#34; ^ -d &#34;{\&#34;grant_type\&#34;: \&#34;refresh_token\&#34;, \&#34;refresh_token\&#34;: \&#34;your_refresh_token\&#34;}&#34; 打开CDN直链提取服务 https://alipan.wmymz.pp.ua 填入上面拿到的两个参数
-*注
-这个cdn直链貌似也有限速，不过延迟可以达到10ms 得到的链接过期时间我改成了32小时（之前是900秒） 有的资源由于没有被下载过，拿不到cdn链接，所以会得到普通直链 用这个直链提取服务你的access_token会暴露到我的服务端，因为我需要这个来请求阿里云的接口，虽然我没有记录你的token，但提前说明一下，介意者勿用 原理篇以后有空再发（我先自己用一阵子，免得分享出来被滥用后和谐了）*
-【原理篇】阿里云盘CDN直链提取 简单介绍三个东西：
-阿里云网盘与相册服务（pds） 这是祖师爷，是阿里云提供的一个公共服务。借用官方文档的话：
-PDS是从阿里云智能存储产品中具有创新性的PaaS服务产品之一，PDS是网盘服务中间件产品，提供基于账号体系的文件管理服务，客户基于PDS可直接便捷高效的开发搭建客户专属的网盘与相册产品。 同时也支持直接使用官方提供的标准网盘产品，简单配置后开箱即用免去二次开发。
-api文档看这里
-阿里云盘 这是阿里的某个团队基于pds开发的网盘类产品，我们自己也能基于pds开发自己的产品，自行申请即可（但得交钱），当然数据是存放在阿里那边的。
-无api文档，需要从官网 6开F12找，接口和pds差不多，github也有项目 8整理接口信息
-阿里云盘开发平台（阿里云盘Open） 阿里云盘用户量越来越多，市面上出现了很多第三方客户端，通过封装阿里云盘web端的api接口实现管理阿里云盘的功能；阿里云盘团队就干脆搞了一个阿里云盘开放平台（阿里云盘Open），第三方客户端可以对接阿里云盘Open，相当于又搞出了一套api接口，等于告诉这些第三方客户端说你们就用这套新的接口，别整天爬我这web端的接口了。当然要用这套新的，得先提交一些信息审核，通过后才会给你个client_key/client_secret（OAuth那套）。
-目前有很多第三方客户端接入了，比如alist、小白羊等，官网可以看到一些热门客户端 8
-api文档看这里
-网盘产品最有用的接口就是获取直链了。对于这一点，上面三个都能做到，只是细节上有所区别
-pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh_token，access_token完全一样；阿里云盘某些接口需要多携带几个和设备id有关的头，关于这个头的生成具体算法可以看这里 7，pds没有这个限制；某些api返回的信息也有差别，比如获取文件直链，pds会返回一个cdn链接（如果有的话），但是阿里云盘绝对不会返回，所以尽可能使用pds的接口就完事了。">
+原理容我卖个关子，以后有空再说，搞了个demo https://alipan.wmymz.pp.ua 玩玩（随时跑路）">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -54,26 +35,7 @@ pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh
   <meta itemprop="name" content="【实操篇】阿里云盘CDN直链提取">
   <meta itemprop="description" content="阿里云盘cdn直链提取的教程 网上很多阿里云盘直链解析，得到的链接通常类似这样：https://cn-beijing-data.aliyundrive.net/xxxxx
 最近偶然发现了一种方式，能得到这样的直链：https://files-cdn.aliyundrive.com/xxxxx
-原理容我卖个关子，以后有空再说，搞了个demo https://alipan.wmymz.pp.ua 玩玩（随时跑路）
-下面是食用方法： 获取file_id 浏览器打开阿里云盘并登录 开启F12，随便点开一个文件夹，筛选list接口 在响应中找到你想提取直链的file_id - 获取access_token
-打开这个链接 https://alist.nn.ci/zh/guide/drivers/aliyundrive.html#%E5%88%B7%E6%96%B0%E4%BB%A4%E7%89%8C
-点击获取token按钮，会弹出一个二维码
-打开手机的阿里云盘App扫描二维码授权登录，有两种方式获取access_token（选一个你能看懂的即可）
-抓包获取 先打开浏览器F12，再点击刚刚的按钮，会出现一个ck请求，查看响应中的bizExt 2. 将得到的bizExt base64解码，可以使用在线解码，拿到access_token - 拿refresh_token自己刷新 1. 直接点击刚刚的按钮，下面会出现一行token
-2. 这个就是refresh_token，接下来可以自己请求接口得到access_token curl -X POST https://auth.alipan.com/v2/account/token ^ -H &#34;Content-Type: application/json&#34; ^ -d &#34;{\&#34;grant_type\&#34;: \&#34;refresh_token\&#34;, \&#34;refresh_token\&#34;: \&#34;your_refresh_token\&#34;}&#34; 打开CDN直链提取服务 https://alipan.wmymz.pp.ua 填入上面拿到的两个参数
-*注
-这个cdn直链貌似也有限速，不过延迟可以达到10ms 得到的链接过期时间我改成了32小时（之前是900秒） 有的资源由于没有被下载过，拿不到cdn链接，所以会得到普通直链 用这个直链提取服务你的access_token会暴露到我的服务端，因为我需要这个来请求阿里云的接口，虽然我没有记录你的token，但提前说明一下，介意者勿用 原理篇以后有空再发（我先自己用一阵子，免得分享出来被滥用后和谐了）*
-【原理篇】阿里云盘CDN直链提取 简单介绍三个东西：
-阿里云网盘与相册服务（pds） 这是祖师爷，是阿里云提供的一个公共服务。借用官方文档的话：
-PDS是从阿里云智能存储产品中具有创新性的PaaS服务产品之一，PDS是网盘服务中间件产品，提供基于账号体系的文件管理服务，客户基于PDS可直接便捷高效的开发搭建客户专属的网盘与相册产品。 同时也支持直接使用官方提供的标准网盘产品，简单配置后开箱即用免去二次开发。
-api文档看这里
-阿里云盘 这是阿里的某个团队基于pds开发的网盘类产品，我们自己也能基于pds开发自己的产品，自行申请即可（但得交钱），当然数据是存放在阿里那边的。
-无api文档，需要从官网 6开F12找，接口和pds差不多，github也有项目 8整理接口信息
-阿里云盘开发平台（阿里云盘Open） 阿里云盘用户量越来越多，市面上出现了很多第三方客户端，通过封装阿里云盘web端的api接口实现管理阿里云盘的功能；阿里云盘团队就干脆搞了一个阿里云盘开放平台（阿里云盘Open），第三方客户端可以对接阿里云盘Open，相当于又搞出了一套api接口，等于告诉这些第三方客户端说你们就用这套新的接口，别整天爬我这web端的接口了。当然要用这套新的，得先提交一些信息审核，通过后才会给你个client_key/client_secret（OAuth那套）。
-目前有很多第三方客户端接入了，比如alist、小白羊等，官网可以看到一些热门客户端 8
-api文档看这里
-网盘产品最有用的接口就是获取直链了。对于这一点，上面三个都能做到，只是细节上有所区别
-pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh_token，access_token完全一样；阿里云盘某些接口需要多携带几个和设备id有关的头，关于这个头的生成具体算法可以看这里 7，pds没有这个限制；某些api返回的信息也有差别，比如获取文件直链，pds会返回一个cdn链接（如果有的话），但是阿里云盘绝对不会返回，所以尽可能使用pds的接口就完事了。">
+原理容我卖个关子，以后有空再说，搞了个demo https://alipan.wmymz.pp.ua 玩玩（随时跑路）">
   <meta itemprop="datePublished" content="2024-06-26T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-06-26T00:00:00+00:00">
   <meta itemprop="wordCount" content="91">
@@ -86,7 +48,7 @@ pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -164,7 +126,7 @@ pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -346,7 +308,6 @@ pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh
 <p>阿里云盘的前缀是：https://api.alipan.com（或者api.aliyundrive.com）</p>
 <p>阿里云盘Open的前缀是：https://openapi.alipan.com</p>
 <p>所以为了下载提速，提取直链时选择pds（有cdn直链，上篇 25提到的在线demo 26可用于提取cdn直链）或者webdav-aliyundriver 24</p>
-
 
     </main>
   </div>

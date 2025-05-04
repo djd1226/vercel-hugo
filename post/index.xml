@@ -14,70 +14,70 @@
       <link>https://hugo.123450908.xyz/post/2025-5-16/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-16/</guid>
-      <description>iTV（Doubebly）原作者库已经不能下载 docker镜像拉取: docker pull doubebly/doube-itv:latest&#xA;docker镜像运行:&#xA;方法一，适用于vps 下面的运行命令中的 “50001” 可以自定义&#xA;docker run -d &amp;ndash;name=doube-itv &amp;ndash;restart=always -p 50001:5000 doubebly/doube-itv:latest&#xA;如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50001/help) 方法二，适用于软路由 下面的运行命令中的 “50101” 坚决不能修改！！！&#xA;docker run -d &amp;ndash;name=doube-itv &amp;ndash;net=host &amp;ndash;restart=always doubebly/doube-itv:latest gunicorn -w 3 -b 0.0.0.0:50101 &amp;ndash;log-level error &amp;ndash;timeout 60 app:app&#xA;如果你使用上面的命令运行的容器，访问 http://ip:port/help (示例：http://127.0.0.1:50101/help) 测试你的网络是否有问题，访问：http://127.0.0.1:5000/demo 页面响应内容是不是百度，如果响应失败表示你的网络有问题自己查找！！！&#xA;下面是订阅地址：&#xA;TXT订阅地址: http://127.0.0.1:5000/Sub?type=txt M3u订阅地址: http://127.0.0.1:5000/Sub?type=m3u ====================================&#xA;allinone（Feiyang）鉴权获取下载部署和更新 1、ALLINONE部署指令生成器 打开网址：https://imgtool.v1.mk/… 全部选项默认即可（系统默认Linux、架构默认amd64、路由模式默认主路由模式），点击“生成AES密钥”，复制密匙&#xA;2、生成Userid和专属Token 到Telegram机器人https://t.me/newallino… 那里去生成Userid和专属Token&#xA;3、生成部署docker得一键命令 回到 https://imgtool.v1.mk/… 填入申请到的Userid和专属Token两个参数，再点击“生成部署ALLINONE命令”，点击“Docker运行”项下面的“复制指令”按钮复制生成的部署docker一键命令&#xA;4、连接设备后打开ssh工具docker部署&#xA;5、部署完成后的订阅地址如下：&#xA;IPTV直播：http://你的IP:35455/tv.m3u&#xA;虎牙一起看：http://你的IP:35455/huyayqk.m3u?url=http://你的IP:35455&#xA;斗鱼一起看：http://你的IP:35455/douyuyqk.m3u?url=http://你的IP:35455&#xA;YY轮播：http://你的IP:35455/yylunbo.m3u?url=http://你的IP:35455</description>
+      <description>&lt;h3 id=&#34;_itvdoubebly原作者库已经不能下载_&#34;&gt;&lt;em&gt;iTV（Doubebly）原作者库已经不能下载&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;docker镜像拉取: docker pull doubebly/doube-itv:latest&lt;/p&gt;&#xA;&lt;p&gt;docker镜像运行:&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用Termux搭建Samba服务器</title>
       <link>https://hugo.123450908.xyz/post/2025-5-9/</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-9/</guid>
-      <description>获取root，安装Samba pkg install root-repo su 安装完成后输入su，手机如果有Magisk，就会提示是否赋予Termux root权限，这个当然选择是&#xA;如果没有Magisk，那很遗憾，Termux无法读取外部存储，也就无法读取外接的SSD中的数据了，这像下图所示：&#xA;安装Samba pkg install samba 恕我直言，我真是没想到Termux的系统仓库里真的会有Samba，就连AI都告诉我要去手动编译源码才行。&#xA;安装完成后Samba是不会启动的，当然现在也不要启动Samba，因为根本没有配置文件。&#xA;调整Samba配置文件 整个Samba说到底就一个配置文件是核心，其他都是浮云，Termux仓库都有编译完成的Samba了，算是帮我们解决了90%的难题了。&#xA;Samba配置文件的位置 进入路径：&#xA;示例配置文件位置 /data/data/com.termux/files/usr/share/doc/samba 里面有一个smb.conf.example文件，把它下载下来，这样你就不需要用到vi去改它了，因为改的东西实在太多了，就这一个配置文件我调了几小时啊！！！！不是看不见目录，就是打不开，要么就是不用用户名密码就能读取，目前你们能看到完整版都是我辛辛苦苦调出来的&#xA;实际配置文件位置 /data/data/com.termux/files/usr/etc/samba 这个目录下，/data/data/com.termux/files/usr/etc目录下默认没有samba目录，需要自行创建&#xA;smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，要把.example去掉！&#xA;# vim: filetype=samba [global] ; these are very recommended to have, even if maybe superfluous workgroup = WORKGROUP unix password sync = no pam password change = no obey pam restrictions = no passwd program = /data/data/com.termux/files/usr/bin/true add user script = /data/data/com.termux/files/usr/bin/true add group script = /data/data/com.</description>
+      <description></description>
     </item>
     <item>
       <title>google搜索语法</title>
       <link>https://hugo.123450908.xyz/post/2025-5-17/</link>
       <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-17/</guid>
-      <description>Google是全球最大的搜索引擎公司，每天处理数以亿计的搜索请求。灵活运用google搜索技巧可以帮助我们更快速更准确的在浩瀚的互联网中找到需要的信息。&#xA;精确匹配 使用引号来搜索一个完全匹配的字词或一组字词。在搜索歌词或文学作品中的一段文字时，此选项很实用。建议您只在查找非常确切的字词或词组时使用该功能，否则可能会无意中排除掉有用的搜索结果。&#xA;例如“见与不见” 搜索结果精确匹配“见与不见”，不能拆分成“见”与“不见”。&#xA;排除字词 在某个字词前添加短横 (-) 可排除所有包含该字词的搜索结果。&#xA;例如：大熊猫 -百科 搜索结果中不出现“百科”&#xA;+包含字词 在某个字词前添加加号 (+) 必需包含含该字词的搜索结果。&#xA;例如：大熊猫 +百科 搜索结果中必需出现“百科”&#xA;~加入类似字词 Google 可能会使用同义词代替原始查询中的某些字词。在字词前添加腭化符号 (~) 可同时搜索该字词及其同义词。&#xA;例如：～搜索 搜索结果可能会出现“电影搜索”这样的结果&#xA;*通配符字词 搜索词中不确定的部分可以用星号*代替，google会匹配相关词。字词忘记或者不确定某些搜索词的情况下非常有用。&#xA;例如： 国家 匹夫 google搜索会自动匹配出“国家兴亡，匹夫有责”结果。&#xA;OR选择性字词搜索 选择性字词OR搜索结果匹配多个搜索字词中的任意一个。没有OR搜索结果中通常只会显示与多个字词都匹配的网页。&#xA;例如：奥运会 2014 OR 2018 搜索结果中会出现 “奥运会 2014”或者“奥运会 2018”的结果&#xA;..搜索数字范围 用两个半角句号（不加空格）隔开两个数字可查看日期、价格和尺寸等指定数字范围的搜索结果。&#xA;提示：仅使用一个数字和两个句号即可表示上限或下限。&#xA;例如：手机 价格2000..5000 搜索结果中会出现价格是2000元至5000元的手机相关信息&#xA;site在特定网站或域名中搜索 在搜索中加入“site:”可以限定在在某个特定网站中搜索信息&#xA;例如：百度影音 site:www.skycn.com&#xA;“site:”后面跟的站点域名，不要带“http://”。site:和站点名之间，不要带空格。&#xA;inurl在特定url链接中搜索 在搜索中加入“inurl:”可以限定在网站url链接中搜索网站信息&#xA;例如：auto视频教程 inurl:video&#xA;搜索词“auto视频教程”是可以出现在网页的任何位置，而“video”则必须出现在网页url中。&#xA;intitle在特定的网页标题中搜索 在搜索中加入“intitle：”可以限定在网页标题title中搜索网站信息&#xA;例如:出国留学 intitle:美国&#xA;搜索词“出国留学”可以出现在网页的任何位置，而“美国”必需出现在网页title中。&#xA;intitle:和后面的关键词之间不要有空格。&#xA;related相关网页搜索 在搜索中加入“related:”可以搜索与指定网站有相似内容的网页&#xA;例如：related:baidu.com 可以搜索和百度类似的网站&#xA;Filetype在特定文档格式中搜索 在搜索中加入“Filetype:”可以限定在文档格式中搜索网页信息，支持文档格式有pdf，ps,dwf, kml, kmz, doc，xls，ppt，rtf,swf,all(所有上面的文档格式)。对于找文档资料相当有帮助。</description>
+      <description>&lt;p&gt;Google是全球最大的搜索引擎公司，每天处理数以亿计的搜索请求。灵活运用google搜索技巧可以帮助我们更快速更准确的在浩瀚的互联网中找到需要的信息。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Serv00-PHP说明文档</title>
       <link>https://hugo.123450908.xyz/post/2025-5-1/</link>
       <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-1/</guid>
-      <description>PHP教程说明文档 PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&#xA;域名的初始配置 要运行使用PHP编写的网站，首先需要确保正确配置了域名。在继续下一步之前，请确保以下几点：&#xA;域名已正确添加并配置到我们的DNS系统中。 已添加了指向PHP类型的WWW页面。 PHP配置 PHP解释器的配置文件位于 /usr/home/LOGIN/.user.ini。你可以为每个目录分别设置自己的 .user.ini 文件。你可以定义在 phpinfo() 中可见的配置项，这些配置项在指令列表中标记为 PHP_INI_PERDIR 或 PHP_INI_ALL，并且还可以设置一些额外的模块变量。&#xA;示例 以下示例为域名 DOMAIN 设置 error_reporting 变量。为此，将以下内容写入文件 /usr/home/LOGIN/domains/DOMAIN/.user.ini：&#xA;ini error_reporting = E_ALL | E_WARNING&#xA;增加PHP解释器的内存：&#xA;ini memory_limit = 768M&#xA;增加 max_execution_time：&#xA;ini max_execution_time = 360&#xA;增加 max_input_vars：&#xA;ini max_input_vars = 600&#xA;将PHP错误日志保存到文件：&#xA;ini display_errors = off log_errors = on error_log = /usr/home/LOGIN/domains/DOMAIN/phperror.log&#xA;更改临时文件目录的默认位置：&#xA;ini upload_tmp_dir = path/to/directory&#xA;加载额外的PHP模块 通过在 .user.ini 文件中添加以下条目可以加载额外的PHP模块：&#xA;ini anp.extensions = &amp;quot;MODULENAME&amp;quot;</description>
+      <description>&lt;h1 id=&#34;php教程说明文档&#34;&gt;PHP教程说明文档&lt;/h1&gt;&#xA;&lt;p&gt;PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00安装FreshRSS</title>
       <link>https://hugo.123450908.xyz/post/2025-5-2/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-2/</guid>
-      <description>serv00安装FreshRSS 使用 git 或下载压缩包获取 FreshRSS。 将应用程序放在服务器上的某个位置（仅将 ./p/ 目录暴露给 Web）。 为 Web 服务器用户添加对 ./data/ 目录的写入权限。 使用浏览器访问 FreshRSS 并按照安装流程进行操作，或者使用命令行接口。 一切都应该正常运行 :) 如果遇到任何问题，欢迎联系我们。 高级配置设置可以在 config.default.php 中找到，并在 data/config.php 中进行修改。 使用 Apache 时，启用 AllowEncodedSlashes 以便更好地兼容移动客户端。 更多关于安装和服务器配置的详细信息可以在我们的文档中找到。 建议 为了更好的安全性，仅暴露 ./p/ 目录给 Web。 请注意，./data/ 目录包含所有个人数据，因此暴露它是一个非常糟糕的主意。 ./constants.php 文件定义了应用程序目录的访问权限。如果你想自定义安装，建议首先查看这个文件。 如果遇到任何问题，日志可以通过界面访问，或者手动查看 ./data/users/*/log*.txt 文件。 特殊的 ./data/users/_/ 目录包含所有用户共享的日志部分。 移动应用中使用 第一步：进入管理界面的“认证”选项 第二步：勾选“允许API访问（移动应用必需）”复选框 第三步：进入配置界面的“个人资料”选项 第四步：创建一个API密码并点击“提交” 第五步：在移动应用中使用 http://ip-address:port/api/greader.php 作为主机地址，并将密码字段替换为第四步中创建的API密码 添加自动更新订阅的脚本： #!/bin/bash # 要添加的 cron 任务，每8小时运行一次 FreshRSS 的更新脚本 CRON_TASK=&amp;#34;0 */8 * * * php /path/to/FreshRSS/app/actualize_script.php &amp;gt; /tmp/FreshRSS.</description>
+      <description>&lt;h3 id=&#34;serv00安装freshrss&#34;&gt;serv00安装FreshRSS&lt;/h3&gt;</description>
     </item>
     <item>
       <title>在共享主机serv00上安装wallabag</title>
       <link>https://hugo.123450908.xyz/post/2025-5-12/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-12/</guid>
-      <description>在共享主机上安装wallabag 我们提供了一个包含所有依赖项的安装包。默认配置使用MySQL作为数据库。要添加你的数据库设置，请编辑 app/config/parameters.yml 文件。注意，密码必须用单引号（&amp;rsquo;）括起来。&#xA;我们已经创建了一个用户：登录名和密码都是 wallabag。&#xA;使用这个安装包时，wallabag 不会检查应用程序中使用的必需扩展（这些检查是在你有专用Web服务器时通过 composer install 进行的，详见上文）。&#xA;执行以下命令下载并解压最新的安装包：&#xA;wget https://wllbg.org/latest-v2-package &amp;amp;&amp;amp; tar xvf latest-v2-package 你可以在我们的网站上找到最新安装包的 md5 哈希值。&#xA;为了保证权限，我设置了 chmod -R 777 data 静态包要求每个命令后面都附加 --env=prod，因为静态包只能在生产环境中使用（开发环境不受支持，完全无法工作）。&#xA;接下来，请阅读下一步来创建你的虚拟主机。&#xA;你必须通过以下命令创建你的第一个用户：&#xA;php bin/console wallabag:install --env=prod 如果由于错误设置导致此步骤出现错误，你必须先执行以下命令清理缓存：&#xA;php bin/console cache:clear --env=prod 然后再次尝试前面的命令。&#xA;之后，你就可以访问你的 wallabag 应用了。&#xA;后续说明 1. 不重置数据库，仅安装缺失表 php bin/console wallabag:install --env=prod --no-interaction 不加 --reset：默认行为是 --reset=no（不重置，但创建缺失表）。 2. 强制重置数据库（慎用！会清空所有 Wallabag 表） php bin/console wallabag:install --env=prod --no-interaction --reset 仅加 --reset：表示“是”，会删除所有 wallabag_* 表并重新创建。 无默认用户问题 进入会发现没有默认账户，Wallabag的默认账户密码为 wallabag/wallabag（如果能登录也请无视下方解决方法），我也不知道什么原因会造成此问题，然后搜了一下没发现类似问题，就只有找找解决办法，然后看到可以使用cli创建用户</description>
+      <description>&lt;h3 id=&#34;在共享主机上安装wallabag&#34;&gt;在共享主机上安装wallabag&lt;/h3&gt;</description>
     </item>
     <item>
       <title>安装 Anki 的同步服务器</title>
       <link>https://hugo.123450908.xyz/post/2025-5-6/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-6/</guid>
-      <description>安装 Anki 的同步服务器 创建一个 Python 虚拟环境并安装 Anki 的同步服务器。让我们逐步解释每一行命令的作用：&#xA;python3 -m venv ~/syncserver&#xA;这条命令使用 Python 3 的 venv 模块在 ~/syncserver 目录中创建一个虚拟环境。&#xA;python3: 使用 Python 3 版本。 -m venv: 通过模块 venv 创建一个虚拟环境。 ~/syncserver: 虚拟环境将会被创建在用户主目录下的 syncserver 目录中。 目的：虚拟环境用于隔离项目的依赖，不影响系统的全局 Python 环境。&#xA;~/syncserver/bin/pip install anki&#xA;这条命令在刚刚创建的虚拟环境中，使用该环境内的 pip 安装 anki 模块。&#xA;~/syncserver/bin/pip: 这是虚拟环境中的 pip 程序，用于在虚拟环境内安装依赖。 install anki: 安装 anki 包。 目的：安装 Anki 的同步服务器模块。&#xA;SYNC_USER1=user:pass ~/syncserver/bin/python -m anki.syncserver&#xA;这条命令设置一个环境变量 SYNC_USER1，然后启动 Anki 的同步服务器。&#xA;SYNC_USER1=user:pass: 设置环境变量 SYNC_USER1，其中 user 和 pass 是同步服务器的用户名和密码。 ~/syncserver/bin/python: 使用虚拟环境中的 Python 解释器。 -m anki.</description>
+      <description>&lt;h2 id=&#34;安装-anki-的同步服务器&#34;&gt;安装 Anki 的同步服务器&lt;/h2&gt;</description>
     </item>
     <item>
       <title>serv00 恢复如初</title>
       <link>https://hugo.123450908.xyz/post/2025-5-3/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-3/</guid>
-      <description>清除PM2进程 列出进程清单 pm2 list 恢复已保存列表的进程 ~/.npm-global/bin/pm2 resurrect 停止所有进程 pm2 stop all 删除所有进程 pm2 delete all&#xA;清除虚拟机进程 列出当前系统所有进程清单&#xA;使用 ps aux: ps aux &amp;ldquo;aux&amp;quot;这个选项提供了一个更详细的输出，包括每个进程的所有者、CPU 和内存使用情况、启动时间等。&#xA;ps aux 命令的组成&#xA;ps: 进程状态（process status）的缩写，是一个用于显示系统进程信息的命令。 a: 显示所有用户的所有进程（包括没有控制终端的进程）。 u: 以用户为中心的格式显示进程信息，包括进程的用户、CPU 和内存使用情况。 x: 显示没有控制终端的进程。 使用 top: top 这个命令提供了一个动态、实时的系统监视器，显示当前所有运行的进程及其资源使用情况。 使用 q 退出 top。&#xA;清除指定账户的所有进程 pkill -kill -u ${username} 比如: pkill -kill -u defeisoft&#xA;解释&#xA;pkill: 这个命令用于根据进程名、用户、终端或其他属性来选择进程，并向它们发送信号。&#xA;-kill: 这个选项实际上是一个信号参数。-kill 等效于 -SIGKILL，表示发送 SIGKILL 信号给目标进程。SIGKILL 信号是一个非捕获、非忽略的信号，用于强制终止进程。&#xA;-u ${username}: 这个选项用于根据用户名称来选择进程。 ${username} 是一个变量，表示你要终止的进程所属的用户名称。这个选项会选择所有由指定用户启动的进程。</description>
+      <description>&lt;h2 id=&#34;清除pm2进程&#34;&gt;清除PM2进程&lt;/h2&gt;&#xA;&lt;p&gt;列出进程清单 pm2 list 恢复已保存列表的进程 &lt;code&gt;~/.npm-global/bin/pm2 resurrect&lt;/code&gt; 停止所有进程 &lt;code&gt;pm2 stop all&lt;/code&gt; 删除所有进程 &lt;code&gt;pm2 delete all&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Serv00 进程保活最终解决方案</title>
       <link>https://hugo.123450908.xyz/post/2025-5-5/</link>
       <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-5/</guid>
-      <description>Serv00 进程保活最终解决方案 这个方案已经写出来差不多一个月了，Github 上也开了源，论坛里、群里也都介绍了使用方法，但是，目前除了我重构之后的 X-for-serv00 以及 Sb-for-serv00 以外，还没有哪个项目已经用上了的。遂在博客里对于这个方案进行进一步的介绍。&#xA;首先几个大前提，似乎还有很多人搞不清：&#xA;Serv00 不是 VPS，是一台独立服务器，新建了很多用户，按照用户进行隔离，并没有虚拟化一个完整的 FreeBSD Server 给用户，所以没有 Root 权限，但是内置了很多独立服务器自带的软件包、服务等等，可以说是有利有弊；&#xA;Serv00 不是 Linux 系统，是 FreeBSD 系统，虽说 Unix like 使用起来总是相似的，但是总归还是不一样的；&#xA;Serv00 自带了一个 Web 服务器——Apache。Apache 与 Nginx 功能相似但是使用方法是不一样的，而且在没有 Root 权限的情况下，很多东西你无法进行设置；&#xA;每个用户能够最多预留三个端口的使用权，而且端口范围在 1024-64000；&#xA;因为是独立服务器按照用户进行隔离，所以你不能对其进行重启、重装等操作，机器的重启与重装会影响这台 Server 上的一万名用户&#xA;And so on…&#xA;Serv00 的 Apache 服务器附带了一个插件——Phusion Passenger，利用其特性，我们能够在 Serv00 上实现访问网页即对进行实现保活。已知 WWW websites 在被访问时会按照其类型被唤醒，而且通过 Phusion Passenger 托管的 Django / NodeJS / Ruby on Rails 等类型的应用是可以端口复用，在 80 /443 端口提供 Web 服务的，所以只需要在这样一个脚本或者应用内写入进程的检测与唤醒即可通过网页对进程保活。&#xA;但是这样做还有一个问题，一个网站需要两个域名，一个用来保活，一个用来提供 Web 服务，很是不方便，但是，在 JavaScript 中，可以通过引入 chimurai/http-proxy-middleware 这个中间件将其合二为一，实现真正的访问即保活，访问即唤醒。</description>
+      <description>&lt;h1 id=&#34;serv00-进程保活最终解决方案&#34;&gt;Serv00 进程保活最终解决方案&lt;/h1&gt;</description>
     </item>
     <item>
       <title>chat2api添加vercel代理设置</title>
       <link>https://hugo.123450908.xyz/post/2025-5-15/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-15/</guid>
-      <description>为了防止被人追踪，也为了自己的 IP 安全，可以先搭建一个 HTTP 代理：&#xA;{ &amp;#34;rewrites&amp;#34;: [ { &amp;#34;source&amp;#34;: &amp;#34;/proxy/:match/:url*&amp;#34;, &amp;#34;destination&amp;#34;: &amp;#34;https://:match/:url*&amp;#34; }, { &amp;#34;source&amp;#34;: &amp;#34;/proxy/:match/:url/*&amp;#34;, &amp;#34;destination&amp;#34;: &amp;#34;https://:match/:url/&amp;#34; }, { &amp;#34;source&amp;#34;: &amp;#34;/httpproxy/:match/:url*&amp;#34;, &amp;#34;destination&amp;#34;: &amp;#34;http://:match/:url*&amp;#34; }, { &amp;#34;source&amp;#34;: &amp;#34;/httpproxy/:match/:url/*&amp;#34;, &amp;#34;destination&amp;#34;: &amp;#34;http://:match/:url/&amp;#34; } ] } 在 GitHub 中新建一个仓库，仓库中新建名为 vercel.json 的文件，并填入以上内容。再去 Vercel 中新建 Project，选择刚新建的这个仓库即可。这样你就获得了一个由 Vercel 提供的通用 HTTP 代理，只需要在你需要访问的地址前加上 https://your-vercel-project.vercel.app/proxy/ 即可通过 Vercel 代理访问目标地址，如 https://proxy-nineninesix.vercel.app/proxy/www.google.com 即为通过 Vercel 访问 https://www.google.com。&#xA;添加vercel做代理后，测试正常，消息内容如下：&#xA;2024-08-16 09:19:15,170 | INFO | -------------------------------------------------- 2024-08-16 09:19:15,170 | INFO | Chat2Api v1.4.3 | https://github.</description>
+      <description>&lt;p&gt;为了防止被人追踪，也为了自己的 IP 安全，可以先搭建一个 HTTP 代理：&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用虚拟环境启动Python项目</title>
@@ -91,7 +91,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-4/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-4/</guid>
-      <description>Node.js 使用教程 目录 基础知识 登录 使用密钥登录 双重身份验证 Binexec 端口保留 实用命令 环境设置 修改密码 Crontab IP 地址 指纹 教程 WordPress Redis Memcached Imapsync WP-CLI Tomcat Devil DevilWEB 网站 .htaccess PHP Node.js 初始配置 Node.js 版本 Node.js 项目 Node.js 模块 准备 Node.js 应用程序 已有的 Node.js 项目 重启应用程序 Phusion Passenger 进程限制 静态文件 变量 日志 应用程序生命周期 外部参考 Node.js 教程 初始配置 要运行基于 Node.js 的应用程序，请确保进行了正确的预配置。在继续以下步骤之前，请确保：&#xA;域名已在我们的 DNS 系统中正确添加和配置。 已添加网站，并选择 Node.js 类型。 执行以下命令： mkdir ~/.npm-global npm config set prefix &amp;#39;~/.</description>
+      <description>&lt;h3 id=&#34;nodejs-使用教程&#34;&gt;Node.js 使用教程&lt;/h3&gt;</description>
     </item>
     <item>
       <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
@@ -105,7 +105,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-8/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-8/</guid>
-      <description>如何在Serv00.com服务器上使用Python的虚拟环境。 1. 启用自定义软件（Binexec） 在开始之前，确保你已经启用了自定义软件功能（Binexec）。这个步骤通常需要在你的托管账户面板中完成。如果你不确定如何操作，可以咨询服务器提供商的支持团队。&#xA;2. 创建存放虚拟环境的目录 首先，在你的主目录中创建一个专门存放虚拟环境的目录。假设你的登录名是 LOGIN：&#xA;`mkdir /usr/home/LOGIN/.virtualenvs` 3. 创建虚拟环境 进入刚才创建的目录，然后创建一个新的虚拟环境。这里假设你要创建名为 myenv的虚拟环境：&#xA;`cd /usr/home/LOGIN/.virtualenvs virtualenv myenv` 默认情况下，这将使用系统的Python 3.10版本。如果你想使用其他版本的Python，比如Python 3.7，可以这样：&#xA;`virtualenv myenv -p /usr/local/bin/python3.7` 4. 激活虚拟环境 创建好虚拟环境后，需要激活它：&#xA;`source /usr/home/LOGIN/.virtualenvs/myenv/bin/activate` 激活后，你的命令提示符会显示虚拟环境的名称，例如：&#xA;`(myenv) $` 这表示你已经进入了虚拟环境，现在你可以在其中安装Python包或运行Python代码，这些操作都不会影响到系统的全局Python环境。&#xA;5. 安装Python包 在激活的虚拟环境中，你可以使用 pip来安装所需的Python包。例如，安装 requests库：&#xA;`pip install requests` 6. 运行Python脚本 在虚拟环境中，你可以直接运行Python脚本，例如：&#xA;`python my_script.py` 7. 退出虚拟环境 完成操作后，可以通过以下命令退出虚拟环境：&#xA;`deactivate` 8. 在网站中使用虚拟环境 如果你想在你的WWW网站中使用这个虚拟环境，你需要指定虚拟环境的Python可执行文件路径。例如：&#xA;`/usr/home/LOGIN/.virtualenvs/myenv/bin/python` 在托管账户面板的WWW选项卡中，添加或修改你的Python类型的WWW页面，确保使用上述路径来执行Python。&#xA;9. 处理编译问题（可选） 有些Python包在安装时需要编译工具。如果遇到编译问题，可以使用以下命令来设置环境变量：&#xA;`export CFLAGS=&amp;quot;-I/usr/local/include&amp;quot; export CXXFLAGS=&amp;quot;-I/usr/local/include&amp;quot; export CC=gcc export CXX=g++` 如果进程超出系统限制，可以设置并发限制：&#xA;`export MAX_CONCURRENCY=1 export CPUCOUNT=1 export MAKEFLAGS=&amp;quot;-j1&amp;quot;` 10.</description>
+      <description>&lt;h2 id=&#34;如何在serv00com服务器上使用python的虚拟环境&#34;&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; alt=&#34;preview.jpeg&#34; title=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>《星际争霸1》常用的编队技巧：</title>
@@ -119,7 +119,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-14/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-14/</guid>
-      <description>阿里云盘cdn直链提取的教程 网上很多阿里云盘直链解析，得到的链接通常类似这样：https://cn-beijing-data.aliyundrive.net/xxxxx&#xA;最近偶然发现了一种方式，能得到这样的直链：https://files-cdn.aliyundrive.com/xxxxx&#xA;原理容我卖个关子，以后有空再说，搞了个demo https://alipan.wmymz.pp.ua 玩玩（随时跑路）&#xA;下面是食用方法： 获取file_id 浏览器打开阿里云盘并登录 开启F12，随便点开一个文件夹，筛选list接口 在响应中找到你想提取直链的file_id - 获取access_token&#xA;打开这个链接 https://alist.nn.ci/zh/guide/drivers/aliyundrive.html#%E5%88%B7%E6%96%B0%E4%BB%A4%E7%89%8C&#xA;点击获取token按钮，会弹出一个二维码&#xA;打开手机的阿里云盘App扫描二维码授权登录，有两种方式获取access_token（选一个你能看懂的即可）&#xA;抓包获取 先打开浏览器F12，再点击刚刚的按钮，会出现一个ck请求，查看响应中的bizExt 2. 将得到的bizExt base64解码，可以使用在线解码，拿到access_token - 拿refresh_token自己刷新 1. 直接点击刚刚的按钮，下面会出现一行token&#xA;2. 这个就是refresh_token，接下来可以自己请求接口得到access_token curl -X POST https://auth.alipan.com/v2/account/token ^ -H &amp;quot;Content-Type: application/json&amp;quot; ^ -d &amp;quot;{\&amp;quot;grant_type\&amp;quot;: \&amp;quot;refresh_token\&amp;quot;, \&amp;quot;refresh_token\&amp;quot;: \&amp;quot;your_refresh_token\&amp;quot;}&amp;quot; 打开CDN直链提取服务 https://alipan.wmymz.pp.ua 填入上面拿到的两个参数&#xA;*注&#xA;这个cdn直链貌似也有限速，不过延迟可以达到10ms 得到的链接过期时间我改成了32小时（之前是900秒） 有的资源由于没有被下载过，拿不到cdn链接，所以会得到普通直链 用这个直链提取服务你的access_token会暴露到我的服务端，因为我需要这个来请求阿里云的接口，虽然我没有记录你的token，但提前说明一下，介意者勿用 原理篇以后有空再发（我先自己用一阵子，免得分享出来被滥用后和谐了）*&#xA;【原理篇】阿里云盘CDN直链提取 简单介绍三个东西：&#xA;阿里云网盘与相册服务（pds） 这是祖师爷，是阿里云提供的一个公共服务。借用官方文档的话：&#xA;PDS是从阿里云智能存储产品中具有创新性的PaaS服务产品之一，PDS是网盘服务中间件产品，提供基于账号体系的文件管理服务，客户基于PDS可直接便捷高效的开发搭建客户专属的网盘与相册产品。 同时也支持直接使用官方提供的标准网盘产品，简单配置后开箱即用免去二次开发。&#xA;api文档看这里&#xA;阿里云盘 这是阿里的某个团队基于pds开发的网盘类产品，我们自己也能基于pds开发自己的产品，自行申请即可（但得交钱），当然数据是存放在阿里那边的。&#xA;无api文档，需要从官网 6开F12找，接口和pds差不多，github也有项目 8整理接口信息&#xA;阿里云盘开发平台（阿里云盘Open） 阿里云盘用户量越来越多，市面上出现了很多第三方客户端，通过封装阿里云盘web端的api接口实现管理阿里云盘的功能；阿里云盘团队就干脆搞了一个阿里云盘开放平台（阿里云盘Open），第三方客户端可以对接阿里云盘Open，相当于又搞出了一套api接口，等于告诉这些第三方客户端说你们就用这套新的接口，别整天爬我这web端的接口了。当然要用这套新的，得先提交一些信息审核，通过后才会给你个client_key/client_secret（OAuth那套）。&#xA;目前有很多第三方客户端接入了，比如alist、小白羊等，官网可以看到一些热门客户端 8&#xA;api文档看这里&#xA;网盘产品最有用的接口就是获取直链了。对于这一点，上面三个都能做到，只是细节上有所区别&#xA;pds和阿里云盘对比 这两的api参数大致相同，鉴权相关的refresh_token，access_token完全一样；阿里云盘某些接口需要多携带几个和设备id有关的头，关于这个头的生成具体算法可以看这里 7，pds没有这个限制；某些api返回的信息也有差别，比如获取文件直链，pds会返回一个cdn链接（如果有的话），但是阿里云盘绝对不会返回，所以尽可能使用pds的接口就完事了。</description>
+      <description>&lt;h2 id=&#34;阿里云盘cdn直链提取的教程&#34;&gt;阿里云盘cdn直链提取的教程&lt;/h2&gt;&#xA;&lt;p&gt;网上很多阿里云盘直链解析，得到的链接通常类似这样：https://cn-beijing-data.aliyundrive.net/xxxxx&lt;/p&gt;&#xA;&lt;p&gt;最近偶然发现了一种方式，能得到这样的直链：https://files-cdn.aliyundrive.com/xxxxx&lt;/p&gt;&#xA;&lt;p&gt;原理容我卖个关子，以后有空再说，搞了个demo &lt;a href=&#34;https://alipan.wmymz.pp.ua&#34;&gt;https://alipan.wmymz.pp.ua&lt;/a&gt; 玩玩（随时跑路）&lt;/p&gt;</description>
     </item>
     <item>
       <title>vim添加美化样式插件</title>
@@ -154,7 +154,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-7/</link>
       <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-7/</guid>
-      <description>render部署GPT-API教程&#xA;1 登录render 1，点击 New，选择Web Service 2 选择 Build and deploy from a Git repository，点击Next 3 填入大佬项目地址，点击Continue 4 基本配置 5 环境变量配置，复制项目中的(模板) 5，一般只修改Authorization就行 （大佬又更新代码了，可以重新部署试试，环境变量应该不需要了） 6 取消自动部署，防止大佬改动项目时，触发自动重新部署（可选） 7 最后点击Create Web Service，等待部署完成 8 部署完成后，访问右上角域名即可 10 使用vercel部署chatGPT next web chatGPT next web的配置示范</description>
+      <description>&lt;p&gt;render部署GPT-API教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>学习部署FreeGPT35</title>
@@ -168,7 +168,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-11/</link>
       <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-11/</guid>
-      <description>我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35（Glitch和Render),但可是我不会用，先做个记录把！ 发了个好玩的仓库：missuo/FreeGPT35 ，我一看，原来是 OpenAI 的 ChatGPT-3.5 免登录使用已经开放使用了，不再是灰度测试了。然后这个仓库的功能就是对目前的 ChatGPT 网页免登录版本进行逆向，并提供 OpenAI 标准格式的 API 转换。&#xA;Glitch 的每月免费使用时间高达 1000 小时，足够单个项目运行覆盖整月!&#xA;下面是Render的部署步骤： 选免费服务器 最后运行起来之后，访问左上角域名就完事了 </description>
+      <description>&lt;h2 id=&#34;我试着部署了一下分别通过github账户登录了两个网站并且都部署了missuofreegpt35glitch和render但可是我不会用先做个记录把&#34;&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35（Glitch和Render),但可是我不会用，先做个记录把！&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;发了个好玩的仓库：missuo/FreeGPT35 ，我一看，原来是 OpenAI 的 ChatGPT-3.5 免登录使用已经开放使用了，不再是灰度测试了。然后这个仓库的功能就是对目前的 ChatGPT 网页免登录版本进行逆向，并提供 OpenAI 标准格式的 API 转换。&lt;/p&gt;&#xA;&lt;p&gt;Glitch 的每月免费使用时间高达 1000 小时，足够单个项目运行覆盖整月!&lt;/p&gt;</description>
     </item>
     <item>
       <title>与GitHub仓库同步</title>

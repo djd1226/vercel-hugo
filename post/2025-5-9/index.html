@@ -22,16 +22,6 @@
   <meta property="og:url" content="https://hugo.123450908.xyz/post/2025-5-9/">
   <meta property="og:site_name" content="雨过天晴">
   <meta property="og:title" content="使用Termux搭建Samba服务器">
-  <meta property="og:description" content="获取root，安装Samba pkg install root-repo su 安装完成后输入su，手机如果有Magisk，就会提示是否赋予Termux root权限，这个当然选择是
-如果没有Magisk，那很遗憾，Termux无法读取外部存储，也就无法读取外接的SSD中的数据了，这像下图所示：
-安装Samba pkg install samba 恕我直言，我真是没想到Termux的系统仓库里真的会有Samba，就连AI都告诉我要去手动编译源码才行。
-安装完成后Samba是不会启动的，当然现在也不要启动Samba，因为根本没有配置文件。
-调整Samba配置文件 整个Samba说到底就一个配置文件是核心，其他都是浮云，Termux仓库都有编译完成的Samba了，算是帮我们解决了90%的难题了。
-Samba配置文件的位置 进入路径：
-示例配置文件位置 /data/data/com.termux/files/usr/share/doc/samba 里面有一个smb.conf.example文件，把它下载下来，这样你就不需要用到vi去改它了，因为改的东西实在太多了，就这一个配置文件我调了几小时啊！！！！不是看不见目录，就是打不开，要么就是不用用户名密码就能读取，目前你们能看到完整版都是我辛辛苦苦调出来的
-实际配置文件位置 /data/data/com.termux/files/usr/etc/samba 这个目录下，/data/data/com.termux/files/usr/etc目录下默认没有samba目录，需要自行创建
-smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，要把.example去掉！
-# vim: filetype=samba [global] ; these are very recommended to have, even if maybe superfluous workgroup = WORKGROUP unix password sync = no pam password change = no obey pam restrictions = no passwd program = /data/data/com.termux/files/usr/bin/true add user script = /data/data/com.termux/files/usr/bin/true add group script = /data/data/com.">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -40,16 +30,6 @@ smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，
 
   
   <meta itemprop="name" content="使用Termux搭建Samba服务器">
-  <meta itemprop="description" content="获取root，安装Samba pkg install root-repo su 安装完成后输入su，手机如果有Magisk，就会提示是否赋予Termux root权限，这个当然选择是
-如果没有Magisk，那很遗憾，Termux无法读取外部存储，也就无法读取外接的SSD中的数据了，这像下图所示：
-安装Samba pkg install samba 恕我直言，我真是没想到Termux的系统仓库里真的会有Samba，就连AI都告诉我要去手动编译源码才行。
-安装完成后Samba是不会启动的，当然现在也不要启动Samba，因为根本没有配置文件。
-调整Samba配置文件 整个Samba说到底就一个配置文件是核心，其他都是浮云，Termux仓库都有编译完成的Samba了，算是帮我们解决了90%的难题了。
-Samba配置文件的位置 进入路径：
-示例配置文件位置 /data/data/com.termux/files/usr/share/doc/samba 里面有一个smb.conf.example文件，把它下载下来，这样你就不需要用到vi去改它了，因为改的东西实在太多了，就这一个配置文件我调了几小时啊！！！！不是看不见目录，就是打不开，要么就是不用用户名密码就能读取，目前你们能看到完整版都是我辛辛苦苦调出来的
-实际配置文件位置 /data/data/com.termux/files/usr/etc/samba 这个目录下，/data/data/com.termux/files/usr/etc目录下默认没有samba目录，需要自行创建
-smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，要把.example去掉！
-# vim: filetype=samba [global] ; these are very recommended to have, even if maybe superfluous workgroup = WORKGROUP unix password sync = no pam password change = no obey pam restrictions = no passwd program = /data/data/com.termux/files/usr/bin/true add user script = /data/data/com.termux/files/usr/bin/true add group script = /data/data/com.">
   <meta itemprop="datePublished" content="2024-11-12T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-11-12T00:00:00+00:00">
   <meta itemprop="wordCount" content="643">
@@ -62,7 +42,7 @@ smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，
   <div class="intro">
     <div class="logo-container">
       <a href="/">
-        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+        <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
       </a>
     </div>
     <h2>Hi, I'm Djd</h2>
@@ -140,7 +120,7 @@ smb.conf文件内容 以下是smb.conf文件所有的内容，注意文件名，
     <div class="intro">
       <div class="logo-container">
         <a href="/">
-          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile 404 Page not found" class="rounded-logo">
+          <img src='https://hugo.123450908.xyz/images/edna-west.jpg' alt="Profile Designs" class="rounded-logo">
         </a>
       </div>
       <h2>Hi, I'm Djd</h2>
@@ -429,7 +409,6 @@ cd /data/data/com.termux/files/usr/bin
 </code></pre><p>查看Samba启动情况 <code>ps -ef |grep smb</code></p>
 <p>查看Samba日志 如果启动有问题，或者无法访问，可以找到Samba日志去找到问题原因，路径为：</p>
 <p><code>/data/data/com.termux/files/usr/var/log/samba/log.smbd</code></p>
-
 
     </main>
   </div>
