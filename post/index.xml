@@ -14,7 +14,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-16/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-16/</guid>
-      <description>&lt;h3 id=&#34;_itvdoubebly原作者库已经不能下载_&#34;&gt;&lt;em&gt;iTV（Doubebly）原作者库已经不能下载&lt;/em&gt;&lt;/h3&gt;&#xA;&lt;p&gt;docker镜像拉取: docker pull doubebly/doube-itv:latest&lt;/p&gt;&#xA;&lt;p&gt;docker镜像运行:&lt;/p&gt;</description>
+      <description>&lt;p&gt;iTV（Doubebly）原作者库已经不能下载_&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用Termux搭建Samba服务器</title>
@@ -35,42 +35,42 @@
       <link>https://hugo.123450908.xyz/post/2025-5-1/</link>
       <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-1/</guid>
-      <description>&lt;h1 id=&#34;php教程说明文档&#34;&gt;PHP教程说明文档&lt;/h1&gt;&#xA;&lt;p&gt;PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&lt;/p&gt;</description>
+      <description>&lt;p&gt;PHP教程说明文档&lt;/p&gt;&#xA;&lt;p&gt;PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00安装FreshRSS</title>
       <link>https://hugo.123450908.xyz/post/2025-5-2/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-2/</guid>
-      <description>&lt;h3 id=&#34;serv00安装freshrss&#34;&gt;serv00安装FreshRSS&lt;/h3&gt;</description>
+      <description>&lt;p&gt;serv00安装FreshRSS&lt;/p&gt;</description>
     </item>
     <item>
       <title>在共享主机serv00上安装wallabag</title>
       <link>https://hugo.123450908.xyz/post/2025-5-12/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-12/</guid>
-      <description>&lt;h3 id=&#34;在共享主机上安装wallabag&#34;&gt;在共享主机上安装wallabag&lt;/h3&gt;</description>
+      <description>&lt;p&gt;在共享主机上安装wallabag&lt;/p&gt;</description>
     </item>
     <item>
       <title>安装 Anki 的同步服务器</title>
       <link>https://hugo.123450908.xyz/post/2025-5-6/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-6/</guid>
-      <description>&lt;h2 id=&#34;安装-anki-的同步服务器&#34;&gt;安装 Anki 的同步服务器&lt;/h2&gt;</description>
+      <description>&lt;p&gt;安装 Anki 的同步服务器&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00 恢复如初</title>
       <link>https://hugo.123450908.xyz/post/2025-5-3/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-3/</guid>
-      <description>&lt;h2 id=&#34;清除pm2进程&#34;&gt;清除PM2进程&lt;/h2&gt;&#xA;&lt;p&gt;列出进程清单 pm2 list 恢复已保存列表的进程 &lt;code&gt;~/.npm-global/bin/pm2 resurrect&lt;/code&gt; 停止所有进程 &lt;code&gt;pm2 stop all&lt;/code&gt; 删除所有进程 &lt;code&gt;pm2 delete all&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;清除PM2进程&lt;/p&gt;&#xA;&lt;p&gt;列出进程清单 pm2 list 恢复已保存列表的进程 &lt;code&gt;~/.npm-global/bin/pm2 resurrect&lt;/code&gt; 停止所有进程 &lt;code&gt;pm2 stop all&lt;/code&gt; 删除所有进程 &lt;code&gt;pm2 delete all&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Serv00 进程保活最终解决方案</title>
       <link>https://hugo.123450908.xyz/post/2025-5-5/</link>
       <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-5/</guid>
-      <description>&lt;h1 id=&#34;serv00-进程保活最终解决方案&#34;&gt;Serv00 进程保活最终解决方案&lt;/h1&gt;</description>
+      <description>&lt;p&gt;Serv00 进程保活最终解决方案&lt;/p&gt;</description>
     </item>
     <item>
       <title>chat2api添加vercel代理设置</title>
@@ -84,14 +84,14 @@
       <link>https://hugo.123450908.xyz/post/2025-5-10/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-10/</guid>
-      <description>在Python项目中，使用虚拟环境是为了隔离项目的依赖，避免依赖包版本冲突问题。虚拟环境使得每个项目可以有自己的依赖包，并且这些包不会影响到系统全局的Python环境或其他项目。&#xA;使用虚拟环境启动Python项目的步骤： 1. 安装 virtualenv 或使用内置的 venv Python 3.3及以上版本自带了 venv，可以直接使用。&#xA;如果你使用的是Python 2或需要使用 virtualenv，可以通过以下命令安装：&#xA;pip install virtualenv 2. 创建虚拟环境 使用 venv 创建虚拟环境：&#xA;python3 -m venv &amp;lt;环境名&amp;gt; 例如：&#xA;python3 -m venv venv 这将在当前目录下创建一个名为 venv 的虚拟环境文件夹。&#xA;3. 激活虚拟环境 Linux:&#xA;source venv/bin/activate 激活后，终端会显示虚拟环境的名称，类似 (venv)，表示你当前处于虚拟环境中。&#xA;4. 安装项目依赖 激活虚拟环境后，可以使用 pip 安装项目依赖：&#xA;pip install &amp;lt;package_name&amp;gt; 例如，如果你的项目需要 requests 库，你可以执行：&#xA;pip install requests 项目中的依赖通常会被记录在一个 requirements.txt 文件中。你可以使用以下命令安装所有依赖：&#xA;pip install -r requirements.txt 5. 运行项目 在虚拟环境激活的状态下，你可以直接运行你的Python项目：&#xA;python &amp;lt;你的项目文件&amp;gt;.py 例如：&#xA;python app.py 6. 保存依赖 如果你在项目中安装了新的依赖库，并且希望保存它们到 requirements.</description>
+      <description>&lt;p&gt;在Python项目中，使用虚拟环境是为了隔离项目的依赖，避免依赖包版本冲突问题。虚拟环境使得每个项目可以有自己的依赖包，并且这些包不会影响到系统全局的Python环境或其他项目。&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00教程-node.js</title>
       <link>https://hugo.123450908.xyz/post/2025-5-4/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-4/</guid>
-      <description>&lt;h3 id=&#34;nodejs-使用教程&#34;&gt;Node.js 使用教程&lt;/h3&gt;</description>
+      <description>&lt;p&gt;Node.js 使用教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
@@ -105,7 +105,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-8/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-8/</guid>
-      <description>&lt;h2 id=&#34;如何在serv00com服务器上使用python的虚拟环境&#34;&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; alt=&#34;preview.jpeg&#34; title=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; alt=&#34;preview.jpeg&#34; title=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>《星际争霸1》常用的编队技巧：</title>
@@ -119,7 +119,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-14/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-14/</guid>
-      <description>&lt;h2 id=&#34;阿里云盘cdn直链提取的教程&#34;&gt;阿里云盘cdn直链提取的教程&lt;/h2&gt;&#xA;&lt;p&gt;网上很多阿里云盘直链解析，得到的链接通常类似这样：https://cn-beijing-data.aliyundrive.net/xxxxx&lt;/p&gt;&#xA;&lt;p&gt;最近偶然发现了一种方式，能得到这样的直链：https://files-cdn.aliyundrive.com/xxxxx&lt;/p&gt;&#xA;&lt;p&gt;原理容我卖个关子，以后有空再说，搞了个demo &lt;a href=&#34;https://alipan.wmymz.pp.ua&#34;&gt;https://alipan.wmymz.pp.ua&lt;/a&gt; 玩玩（随时跑路）&lt;/p&gt;</description>
+      <description>&lt;p&gt;阿里云盘cdn直链提取的教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>vim添加美化样式插件</title>
@@ -168,7 +168,7 @@
       <link>https://hugo.123450908.xyz/post/2025-5-11/</link>
       <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/2025-5-11/</guid>
-      <description>&lt;h2 id=&#34;我试着部署了一下分别通过github账户登录了两个网站并且都部署了missuofreegpt35glitch和render但可是我不会用先做个记录把&#34;&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35（Glitch和Render),但可是我不会用，先做个记录把！&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;发了个好玩的仓库：missuo/FreeGPT35 ，我一看，原来是 OpenAI 的 ChatGPT-3.5 免登录使用已经开放使用了，不再是灰度测试了。然后这个仓库的功能就是对目前的 ChatGPT 网页免登录版本进行逆向，并提供 OpenAI 标准格式的 API 转换。&lt;/p&gt;&#xA;&lt;p&gt;Glitch 的每月免费使用时间高达 1000 小时，足够单个项目运行覆盖整月!&lt;/p&gt;</description>
+      <description>&lt;p&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35（Glitch和Render),但可是我不会用，先做个记录把！&lt;/p&gt;</description>
     </item>
     <item>
       <title>与GitHub仓库同步</title>
