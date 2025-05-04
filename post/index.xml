@@ -115,18 +115,18 @@
       <description>&lt;p&gt;阿里云盘cdn直链提取的教程&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Serv00搭建各种服务</title>
+      <link>https://hugo.123450908.xyz/post/2025-5-13/</link>
+      <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/post/2025-5-13/</guid>
+      <description>&lt;p&gt;这个平台是个 Virtual Host ，没有 Root ，还是 FreeBSD 的系统，不是 Linux ，不太好用。但是优点是隔离性差， Memory 和 vCPU 能短时间内超过 100% 进行调用。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>vim添加美化样式插件</title>
       <link>https://hugo.123450908.xyz/post/24_04_18/</link>
       <pubDate>Thu, 18 Apr 2024 00:53:35 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/post/24_04_18/</guid>
       <description>&lt;p&gt;本文的基础目的是配置一个好用的vim可以替代普通的文本编辑器，最终目的是可以在vim流畅开发&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>转载——Serv00搭建各种服务</title>
-      <link>https://hugo.123450908.xyz/post/2025-5-13/</link>
-      <pubDate>Sun, 07 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/post/2025-5-13/</guid>
-      <description>&lt;p&gt;这个平台是个 Virtual Host ，没有 Root ，还是 FreeBSD 的系统，不是 Linux ，不太好用。但是优点是隔离性差， Memory 和 vCPU 能短时间内超过 100% 进行调用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>部署免费的GPT-API，实现GPT自由！</title>
