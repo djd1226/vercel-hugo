@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ABOUT on Rain Blog</title>
-    <link>http://192.168.1.99:1313/about/</link>
+    <link>https://djd1226.github.io/about/</link>
     <description>Recent content in ABOUT on Rain Blog</description>
     <image>
       <title>Rain Blog</title>
-      <url>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 03 Dec 2023 04:56:40 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.99:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://djd1226.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>about_1</title>
-      <link>http://192.168.1.99:1313/about/23003/</link>
+      <link>https://djd1226.github.io/about/23003/</link>
       <pubDate>Sun, 03 Dec 2023 04:56:40 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/about/23003/</guid>
+      <guid>https://djd1226.github.io/about/23003/</guid>
       <description>rain1226 blog</description>
     </item>
     <item>
       <title>about_2</title>
-      <link>http://192.168.1.99:1313/about/23001/</link>
+      <link>https://djd1226.github.io/about/23001/</link>
       <pubDate>Fri, 01 Dec 2023 04:56:40 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/about/23001/</guid>
+      <guid>https://djd1226.github.io/about/23001/</guid>
       <description>Posts Section</description>
     </item>
   </channel>

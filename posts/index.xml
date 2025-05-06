@@ -2,228 +2,227 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Rain Blog</title>
-    <link>http://192.168.1.99:1313/posts/</link>
+    <link>https://djd1226.github.io/posts/</link>
     <description>Recent content in Posts on Rain Blog</description>
     <image>
       <title>Rain Blog</title>
-      <url>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.99:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://djd1226.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://djd1226.github.io/posts/2025-5-1/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://djd1226.github.io/posts/2025-5-1/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Docker 部署IPTV</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-16/</link>
+      <link>https://djd1226.github.io/posts/2025-5-16/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-16/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-16/</guid>
       <description>&lt;p&gt;iTV（Doubebly）原作者库已经不能下载_&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用Termux搭建Samba服务器</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-9/</link>
+      <link>https://djd1226.github.io/posts/2025-5-9/</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-9/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-9/</guid>
       <description></description>
     </item>
     <item>
       <title>google搜索语法</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-17/</link>
+      <link>https://djd1226.github.io/posts/2025-5-17/</link>
       <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-17/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-17/</guid>
       <description>&lt;p&gt;Google是全球最大的搜索引擎公司，每天处理数以亿计的搜索请求。灵活运用google搜索技巧可以帮助我们更快速更准确的在浩瀚的互联网中找到需要的信息。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Serv00-PHP说明文档</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-1/</link>
-      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-1/</guid>
-      <description>&lt;p&gt;PHP教程说明文档&lt;/p&gt;
-&lt;p&gt;PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>serv00安装FreshRSS</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-2/</link>
+      <link>https://djd1226.github.io/posts/2025-5-2/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-2/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-2/</guid>
       <description>&lt;p&gt;serv00安装FreshRSS&lt;/p&gt;</description>
     </item>
     <item>
       <title>在共享主机serv00上安装wallabag</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-12/</link>
+      <link>https://djd1226.github.io/posts/2025-5-12/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-12/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-12/</guid>
       <description>&lt;p&gt;在共享主机上安装wallabag&lt;/p&gt;</description>
     </item>
     <item>
       <title>安装 Anki 的同步服务器</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-6/</link>
+      <link>https://djd1226.github.io/posts/2025-5-6/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-6/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-6/</guid>
       <description>&lt;p&gt;安装 Anki 的同步服务器&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00 恢复如初</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-3/</link>
+      <link>https://djd1226.github.io/posts/2025-5-3/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-3/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-3/</guid>
       <description>&lt;p&gt;清除PM2进程&lt;/p&gt;
 &lt;p&gt;列出进程清单 pm2 list 恢复已保存列表的进程 &lt;code&gt;~/.npm-global/bin/pm2 resurrect&lt;/code&gt; 停止所有进程 &lt;code&gt;pm2 stop all&lt;/code&gt; 删除所有进程 &lt;code&gt;pm2 delete all&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Serv00 进程保活最终解决方案</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-5/</link>
+      <link>https://djd1226.github.io/posts/2025-5-5/</link>
       <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-5/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-5/</guid>
       <description>&lt;p&gt;Serv00 进程保活最终解决方案&lt;/p&gt;</description>
     </item>
     <item>
       <title>chat2api添加vercel代理设置</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-15/</link>
+      <link>https://djd1226.github.io/posts/2025-5-15/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-15/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-15/</guid>
       <description>&lt;p&gt;为了防止被人追踪，也为了自己的 IP 安全，可以先搭建一个 HTTP 代理：&lt;/p&gt;</description>
     </item>
     <item>
       <title>使用虚拟环境启动Python项目</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-10/</link>
+      <link>https://djd1226.github.io/posts/2025-5-10/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-10/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-10/</guid>
       <description>&lt;p&gt;在Python项目中，使用虚拟环境是为了隔离项目的依赖，避免依赖包版本冲突问题。虚拟环境使得每个项目可以有自己的依赖包，并且这些包不会影响到系统全局的Python环境或其他项目。&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00教程-node.js</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-4/</link>
+      <link>https://djd1226.github.io/posts/2025-5-4/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-4/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-4/</guid>
       <description>&lt;p&gt;Node.js 使用教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何在Serv00.com服务器上使用Python的虚拟环境</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-8/</link>
+      <link>https://djd1226.github.io/posts/2025-5-8/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-8/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-8/</guid>
       <description>&lt;p&gt;如何在Serv00.com服务器上使用Python的虚拟环境。&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;preview.jpeg&#34; loading=&#34;lazy&#34; src=&#34;https://pub-205cbc55af97469188f80389cf5dc778.r2.dev/2024/07/20/669b27b093093.jpeg&#34; title=&#34;preview.jpeg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>《星际争霸1》常用的编队技巧：</title>
-      <link>http://192.168.1.99:1313/posts/24_07_10/</link>
+      <link>https://djd1226.github.io/posts/24_07_10/</link>
       <pubDate>Wed, 10 Jul 2024 07:59:31 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_07_10/</guid>
+      <guid>https://djd1226.github.io/posts/24_07_10/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>【实操篇】阿里云盘CDN直链提取</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-14/</link>
+      <link>https://djd1226.github.io/posts/2025-5-14/</link>
       <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-14/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-14/</guid>
       <description>&lt;p&gt;阿里云盘cdn直链提取的教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>Serv00搭建各种服务</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-132/</link>
+      <link>https://djd1226.github.io/posts/2025-5-132/</link>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-132/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-132/</guid>
       <description>&lt;p&gt;这个平台是个 Virtual Host ，没有 Root ，还是 FreeBSD 的系统，不是 Linux ，不太好用。但是优点是隔离性差， Memory 和 vCPU 能短时间内超过 100% 进行调用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>vim添加美化样式插件</title>
-      <link>http://192.168.1.99:1313/posts/24_04_18/</link>
+      <link>https://djd1226.github.io/posts/24_04_18/</link>
       <pubDate>Thu, 18 Apr 2024 00:53:35 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_04_18/</guid>
+      <guid>https://djd1226.github.io/posts/24_04_18/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>部署免费的GPT-API，实现GPT自由！</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-7/</link>
+      <link>https://djd1226.github.io/posts/2025-5-7/</link>
       <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-7/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-7/</guid>
       <description>&lt;p&gt;render部署GPT-API教程&lt;/p&gt;</description>
     </item>
     <item>
       <title>学习部署FreeGPT35</title>
-      <link>http://192.168.1.99:1313/posts/2025-5-11/</link>
+      <link>https://djd1226.github.io/posts/2025-5-11/</link>
       <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/2025-5-11/</guid>
+      <guid>https://djd1226.github.io/posts/2025-5-11/</guid>
       <description>&lt;p&gt;我试着部署了一下，分别通过github账户，登录了两个网站，并且都部署了missuo/FreeGPT35（Glitch和Render),但可是我不会用，先做个记录把！&lt;/p&gt;</description>
     </item>
     <item>
       <title>与GitHub仓库同步</title>
-      <link>http://192.168.1.99:1313/posts/24_03_07/</link>
+      <link>https://djd1226.github.io/posts/24_03_07/</link>
       <pubDate>Thu, 07 Mar 2024 12:21:20 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_03_07/</guid>
+      <guid>https://djd1226.github.io/posts/24_03_07/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>旅游日志制作：PR（Adobe Premiere R）</title>
-      <link>http://192.168.1.99:1313/posts/24_03_02/</link>
+      <link>https://djd1226.github.io/posts/24_03_02/</link>
       <pubDate>Sat, 02 Mar 2024 13:17:54 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_03_02/</guid>
+      <guid>https://djd1226.github.io/posts/24_03_02/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>使用Python实现自动化：轻松操控Hugo和Git</title>
-      <link>http://192.168.1.99:1313/posts/24_01_051/</link>
+      <link>https://djd1226.github.io/posts/24_01_051/</link>
       <pubDate>Fri, 05 Jan 2024 13:39:59 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_01_051/</guid>
+      <guid>https://djd1226.github.io/posts/24_01_051/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>面对python爬虫练习的困境与决策：一次失败与放弃的思考</title>
-      <link>http://192.168.1.99:1313/posts/24_01_05/</link>
+      <link>https://djd1226.github.io/posts/24_01_05/</link>
       <pubDate>Fri, 05 Jan 2024 13:16:57 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/24_01_05/</guid>
+      <guid>https://djd1226.github.io/posts/24_01_05/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>编写一个简单的Shell脚本来执行Hugo任务</title>
-      <link>http://192.168.1.99:1313/posts/23_12_31/</link>
+      <link>https://djd1226.github.io/posts/23_12_31/</link>
       <pubDate>Sun, 31 Dec 2023 12:53:50 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23_12_31/</guid>
+      <guid>https://djd1226.github.io/posts/23_12_31/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>使用frp进行内网穿透并结合Cloudflare和Cloudns实现免费域名访问</title>
-      <link>http://192.168.1.99:1313/posts/23_12_30/</link>
+      <link>https://djd1226.github.io/posts/23_12_30/</link>
       <pubDate>Sat, 30 Dec 2023 12:20:26 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23_12_30/</guid>
+      <guid>https://djd1226.github.io/posts/23_12_30/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>提升Anki学习效率：自制卡牌的高级技巧</title>
-      <link>http://192.168.1.99:1313/posts/23_12_29/</link>
+      <link>https://djd1226.github.io/posts/23_12_29/</link>
       <pubDate>Fri, 29 Dec 2023 05:37:40 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23_12_29/</guid>
+      <guid>https://djd1226.github.io/posts/23_12_29/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>使用Hugo搭建个人网站并推送到GitHub Pages</title>
-      <link>http://192.168.1.99:1313/posts/23_12_27/</link>
+      <link>https://djd1226.github.io/posts/23_12_27/</link>
       <pubDate>Wed, 27 Dec 2023 05:28:31 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23_12_27/</guid>
+      <guid>https://djd1226.github.io/posts/23_12_27/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>2023对于IPTV抓包，我个人认为已经没有意义了！</title>
-      <link>http://192.168.1.99:1313/posts/23_12_26/</link>
+      <link>https://djd1226.github.io/posts/23_12_26/</link>
       <pubDate>Tue, 26 Dec 2023 11:56:52 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23_12_26/</guid>
+      <guid>https://djd1226.github.io/posts/23_12_26/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>X96MAX盒子折腾记 第一篇：</title>
-      <link>http://192.168.1.99:1313/posts/231221/</link>
+      <link>https://djd1226.github.io/posts/231221/</link>
       <pubDate>Thu, 21 Dec 2023 17:18:46 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/231221/</guid>
+      <guid>https://djd1226.github.io/posts/231221/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
     <item>
       <title>折腾了两天免费图床，最终还是选了Github</title>
-      <link>http://192.168.1.99:1313/posts/23-12/</link>
+      <link>https://djd1226.github.io/posts/23-12/</link>
       <pubDate>Wed, 06 Dec 2023 04:56:40 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/posts/23-12/</guid>
+      <guid>https://djd1226.github.io/posts/23-12/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
   </channel>

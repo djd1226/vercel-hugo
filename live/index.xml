@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Moto Travel on Rain Blog</title>
-    <link>http://192.168.1.99:1313/live/</link>
+    <link>https://djd1226.github.io/live/</link>
     <description>Recent content in Moto Travel on Rain Blog</description>
     <image>
       <title>Rain Blog</title>
-      <url>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://192.168.1.99:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://djd1226.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 07 Dec 2023 04:56:40 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.99:1313/live/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://djd1226.github.io/live/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>贵州小七孔游记</title>
-      <link>http://192.168.1.99:1313/live/23-121/</link>
+      <link>https://djd1226.github.io/live/23-121/</link>
       <pubDate>Thu, 07 Dec 2023 04:56:40 +0000</pubDate>
-      <guid>http://192.168.1.99:1313/live/23-121/</guid>
+      <guid>https://djd1226.github.io/live/23-121/</guid>
       <description>Exaplanation on the shortcodes with personal-web</description>
     </item>
   </channel>
