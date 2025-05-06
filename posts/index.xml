@@ -14,11 +14,31 @@
     <lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test</title>
-      <link>https://hugo.123450908.xyz/posts/2025-5-1/</link>
+      <title>WordPress 文章完美转换 Markdown 方法</title>
+      <link>https://hugo.123450908.xyz/posts/2025-05-06/</link>
       <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://hugo.123450908.xyz/posts/2025-5-1/</guid>
-      <description></description>
+      <guid>https://hugo.123450908.xyz/posts/2025-05-06/</guid>
+      <description>&lt;p&gt;最近换用了 Markdown 写文, 但是博客中以前的文章不是 Markdown 格式, 想把它们转换为 Markdown 格式, 偶然发现了 wordpress-export-to-markdown 这个项目,可以导出页面, 评论, 文章, 图片. 试用了一下, 效果非常不错, 图片也能很好的处理, 今天来为大家介绍使用方法.&lt;/p&gt;
+&lt;h2 id=&#34;下载-nodejs&#34;&gt;下载 Node.js&lt;/h2&gt;
+&lt;p&gt;访问 [Node.js](&lt;a href=&#34;https://nodejs.org/zh-cn/&#34;&gt;https://nodejs.org/zh-cn/&lt;/a&gt;官网, 下载长期维护版即可.&lt;/p&gt;
+&lt;p&gt;下载完成后安装, 无脑下一步即可.&lt;/p&gt;
+&lt;p&gt;开始转换
+访问你的 WordPress 后台, 导出 xml 文件, 选择所有内容, 否则无法导出图片.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;新建一个文件夹, 名字随便, 把刚才下载的 .xml 文件改名为 export.xml 放到此文件夹.&lt;/p&gt;
+&lt;p&gt;按住 Shift 右键文件夹空白处打开 powershell&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输入命令&lt;/p&gt;
+&lt;p&gt;npx wordpress-export-to-markdown
+回车下一步, 提示 (y/N) 全部选 y 即可.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样就算执行成功了(忽略我那两个错误), 返回文件夹 output 就是导出的所有内容.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker 部署IPTV</title>
@@ -40,6 +60,14 @@
       <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/posts/2025-5-17/</guid>
       <description>&lt;p&gt;Google是全球最大的搜索引擎公司，每天处理数以亿计的搜索请求。灵活运用google搜索技巧可以帮助我们更快速更准确的在浩瀚的互联网中找到需要的信息。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serv00-PHP说明文档</title>
+      <link>https://hugo.123450908.xyz/posts/2025-5-1/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-5-1/</guid>
+      <description>&lt;p&gt;PHP教程说明文档&lt;/p&gt;
+&lt;p&gt;PHP是一种面向对象的编程语言，设计用于实时生成网页并构建Web应用程序。&lt;/p&gt;</description>
     </item>
     <item>
       <title>serv00安装FreshRSS</title>
