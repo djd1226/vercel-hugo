@@ -274,5 +274,284 @@
       <guid>https://hugo.123450908.xyz/about/23001/</guid>
       <description>Posts Section</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://hugo.123450908.xyz/menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/menu/</guid>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;我的导航&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: &#39;Arial&#39;, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #3498db;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .emoji {
+            margin-right: 10px;
+        }
+        .todo-list {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .todo-list li {
+            margin-bottom: 5px;
+        }
+        .update-time {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;我的导航&lt;/h1&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;🏠&lt;/span&gt;常用网站&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.google.com&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.youtube.com&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.cloudflare-cn.com&#34; target=&#34;_blank&#34;&gt;Cloudflare&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://cn.bing.com&#34; target=&#34;_blank&#34;&gt;必应&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ggbak.123450908.xyz&#34; target=&#34;_blank&#34;&gt;我的备用Google&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://linux.do&#34; target=&#34;_blank&#34;&gt;LinuxDo&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📚&lt;/span&gt;学习资源&lt;/h2&gt;
+        &lt;h3&gt;&lt;span class=&#34;emoji&#34;&gt;💡&lt;/span&gt;AI&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://chat.openai.com&#34; target=&#34;_blank&#34;&gt;ChatGPT&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://hw.123450908.xyz:8100&#34; target=&#34;_blank&#34;&gt;我的Fuclaude&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://chat-gpt-next-web-lac-seven-57.vercel.app&#34; target=&#34;_blank&#34;&gt;Vercel-2_Chat-next-web&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://gpt.123450908.xyz&#34; target=&#34;_blank&#34;&gt;我的Chat-next-web&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://chat.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv_Chat-next-web&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://huggingface.co/spaces/rain1226/web&#34; target=&#34;_blank&#34;&gt;抱脸Gemeni&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.coze.com/space/7359770331399356417/bot/7359775941499060230&#34; target=&#34;_blank&#34;&gt;Coze&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://arena.lmsys.org&#34; target=&#34;_blank&#34;&gt;Lmsys&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://poe.com&#34; target=&#34;_blank&#34;&gt;Poe&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://sdk.vercel.ai/playground&#34; target=&#34;_blank&#34;&gt;Vercel-AI&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://nav.linux.do&#34; target=&#34;_blank&#34;&gt;Linux do Free&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://groq.com&#34; target=&#34;_blank&#34;&gt;Groq&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://nav.linux.do&#34; target=&#34;_blank&#34;&gt;Linux do各种服务&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://shared.oaifree.com/dashboard&#34; target=&#34;_blank&#34;&gt;Linux do公益&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://kelaode.ai&#34; target=&#34;_blank&#34;&gt;Free claude&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3&gt;&lt;span class=&#34;emoji&#34;&gt;🌐&lt;/span&gt;我的局域网&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:8090&#34; target=&#34;_blank&#34;&gt;X96MAX主页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:9244&#34; target=&#34;_blank&#34;&gt;Alist&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:9085&#34; target=&#34;_blank&#34;&gt;File Browser&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:9083&#34; target=&#34;_blank&#34;&gt;Books&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:8090/reference&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.99:3020&#34; target=&#34;_blank&#34;&gt;X96-note&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://192.168.1.99:8054&#34; target=&#34;_blank&#34;&gt;X96-Memos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.88:3020&#34; target=&#34;_blank&#34;&gt;Arm-note&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.88:8015&#34; target=&#34;_blank&#34;&gt;Next-chat&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.88:4533&#34; target=&#34;_blank&#34;&gt;Navidrome&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.88:8090&#34; target=&#34;_blank&#34;&gt;certimate&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://192.168.1.88:8083&#34; target=&#34;_blank&#34;&gt;talebook&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;🛠️&lt;/span&gt;工具&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://vercel.com&#34; target=&#34;_blank&#34;&gt;Vercel&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://labs.play-with-docker.com&#34; target=&#34;_blank&#34;&gt;Play with Docker&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ip.gs&#34; target=&#34;_blank&#34;&gt;IP.GS&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.speedtest.net&#34; target=&#34;_blank&#34;&gt;Speedtest&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.182682.xyz/page/cloudflare/ipv4.html&#34; target=&#34;_blank&#34;&gt;优选IP&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://stock.hostmonit.com/CloudFlareYes&#34; target=&#34;_blank&#34;&gt;优选IP2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://cf.090227.xyz&#34; target=&#34;_blank&#34;&gt;优选IP3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;🛠️&lt;/span&gt;盒子&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:8090&#34; target=&#34;_blank&#34;&gt;X96MAX主页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:9244&#34; target=&#34;_blank&#34;&gt;Alist&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:9085&#34; target=&#34;_blank&#34;&gt;File Browser&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:9083&#34; target=&#34;_blank&#34;&gt;Books&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:8090/reference&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://ddns.123450908.xyz:3020&#34; target=&#34;_blank&#34;&gt;X96-note&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:8054&#34; target=&#34;_blank&#34;&gt;X96-Memos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8015&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-newapi&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8016&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-Gemini&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8017&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-DeepSeek&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8080&#34; target=&#34;_blank&#34;&gt;Docker-qBT&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8013&#34; target=&#34;_blank&#34;&gt;Docker-音乐下载&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8031&#34; target=&#34;_blank&#34;&gt;Docker-uptime&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:12017&#34; target=&#34;_blank&#34;&gt;Docker-V2rayA&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:3020&#34; target=&#34;_blank&#34;&gt;Arm-note&lt;/a&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;🛠️&lt;/span&gt;IPV4&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://dd.odquzd.eu.org:8090&#34; target=&#34;_blank&#34;&gt;X96MAX主页&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:5244&#34; target=&#34;_blank&#34;&gt;Alist&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8085&#34; target=&#34;_blank&#34;&gt;File Browser&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8083&#34; target=&#34;_blank&#34;&gt;Books&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://dd.odquzd.eu.org:8090/reference&#34; target=&#34;_blank&#34;&gt;Reference&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:3020&#34; target=&#34;_blank&#34;&gt;X96-note&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8052&#34; target=&#34;_blank&#34;&gt;X96-Memos&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8015&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-newapi&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8016&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-Gemini&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8017&#34; target=&#34;_blank&#34;&gt;Docker-nextchat-DeepSeek&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8080&#34; target=&#34;_blank&#34;&gt;Docker-qBT&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8013&#34; target=&#34;_blank&#34;&gt;Docker-音乐下载&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8031&#34; target=&#34;_blank&#34;&gt;Docker-uptime&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:12017&#34; target=&#34;_blank&#34;&gt;Docker-V2rayA&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:3021&#34; target=&#34;_blank&#34;&gt;Arm-note&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:8096&#34; target=&#34;_blank&#34;&gt;Jellyfin&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://dd.odquzd.eu.org:4533&#34; target=&#34;_blank&#34;&gt;Navidrome&lt;/a&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;💻&lt;/span&gt;VPS&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://eu.123450908.xyz:8002&#34; target=&#34;_blank&#34;&gt;EU-FreshRSS-Fail&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📲&lt;/span&gt;我的博客&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:8111&#34; target=&#34;_blank&#34;&gt;X96-Hugo&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://hugo.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Vercel-Hugo&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://djd1226.github.io&#34; target=&#34;_blank&#34;&gt;Github-Hugo&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://sv66.123450908.xyz&#34; target=&#34;_blank&#34;&gt;越南主机wordpress&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://djd1226.evai.pl/wordpress&#34; target=&#34;_blank&#34;&gt;Evai-wordpress&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://evai.123450908.xyz/wordpress&#34; target=&#34;_blank&#34;&gt;Evai-wordpress-me&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://styp.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv-typecho&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://lsky.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv-兰空图床&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://hot1226.serv00.net&#34; target=&#34;_blank&#34;&gt;Serv-测验排名&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://hot1226.serv00.net/reference&#34; target=&#34;_blank&#34;&gt;Serv-reference&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://ddns.123450908.xyz:8090/dqy&#34; target=&#34;_blank&#34;&gt;X96-测验排名&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://md.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv-Mark转Html&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://eu.123450908.xyz:3010&#34; target=&#34;_blank&#34;&gt;EU-聊天室&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://eu.123450908.xyz:5009&#34; target=&#34;_blank&#34;&gt;EU-销售管理系统&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://rain.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv-我的日记&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://djd0908.serv00.net&#34; target=&#34;_blank&#34;&gt;Serv-聊天室&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📰&lt;/span&gt;我的应用&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://piwigo.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Serv-piwigo&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://img.123450908.xyz&#34; target=&#34;_blank&#34;&gt;R2-vercel&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://hw.123450908.xyz:8008&#34; target=&#34;_blank&#34;&gt;Minichat&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://rss.sv66.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Sv66-FreshRss&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://wall.sv66.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Sv66-Wallabag&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://deep.odquzd.eu.org/translate&#34; target=&#34;_blank&#34;&gt;DeepLX-API&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://cn.odquzd.eu.org&#34; target=&#34;_blank&#34;&gt;DeepLX-WEB&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://dav.odquzd.eu.org&#34; target=&#34;_blank&#34;&gt;CF-webdav&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:8096&#34; target=&#34;_blank&#34;&gt;Jellyfin&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;http://arm.123450908.xyz:4533&#34; target=&#34;_blank&#34;&gt;Navidrome&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://tools.123450908.xyz&#34; target=&#34;_blank&#34;&gt;Toolbox&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📰&lt;/span&gt;新闻与阅读&lt;/h2&gt;
+        &lt;https://sv66.123450908.xyz/ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://news.ycombinator.com&#34; target=&#34;_blank&#34;&gt;BBC-News&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://saika.us.kg&#34; target=&#34;_blank&#34;&gt;Serv00部署各种应用&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://linux.do/t/topic/43121&#34; target=&#34;_blank&#34;&gt;Serv00应用汇总&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📰&lt;/span&gt; 英语学习&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://www.bbc.co.uk/learningenglish&#34; target=&#34;_blank&#34;&gt;BBC-学习&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://learnenglishteens.britishcouncil.org&#34; target=&#34;_blank&#34;&gt;British英语学习&lt;/a&gt;&lt;/li&gt;
+            
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📰&lt;/span&gt;备忘链接&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://tianyiso.com&#34; target=&#34;_blank&#34;&gt;天逸搜&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://api-proxy.me&#34; target=&#34;_blank&#34;&gt;3B大佬代理&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://fk.lqqq.cc&#34; target=&#34;_blank&#34;&gt;购买逆向账户&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&#34;https://serv00.eooce.com&#34; target=&#34;_blank&#34;&gt;Serv00检查&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;🎵&lt;/span&gt;娱乐&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&#34;https://asd135.ct8.pl&#34; target=&#34;_blank&#34;&gt;老王音乐&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;section&#34;&gt;
+        &lt;h2&gt;&lt;span class=&#34;emoji&#34;&gt;📅&lt;/span&gt;每周待办事项&lt;/h2&gt;
+        &lt;ul class=&#34;todo-list&#34;&gt;
+            &lt;li&gt;&lt;input type=&#34;checkbox&#34;&gt; 学习新技能&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&#34;checkbox&#34;&gt; 阅读一篇技术文章&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&#34;checkbox&#34;&gt; 锻炼身体&lt;/li&gt;
+            &lt;li&gt;&lt;input type=&#34;checkbox&#34;&gt; 与朋友联系&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;p class=&#34;update-time&#34;&gt;最后更新时间：2024年8月16日&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
