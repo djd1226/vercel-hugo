@@ -11,8 +11,38 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用pyenv编译Python项目为PEX文件</title>
+      <link>https://hugo.123450908.xyz/posts/2025-05-16/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-05-16/</guid>
+      <description>&lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;code&gt;pyenv&lt;/code&gt;&lt;/strong&gt;
+&lt;code&gt;pyenv&lt;/code&gt; 是 Python 版本管理工具，用来管理不同的 Python 版本。你需要先安装 &lt;code&gt;pyenv&lt;/code&gt; 和 &lt;code&gt;pyenv-virtualenv&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;code&gt;pyenv&lt;/code&gt;：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装 pyenv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://pyenv.run &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装 &lt;code&gt;pyenv-virtualenv&lt;/code&gt;：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install pyenv-virtualenv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-安装-python-版本&#34;&gt;1. 安装 Python 版本&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;pyenv&lt;/code&gt; 安装合适的 Python 版本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv install 3.11.2  &lt;span class=&#34;c1&#34;&gt;# 安装指定版本的 Python&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv global 3.11.2   &lt;span class=&#34;c1&#34;&gt;# 设置为全局默认版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你也可以创建一个虚拟环境：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv virtualenv 3.11.2 myenv  &lt;span class=&#34;c1&#34;&gt;# 创建虚拟环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv activate myenv           &lt;span class=&#34;c1&#34;&gt;# 激活虚拟环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装 &lt;code&gt;pex&lt;/code&gt; 工具&lt;/strong&gt;
+&lt;code&gt;pex&lt;/code&gt; 用于打包 Python 项目为可执行文件。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install pex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后安装依赖：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-创建-setuppy-文件可选&#34;&gt;2. 创建 &lt;code&gt;setup.py&lt;/code&gt; 文件（可选）&lt;/h3&gt;
+&lt;p&gt;如果你的项目没有 &lt;code&gt;setup.py&lt;/code&gt; 文件，建议手动创建一个。这个文件定义了模块和依赖。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>带有中文注释的 `.vimrc` 配置文件示例</title>
       <link>https://hugo.123450908.xyz/posts/2025-05-13/</link>
