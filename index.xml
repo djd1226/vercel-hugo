@@ -38,11 +38,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;使用 Composer 安装 sabre/dav：&lt;/strong&gt;  在项目目录中，运行以下命令来安装 &lt;code&gt;sabre/dav&lt;/code&gt; 库：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;composer require sabre/dav
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这将自动下载并安装 &lt;code&gt;sabre/dav&lt;/code&gt; 及其依赖项。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;第四部分：创建基本的 WebDAV 服务器&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;composer require sabre/dav ~4.7.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这将自动下载并安装 &lt;code&gt;sabre/dav&lt;/code&gt; 及其依赖项。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cloudflare&#43;resend无限多企业邮箱，可收发邮件</title>
