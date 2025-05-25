@@ -11,8 +11,39 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 20 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 `sabre/dav` 库----WebDAV 教程</title>
+      <link>https://hugo.123450908.xyz/posts/2025-05-25/</link>
+      <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-05-25/</guid>
+      <description>&lt;h2 id=&#34;安装sabredav-库&#34;&gt;安装&lt;code&gt;sabre/dav&lt;/code&gt; 库&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;WebDAV 入门教程 (基于 sabre/dav)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一部分：什么是 WebDAV？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;WebDAV (Web Distributed Authoring and Versioning) 是一种基于 HTTP 协议的扩展，允许客户端像操作本地文件一样，对服务器上的文件进行创建、读取、修改和删除等操作。  简单来说，它让你可以通过网络像访问本地硬盘一样访问服务器上的文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二部分：准备工作&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在开始之前，请确保您已经安装了以下软件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PHP:&lt;/strong&gt; 确保您的 PHP 版本符合 &lt;code&gt;sabre/dav&lt;/code&gt; 的要求 (通常是 PHP 7.4 或更高版本)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Composer:&lt;/strong&gt; Composer 是 PHP 的依赖管理工具。如果您还没有安装，请访问 &lt;a href=&#34;https://getcomposer.org/&#34;&gt;https://getcomposer.org/&lt;/a&gt; 下载并安装。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web 服务器 (例如 Apache 或 Nginx):&lt;/strong&gt; 用于运行您的 PHP 代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第三部分：安装 sabre/dav&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建项目目录：&lt;/strong&gt;  首先，创建一个新的目录来存放您的 WebDAV 项目。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir my-webdav-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-webdav-server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用 Composer 安装 sabre/dav：&lt;/strong&gt;  在项目目录中，运行以下命令来安装 &lt;code&gt;sabre/dav&lt;/code&gt; 库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;composer require sabre/dav
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这将自动下载并安装 &lt;code&gt;sabre/dav&lt;/code&gt; 及其依赖项。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;第四部分：创建基本的 WebDAV 服务器&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cloudflare&#43;resend无限多企业邮箱，可收发邮件</title>
       <link>https://hugo.123450908.xyz/posts/2025-05-20/</link>
