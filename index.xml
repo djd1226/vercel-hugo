@@ -11,8 +11,117 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 28 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从搜狗双拼切换到小鹤双拼面</title>
+      <link>https://hugo.123450908.xyz/posts/2025-06-21/</link>
+      <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-06-21/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;零声母音节的处理方式&lt;/strong&gt;（这是最根本的区别）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;部分韵母的键位定义&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面我将为您详细拆解，并提供记忆方法，助您平稳过渡。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;一最大的不同零声母的处理方式&#34;&gt;一、最大的不同：零声母的处理方式&lt;/h3&gt;
+&lt;p&gt;这是您需要建立的第一个新习惯，也是小鹤方案高效的原因之一。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;搜狗双拼 (旧习惯)：&lt;/p&gt;
+&lt;p&gt;处理零声母音节（如 a, an, ang, o, ou 等）时，需要先按下一个虚拟的“零声母引导键”，通常是 O 键。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入“安”(an)：需要按 &lt;code&gt;O&lt;/code&gt; + &lt;code&gt;J&lt;/code&gt; (&lt;code&gt;J&lt;/code&gt;是搜狗方案里&lt;code&gt;an&lt;/code&gt;的键位)。&lt;/li&gt;
+&lt;li&gt;输入“昂”(ang)：需要按 &lt;code&gt;O&lt;/code&gt; + &lt;code&gt;D&lt;/code&gt; (&lt;code&gt;D&lt;/code&gt;是搜狗方案里&lt;code&gt;ang&lt;/code&gt;的键位)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小鹤双拼 (新习惯)：&lt;/p&gt;
+&lt;p&gt;彻底抛弃了零声母引导键。直接将零声母音节的第一个字母视为声母。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入“安”(an)：直接按 &lt;code&gt;an&lt;/code&gt; 所在的键，即 &lt;code&gt;J&lt;/code&gt; 键（&lt;code&gt;a&lt;/code&gt;在&lt;code&gt;A&lt;/code&gt;，&lt;code&gt;n&lt;/code&gt;在&lt;code&gt;N&lt;/code&gt;，所以&lt;code&gt;an&lt;/code&gt;双拼在&lt;code&gt;J&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;输入“昂”(ang)：直接按 &lt;code&gt;ang&lt;/code&gt; 所在的键，即 &lt;code&gt;K&lt;/code&gt; 键。&lt;/li&gt;
+&lt;li&gt;输入“爱”(ai)：直接按 &lt;code&gt;ai&lt;/code&gt; 所在的键，即 &lt;code&gt;D&lt;/code&gt; 键。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;您需要做的改变：&lt;/strong&gt; 忘记 &lt;code&gt;O&lt;/code&gt; 键！以后凡是遇到 a, e, o 开头的音节，就把它当成一个普通的双拼音节直接输入即可。这是最核心、最重要的一个转变。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;二需要重新记忆的韵母键位&#34;&gt;二、需要重新记忆的韵母键位&lt;/h3&gt;
+&lt;p&gt;许多键位在两个方案中是相同的，这会减轻您的学习负担。我们重点关注那些&lt;strong&gt;发生了变化&lt;/strong&gt;的键位。&lt;/p&gt;
+&lt;p&gt;下表清晰地列出了所有不同点，以及帮助您记忆的“小鹤口诀”提示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;韵母&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜狗双拼键位 (旧)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小鹤双拼键位 (新)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;记忆提示与口诀（重点看）&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;韵母&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;搜狗双拼键位 (旧)&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;小鹤双拼键位 (新)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;记忆提示与口诀（重点看）&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;ai&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;D&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;爱(ai)戴(dài) -&amp;gt; &lt;code&gt;ai&lt;/code&gt; 在 &lt;code&gt;D&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;an&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;M&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;J&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;安(an)静(jìng) -&amp;gt; &lt;code&gt;an&lt;/code&gt; 在 &lt;code&gt;J&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;ang&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;D&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;K&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;昂(áng)首挺胸看(k) -&amp;gt; &lt;code&gt;ang&lt;/code&gt; 在 &lt;code&gt;K&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;iang&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;code&gt;uang&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;K&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;姑娘(niáng)靓(liàng) -&amp;gt; &lt;code&gt;iang&lt;/code&gt; 在 &lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;ong&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;S&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;轰(hōng)隆隆 -&amp;gt; &lt;code&gt;ong&lt;/code&gt; 在 &lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;iong&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;S&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;Y&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;穷(qióng)困潦倒用(y)钱 -&amp;gt; &lt;code&gt;iong&lt;/code&gt; 在 &lt;code&gt;Y&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;ing&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;Y&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;英(yīng)雄 -&amp;gt; &lt;code&gt;ing&lt;/code&gt; 和 &lt;code&gt;iong&lt;/code&gt; 都在 &lt;code&gt;Y&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;in&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;J&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;因(yīn)为(n) -&amp;gt; &lt;code&gt;in&lt;/code&gt; 在 &lt;code&gt;N&lt;/code&gt; (本身就是N)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;un&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;Y&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;P&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;温(wēn)柔一刀劈(pī) -&amp;gt; &lt;code&gt;un&lt;/code&gt; 在 &lt;code&gt;P&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;快速总结您需要重点练习的8个新键位：&lt;code&gt;D, J, K, L, H, Y, N, P&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>自选Reality的目标网站</title>
       <link>https://hugo.123450908.xyz/posts/2025-05-28/</link>
