@@ -11,8 +11,56 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>## API 请求映射到 n8n</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-07/</link>
+      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-07/</guid>
+      <description>&lt;p&gt;如何将任何代码（无论是 &lt;code&gt;curl&lt;/code&gt;、Python 还是 JavaScript）中的 API 请求，映射到 n8n 的 HTTP Request 节点上。&lt;/p&gt;
+&lt;h3 id=&#34;第一步理解一个-api-请求的四要素&#34;&gt;第一步：理解一个 API 请求的“四要素”&lt;/h3&gt;
+&lt;p&gt;无论用什么工具，一个标准的 HTTP API 请求（特别是 &lt;code&gt;POST&lt;/code&gt; 请求）通常都由四个核心部分组成，就像寄一个快递一样：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;方法 (Method)&lt;/strong&gt;: 你想让服务器做什么操作。(&lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;GET&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; 等)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;好比&lt;/strong&gt;: 告诉快递员你是要“寄件”(POST) 还是“查件”(GET)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;网址 (URL)&lt;/strong&gt;: 你要把请求发送到哪里。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;好比&lt;/strong&gt;: 快递包裹上的“收件人地址”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;请求头 (Headers)&lt;/strong&gt;: 关于这次请求的“元数据”或“说明书”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;好比&lt;/strong&gt;: 快递单上的附加信息，比如“内含易碎品”(Content-Type)、“寄件人身份证号”(Authorization)。它描述的是这个包裹本身，而不是里面的东西。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;请求体 (Body)&lt;/strong&gt;: 你实际发送给服务器的数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;好比&lt;/strong&gt;: 你要寄送的“包裹里的物品”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;n8n 的 HTTP Request 节点界面，就是围绕这“四要素”设计的，只不过是用图形化的方式来呈现。&lt;/p&gt;
+&lt;h3 id=&#34;第二步将脚本代码与四要素对应&#34;&gt;第二步：将脚本代码与“四要素”对应&lt;/h3&gt;
+&lt;p&gt;让我们以我们最终成功的 &lt;code&gt;curl&lt;/code&gt; 命令为例，因为它最能清晰地体现这四要素：&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#39;https://rain1226-crawl4ai.hf.space/crawl_sync&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#39;Content-Type: application/json&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#39;Authorization: Bearer 781226&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -d &amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;urls&amp;#34;: [&amp;#34;https://www.python.org&amp;#34;],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;crawler_options&amp;#34;: {}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们来分解这个命令：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>从搜狗双拼切换到小鹤双拼面</title>
       <link>https://hugo.123450908.xyz/posts/2025-06-21/</link>
