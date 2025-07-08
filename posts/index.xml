@@ -11,8 +11,72 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HF部署的Crawl4AI  API 端点用途详解</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-08/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-08/</guid>
+      <description>&lt;p&gt;我们可以把这些端点分为两大类：&lt;strong&gt;核心爬取功能&lt;/strong&gt;和&lt;strong&gt;辅助功能&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;核心爬取功能&#34;&gt;核心爬取功能&lt;/h4&gt;
+&lt;h5 id=&#34;1-post-crawl_sync-同步爬取---您正在使用的&#34;&gt;1. &lt;code&gt;POST /crawl_sync&lt;/code&gt; (同步爬取 - 您正在使用的)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;: 这是最直接、最简单的爬取方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作模式 (同步)&lt;/strong&gt;: 您发送一个包含目标网址的请求，然后您的程序会&lt;strong&gt;一直等待&lt;/strong&gt;，直到服务器完成所有的工作（启动浏览器、加载页面、提取内容），最后服务器将&lt;strong&gt;完整的结果一次性返回&lt;/strong&gt;给您。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;好比&lt;/strong&gt;: 去快餐店点餐。您点单、付钱、在柜台前等待，然后直接拿到您的汉堡。一次搞定。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;: 非常适合测试、快速获取单个页面的结果，或者在您自己的脚本不介意等待几秒到几十秒的情况下使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;2-post-crawl-和-get-tasktask_id-异步爬取---两步法&#34;&gt;2. &lt;code&gt;POST /crawl&lt;/code&gt; 和 &lt;code&gt;GET /task/{task_id}&lt;/code&gt; (异步爬取 - 两步法)&lt;/h5&gt;
+&lt;p&gt;这两个端点需要组合使用，提供了一种更高级、更强大的工作模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;: 处理可能耗时很长的爬取任务，避免请求超时。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作模式 (异步)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第一步 (&lt;code&gt;POST /crawl&lt;/code&gt;)&lt;/strong&gt;: 您先发送一个爬取请求。服务器收到后，不会马上开始爬取，而是立即返回一个&lt;strong&gt;任务ID (&lt;code&gt;task_id&lt;/code&gt;)&lt;/strong&gt;，好比给您一个取餐的号牌。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第二步 (&lt;code&gt;GET /task/{task_id}&lt;/code&gt;)&lt;/strong&gt;: 您拿到 &lt;code&gt;task_id&lt;/code&gt; 后，可以过一会儿再用这个 ID 去调用 &lt;code&gt;/task/{task_id}&lt;/code&gt; 接口，查询任务的进度（例如：排队中、处理中、已完成、失败）。如果任务已完成，这个接口就会返回最终的爬取结果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;好比&lt;/strong&gt;: 去一家高级餐厅点一道需要精心烹制的菜。您点单后，服务员给您一个订单号，您可以先做点别的事情，隔一段时间再凭订单号询问菜做好了没有。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;适用场景&lt;/strong&gt;: 构建复杂的应用程序，需要同时发起多个爬取任务而不希望程序被卡住；或者当您要爬取的网站非常庞大，预计会花费几分钟甚至更长时间时，使用异步模式可以防止您的请求因为超时而失败。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;3-post-crawl_direct-直接爬取&#34;&gt;3. &lt;code&gt;POST /crawl_direct&lt;/code&gt; (直接爬取)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;: 从命名上看，它很可能也是一个&lt;strong&gt;同步端点&lt;/strong&gt;，类似于 &lt;code&gt;/crawl_sync&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;推测&lt;/strong&gt;: “Direct” 可能意味着它绕过了一些高级的内容处理（比如复杂的 Markdown 转换、内容过滤或文章提取），直接返回更“原始”的页面数据（例如，只提取纯文本或基础HTML）。这会让它的处理速度更快，但返回的信息没有经过深度加工。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;辅助功能&#34;&gt;辅助功能&lt;/h4&gt;
+&lt;h5 id=&#34;4-get-health-健康检查&#34;&gt;4. &lt;code&gt;GET /health&lt;/code&gt; (健康检查)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用途&lt;/strong&gt;: 这是一个标准的接口，用于监控服务是否还“活着”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作模式&lt;/strong&gt;: 当您访问这个端点时，如果服务正常，它会返回一个成功的响应（例如 &lt;code&gt;{&amp;quot;status&amp;quot;: &amp;quot;ok&amp;quot;}&lt;/code&gt;）。自动化监控系统会定期调用这个接口，如果发现调用失败或超时，就会发出警报，提醒管理员服务可能出问题了。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>API 请求映射到 n8n</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-07/</link>
