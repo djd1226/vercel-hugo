@@ -11,8 +11,84 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 13 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS选择器详解</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-14/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-14/</guid>
+      <description>&lt;p&gt;首先，一个核心概念要明确：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。&lt;/strong&gt; 无论你在哪里使用它，语法规则都是完全一样的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在Python的BeautifulSoup里，你把选择器字符串传给 &lt;code&gt;soup.select(&#39;...&#39;)&lt;/code&gt; 函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在JavaScript里，你把&lt;strong&gt;同样&lt;/strong&gt;的字符串传给 &lt;code&gt;document.querySelectorAll(&#39;...&#39;)&lt;/code&gt; 函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在CSS样式表里，你直接使用它来定义样式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;javascript中如何使用css选择器&#34;&gt;JavaScript中如何使用CSS选择器&lt;/h3&gt;
+&lt;p&gt;在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;document.querySelector(&#39;你的选择器&#39;)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：返回匹配到的 &lt;strong&gt;第一个&lt;/strong&gt; 元素。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：如果找不到，返回 &lt;code&gt;null&lt;/code&gt;。当你确定只有一个目标时，用它很方便。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;document.querySelectorAll(&#39;你的选择器&#39;)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：返回匹配到的 &lt;strong&gt;所有&lt;/strong&gt; 元素，以一个列表（&lt;code&gt;NodeList&lt;/code&gt;）的形式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：这是我们爬虫和调试时最常用的！它和Python里的 &lt;code&gt;soup.select()&lt;/code&gt; 功能几乎完全一样。如果找不到，返回一个空列表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;这是你在将选择器放入Python代码前，进行测试的最佳方式！&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;css选择器参数写法速查宝典&#34;&gt;CSS选择器参数写法“速查宝典”&lt;/h3&gt;
+&lt;p&gt;下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 &lt;code&gt;docs.crawl4ai.com&lt;/code&gt; 的例子来说明。&lt;/p&gt;
+&lt;h4 id=&#34;1-基础选择器-the-basics&#34;&gt;1. 基础选择器 (The Basics)&lt;/h4&gt;
+&lt;p&gt;类型&lt;/p&gt;
+&lt;p&gt;语法&lt;/p&gt;
+&lt;p&gt;例子 (针对crawl4ai)&lt;/p&gt;
+&lt;p&gt;解释&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标签&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tag&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;h1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选取所有 &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 标签。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;类名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.classname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.terminal-mkdocs-side-nav-item&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选取所有 &lt;code&gt;class&lt;/code&gt; 属性包含这个类名的元素。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ID&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#idname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#Introduction&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选取 &lt;code&gt;id&lt;/code&gt; 属性等于 &lt;code&gt;Introduction&lt;/code&gt; 的元素（ID在页面中应唯一）。&lt;/p&gt;
+&lt;h4 id=&#34;2-组合选择器-relationships&#34;&gt;2. 组合选择器 (Relationships)&lt;/h4&gt;
+&lt;p&gt;这是最强大的部分，用来描述元素之间的层级关系。&lt;/p&gt;
+&lt;p&gt;类型&lt;/p&gt;
+&lt;p&gt;语法&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;p&gt;解释&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后代&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;A B&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>n8n使用code节点清洗数据</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-13/</link>
@@ -281,7 +357,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST \
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#39;https://rain1226-crawl4ai.hf.space/crawl_sync&amp;#39; \
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#39;Content-Type: application/json&amp;#39; \
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#39;Authorization: Bearer 781226&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &amp;#39;Authorization: Bearer password&amp;#39; \
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -d &amp;#39;{
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;urls&amp;#34;: [&amp;#34;https://www.python.org&amp;#34;],
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;crawler_options&amp;#34;: {}

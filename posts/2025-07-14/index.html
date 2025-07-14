@@ -1,0 +1,181 @@
+<!doctype html><html lang=zh dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>CSS选择器详解 | Rain Blog</title>
+<meta name=keywords content><meta name=description content="首先，一个核心概念要明确：
+CSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。 无论你在哪里使用它，语法规则都是完全一样的。
+
+
+在Python的BeautifulSoup里，你把选择器字符串传给 soup.select('...') 函数。
+
+
+在JavaScript里，你把同样的字符串传给 document.querySelectorAll('...') 函数。
+
+
+在CSS样式表里，你直接使用它来定义样式。
+
+
+所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。
+
+JavaScript中如何使用CSS选择器
+在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：
+
+
+document.querySelector('你的选择器')
+
+
+作用：返回匹配到的 第一个 元素。
+
+
+特点：如果找不到，返回 null。当你确定只有一个目标时，用它很方便。
+
+
+
+
+document.querySelectorAll('你的选择器')
+
+
+作用：返回匹配到的 所有 元素，以一个列表（NodeList）的形式。
+
+
+特点：这是我们爬虫和调试时最常用的！它和Python里的 soup.select() 功能几乎完全一样。如果找不到，返回一个空列表。
+
+
+
+
+这是你在将选择器放入Python代码前，进行测试的最佳方式！
+
+CSS选择器参数写法“速查宝典”
+下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 docs.crawl4ai.com 的例子来说明。
+1. 基础选择器 (The Basics)
+类型
+语法
+例子 (针对crawl4ai)
+解释
+标签
+tag
+h1
+选取所有 <h1> 标签。
+类名
+.classname
+.terminal-mkdocs-side-nav-item
+选取所有 class 属性包含这个类名的元素。
+ID
+#idname
+#Introduction
+选取 id 属性等于 Introduction 的元素（ID在页面中应唯一）。
+2. 组合选择器 (Relationships)
+这是最强大的部分，用来描述元素之间的层级关系。
+类型
+语法
+例子
+解释
+后代
+A B"><meta name=author content="Afer_rain"><link rel=canonical href=https://hugo.123450908.xyz/posts/2025-07-14/><link crossorigin=anonymous href=/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF+13Dyqob6ASlTrTye8=" rel="preload stylesheet" as=style><link rel=icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh href=https://hugo.123450908.xyz/posts/2025-07-14/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://hugo.123450908.xyz/posts/2025-07-14/"><meta property="og:site_name" content="Rain Blog"><meta property="og:title" content="CSS选择器详解"><meta property="og:description" content="首先，一个核心概念要明确：
+CSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。 无论你在哪里使用它，语法规则都是完全一样的。
+在Python的BeautifulSoup里，你把选择器字符串传给 soup.select('...') 函数。
+在JavaScript里，你把同样的字符串传给 document.querySelectorAll('...') 函数。
+在CSS样式表里，你直接使用它来定义样式。
+所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。
+JavaScript中如何使用CSS选择器 在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：
+document.querySelector('你的选择器')
+作用：返回匹配到的 第一个 元素。
+特点：如果找不到，返回 null。当你确定只有一个目标时，用它很方便。
+document.querySelectorAll('你的选择器')
+作用：返回匹配到的 所有 元素，以一个列表（NodeList）的形式。
+特点：这是我们爬虫和调试时最常用的！它和Python里的 soup.select() 功能几乎完全一样。如果找不到，返回一个空列表。
+这是你在将选择器放入Python代码前，进行测试的最佳方式！
+CSS选择器参数写法“速查宝典” 下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 docs.crawl4ai.com 的例子来说明。
+1. 基础选择器 (The Basics) 类型
+语法
+例子 (针对crawl4ai)
+解释
+标签
+tag
+h1
+选取所有 <h1> 标签。
+类名
+.classname
+.terminal-mkdocs-side-nav-item
+选取所有 class 属性包含这个类名的元素。
+ID
+#idname
+#Introduction
+选取 id 属性等于 Introduction 的元素（ID在页面中应唯一）。
+2. 组合选择器 (Relationships) 这是最强大的部分，用来描述元素之间的层级关系。
+类型
+语法
+例子
+解释
+后代
+A B"><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-14T00:00:00+00:00"><meta property="article:modified_time" content="2025-07-14T00:00:00+00:00"><meta property="og:image" content="https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="CSS选择器详解"><meta name=twitter:description content="首先，一个核心概念要明确：
+CSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。 无论你在哪里使用它，语法规则都是完全一样的。
+
+
+在Python的BeautifulSoup里，你把选择器字符串传给 soup.select('...') 函数。
+
+
+在JavaScript里，你把同样的字符串传给 document.querySelectorAll('...') 函数。
+
+
+在CSS样式表里，你直接使用它来定义样式。
+
+
+所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。
+
+JavaScript中如何使用CSS选择器
+在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：
+
+
+document.querySelector('你的选择器')
+
+
+作用：返回匹配到的 第一个 元素。
+
+
+特点：如果找不到，返回 null。当你确定只有一个目标时，用它很方便。
+
+
+
+
+document.querySelectorAll('你的选择器')
+
+
+作用：返回匹配到的 所有 元素，以一个列表（NodeList）的形式。
+
+
+特点：这是我们爬虫和调试时最常用的！它和Python里的 soup.select() 功能几乎完全一样。如果找不到，返回一个空列表。
+
+
+
+
+这是你在将选择器放入Python代码前，进行测试的最佳方式！
+
+CSS选择器参数写法“速查宝典”
+下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 docs.crawl4ai.com 的例子来说明。
+1. 基础选择器 (The Basics)
+类型
+语法
+例子 (针对crawl4ai)
+解释
+标签
+tag
+h1
+选取所有 <h1> 标签。
+类名
+.classname
+.terminal-mkdocs-side-nav-item
+选取所有 class 属性包含这个类名的元素。
+ID
+#idname
+#Introduction
+选取 id 属性等于 Introduction 的元素（ID在页面中应唯一）。
+2. 组合选择器 (Relationships)
+这是最强大的部分，用来描述元素之间的层级关系。
+类型
+语法
+例子
+解释
+后代
+A B"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://hugo.123450908.xyz/posts/"},{"@type":"ListItem","position":2,"name":"CSS选择器详解","item":"https://hugo.123450908.xyz/posts/2025-07-14/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"CSS选择器详解","name":"CSS选择器详解","description":"首先，一个核心概念要明确：\nCSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。 无论你在哪里使用它，语法规则都是完全一样的。\n在Python的BeautifulSoup里，你把选择器字符串传给 soup.select('...') 函数。\n在JavaScript里，你把同样的字符串传给 document.querySelectorAll('...') 函数。\n在CSS样式表里，你直接使用它来定义样式。\n所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。\nJavaScript中如何使用CSS选择器 在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：\ndocument.querySelector('你的选择器')\n作用：返回匹配到的 第一个 元素。\n特点：如果找不到，返回 null。当你确定只有一个目标时，用它很方便。\ndocument.querySelectorAll('你的选择器')\n作用：返回匹配到的 所有 元素，以一个列表（NodeList）的形式。\n特点：这是我们爬虫和调试时最常用的！它和Python里的 soup.select() 功能几乎完全一样。如果找不到，返回一个空列表。\n这是你在将选择器放入Python代码前，进行测试的最佳方式！\nCSS选择器参数写法“速查宝典” 下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 docs.crawl4ai.com 的例子来说明。\n1. 基础选择器 (The Basics) 类型\n语法\n例子 (针对crawl4ai)\n解释\n标签\ntag\nh1\n选取所有 \u0026lt;h1\u0026gt; 标签。\n类名\n.classname\n.terminal-mkdocs-side-nav-item\n选取所有 class 属性包含这个类名的元素。\nID\n#idname\n#Introduction\n选取 id 属性等于 Introduction 的元素（ID在页面中应唯一）。\n2. 组合选择器 (Relationships) 这是最强大的部分，用来描述元素之间的层级关系。\n类型\n语法\n例子\n解释\n后代\nA B\n","keywords":[],"articleBody":"首先，一个核心概念要明确：\nCSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。 无论你在哪里使用它，语法规则都是完全一样的。\n在Python的BeautifulSoup里，你把选择器字符串传给 soup.select('...') 函数。\n在JavaScript里，你把同样的字符串传给 document.querySelectorAll('...') 函数。\n在CSS样式表里，你直接使用它来定义样式。\n所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。\nJavaScript中如何使用CSS选择器 在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：\ndocument.querySelector('你的选择器')\n作用：返回匹配到的 第一个 元素。\n特点：如果找不到，返回 null。当你确定只有一个目标时，用它很方便。\ndocument.querySelectorAll('你的选择器')\n作用：返回匹配到的 所有 元素，以一个列表（NodeList）的形式。\n特点：这是我们爬虫和调试时最常用的！它和Python里的 soup.select() 功能几乎完全一样。如果找不到，返回一个空列表。\n这是你在将选择器放入Python代码前，进行测试的最佳方式！\nCSS选择器参数写法“速查宝典” 下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 docs.crawl4ai.com 的例子来说明。\n1. 基础选择器 (The Basics) 类型\n语法\n例子 (针对crawl4ai)\n解释\n标签\ntag\nh1\n选取所有 标签。\n类名\n.classname\n.terminal-mkdocs-side-nav-item\n选取所有 class 属性包含这个类名的元素。\nID\n#idname\n#Introduction\n选取 id 属性等于 Introduction 的元素（ID在页面中应唯一）。\n2. 组合选择器 (Relationships) 这是最强大的部分，用来描述元素之间的层级关系。\n类型\n语法\n例子\n解释\n后代\nA B\nnav li\n选取 nav 元素内部所有的 li 元素，无论隔了多少层。\n子代\nA \u003e B\nul \u003e li\n只选取 ul 元素的直接子元素 li。\n相邻兄弟\nA + B\nh2 + p\n选取紧跟在 h2 元素之后的那一个 p 元素。\n通用兄弟\nA ~ B\nh2 ~ p\n选取在 h2 元素之后所有的同级 p 元素。\n3. 属性选择器 (Attributes) 当标签和class不够精确时，用属性来筛选。\n语法\n例子\n解释\n[attr]\na[href]\n选取所有拥有 href 属性的 a 标签。\n[attr=\"val\"]\na[href=\"changelog/\"]\n选取 href 属性完全等于 changelog/ 的 a 标签。\n[attr*=\"val\"]\na[href*=\"core\"]\n选取 href 属性包含字符串 core 的 a 标签（非常有用！）。\n[attr^=\"val\"]\na[href^=\"http\"]\n选取 href 属性以 http 开头的 a 标签（用来找外部链接）。\n[attr$=\"val\"]\na[href$=\"/\"]\n选取 href 属性以 / 结尾的 a 标签。\n4. 伪类选择器 (Pseudo-classes) 根据元素的状态或位置来选择。\n语法\n例子\n解释\n:nth-child(n)\nli:nth-child(3)\n选取作为其父元素的第3个子元素的 li。\n:first-child\nli:first-child\n选取作为其父元素的第一个子元素的 li。\n:last-child\nli:last-child\n选取作为其父元素的最后一个子元素的 li。\n:not(selector)\nli:not(.active)\n选取所有不包含 .active 类的 li 元素（超级有用！）。\n实战演练与最佳实践 回到你的需求：“获取导航链接”。\n上次我们用的选择器是：a.terminal-mkdocs-side-nav-item, span.terminal-mkdocs-side-nav-item--active\n它使用了 组合 (用 , 表示“或者”) 和 类选择器。这已经是一个很棒的选择了。 如果你想换一种方式，比如“我想获取‘Core Concepts’下面的所有链接”，你可以这样做：\nF12检查：发现 “Core Concepts” 所在的 li 有个ID，是 #Core-Concepts。\n分析结构：它下面的链接都在一个 内部。\n构建选择器：#Core-Concepts ul a\n解读：找到 id 为 Core-Concepts 的元素，再找它内部的 ul，再找这个 ul 内部所有的 a 标签。 在浏览器控制台测试：输入 document.querySelectorAll('#Core-Concepts ul a')，看看返回的结果是不是你想要的。如果是，再把它用到你的Python脚本里。\n编写选择器的“心法”： 优先用 ID：如果目标附近有ID，从ID开始找，最快最稳。\n善用高辨识度的 Class：选择那些描述功能的class（如 nav-item, article-title），而不是描述样式的（如 red-text, big-font）。\n避免过度限定：div \u003e main \u003e div \u003e ul \u003e li \u003e a 这样的选择器太“脆弱”，网页结构稍微一改就失效了。.main-nav a 通常更健壮。\n保持简洁：能可靠选中目标的最短、最简单的选择器，就是最好的选择器。\n总结一下，css_selector 的参数写法就是上面“速查宝典”里的各种语法。 你的核心任务是像侦探一样分析HTML，然后组合这些语法，构建出能够精确、稳定地命中目标的“制导指令”。多在浏览器控制台里用 document.querySelectorAll 练习，很快你就能运用自如了！\n","wordCount":"258","inLanguage":"zh","image":"https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-07-14T00:00:00Z","dateModified":"2025-07-14T00:00:00Z","author":{"@type":"Person","name":"Afer_rain"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://hugo.123450908.xyz/posts/2025-07-14/"},"publisher":{"@type":"Organization","name":"Rain Blog","logo":{"@type":"ImageObject","url":"https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://hugo.123450908.xyz/ accesskey=h title="Home (Alt + H)"><img src=https://hugo.123450908.xyz/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://hugo.123450908.xyz/posts/ title=学习><span>学习</span></a></li><li><a href=https://hugo.123450908.xyz/live/ title=生活><span>生活</span></a></li><li><a href=https://hugo.123450908.xyz/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=logo><a href=/><img src=/images/dd01.webp alt=网站Logo></a></div><h1 class="post-title entry-hint-parent">CSS选择器详解</h1><div class=post-meta><span title='2025-07-14 00:00:00 +0000 UTC'>七月 14, 2025</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;258 字&nbsp;·&nbsp;Afer_rain&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2025-07-14.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>目录</span></summary><div class=inner><nav id=TableOfContents><ul><li><ul><li><a href=#javascript中如何使用css选择器>JavaScript中如何使用CSS选择器</a></li><li><a href=#css选择器参数写法速查宝典>CSS选择器参数写法“速查宝典”</a></li><li><a href=#实战演练与最佳实践>实战演练与最佳实践</a></li></ul></li></ul></nav></div></details></div><div class=post-content><p>首先，一个核心概念要明确：</p><p><strong>CSS选择器是一套独立的“语言”，它本身与Python或JavaScript无关。</strong> 无论你在哪里使用它，语法规则都是完全一样的。</p><ul><li><p>在Python的BeautifulSoup里，你把选择器字符串传给 <code>soup.select('...')</code> 函数。</p></li><li><p>在JavaScript里，你把<strong>同样</strong>的字符串传给 <code>document.querySelectorAll('...')</code> 函数。</p></li><li><p>在CSS样式表里，你直接使用它来定义样式。</p></li></ul><p>所以，学会了怎么写选择器，你就等于掌握了一项在所有这些技术中通用的技能。</p><hr><h3 id=javascript中如何使用css选择器>JavaScript中如何使用CSS选择器<a hidden class=anchor aria-hidden=true href=#javascript中如何使用css选择器>#</a></h3><p>在JS脚本（尤其是在浏览器控制台里调试时），你主要会用到这两个函数：</p><ol><li><p><strong><code>document.querySelector('你的选择器')</code></strong></p><ul><li><p><strong>作用</strong>：返回匹配到的 <strong>第一个</strong> 元素。</p></li><li><p><strong>特点</strong>：如果找不到，返回 <code>null</code>。当你确定只有一个目标时，用它很方便。</p></li></ul></li><li><p><strong><code>document.querySelectorAll('你的选择器')</code></strong></p><ul><li><p><strong>作用</strong>：返回匹配到的 <strong>所有</strong> 元素，以一个列表（<code>NodeList</code>）的形式。</p></li><li><p><strong>特点</strong>：这是我们爬虫和调试时最常用的！它和Python里的 <code>soup.select()</code> 功能几乎完全一样。如果找不到，返回一个空列表。</p></li></ul></li></ol><p><strong>这是你在将选择器放入Python代码前，进行测试的最佳方式！</strong></p><hr><h3 id=css选择器参数写法速查宝典>CSS选择器参数写法“速查宝典”<a hidden class=anchor aria-hidden=true href=#css选择器参数写法速查宝典>#</a></h3><p>下面，我为你整理了一份从入门到精通的CSS选择器写法“秘笈”，并结合 <code>docs.crawl4ai.com</code> 的例子来说明。</p><h4 id=1-基础选择器-the-basics>1. 基础选择器 (The Basics)<a hidden class=anchor aria-hidden=true href=#1-基础选择器-the-basics>#</a></h4><p>类型</p><p>语法</p><p>例子 (针对crawl4ai)</p><p>解释</p><p><strong>标签</strong></p><p><code>tag</code></p><p><code>h1</code></p><p>选取所有 <code>&lt;h1></code> 标签。</p><p><strong>类名</strong></p><p><code>.classname</code></p><p><code>.terminal-mkdocs-side-nav-item</code></p><p>选取所有 <code>class</code> 属性包含这个类名的元素。</p><p><strong>ID</strong></p><p><code>#idname</code></p><p><code>#Introduction</code></p><p>选取 <code>id</code> 属性等于 <code>Introduction</code> 的元素（ID在页面中应唯一）。</p><h4 id=2-组合选择器-relationships>2. 组合选择器 (Relationships)<a hidden class=anchor aria-hidden=true href=#2-组合选择器-relationships>#</a></h4><p>这是最强大的部分，用来描述元素之间的层级关系。</p><p>类型</p><p>语法</p><p>例子</p><p>解释</p><p><strong>后代</strong></p><p><code>A B</code></p><p><code>nav li</code></p><p>选取 <code>nav</code> 元素<strong>内部所有</strong>的 <code>li</code> 元素，无论隔了多少层。</p><p><strong>子代</strong></p><p><code>A > B</code></p><p><code>ul > li</code></p><p>只选取 <code>ul</code> 元素的<strong>直接子元素</strong> <code>li</code>。</p><p><strong>相邻兄弟</strong></p><p><code>A + B</code></p><p><code>h2 + p</code></p><p>选取紧跟在 <code>h2</code> 元素<strong>之后的那一个</strong> <code>p</code> 元素。</p><p><strong>通用兄弟</strong></p><p><code>A ~ B</code></p><p><code>h2 ~ p</code></p><p>选取在 <code>h2</code> 元素之后<strong>所有的</strong>同级 <code>p</code> 元素。</p><h4 id=3-属性选择器-attributes>3. 属性选择器 (Attributes)<a hidden class=anchor aria-hidden=true href=#3-属性选择器-attributes>#</a></h4><p>当标签和class不够精确时，用属性来筛选。</p><p>语法</p><p>例子</p><p>解释</p><p><code>[attr]</code></p><p><code>a[href]</code></p><p>选取所有<strong>拥有 <code>href</code> 属性</strong>的 <code>a</code> 标签。</p><p><code>[attr="val"]</code></p><p><code>a[href="changelog/"]</code></p><p>选取 <code>href</code> 属性<strong>完全等于</strong> <code>changelog/</code> 的 <code>a</code> 标签。</p><p><code>[attr*="val"]</code></p><p><code>a[href*="core"]</code></p><p>选取 <code>href</code> 属性<strong>包含</strong>字符串 <code>core</code> 的 <code>a</code> 标签（非常有用！）。</p><p><code>[attr^="val"]</code></p><p><code>a[href^="http"]</code></p><p>选取 <code>href</code> 属性以 <code>http</code> <strong>开头</strong>的 <code>a</code> 标签（用来找外部链接）。</p><p><code>[attr$="val"]</code></p><p><code>a[href$="/"]</code></p><p>选取 <code>href</code> 属性以 <code>/</code> <strong>结尾</strong>的 <code>a</code> 标签。</p><h4 id=4-伪类选择器-pseudo-classes>4. 伪类选择器 (Pseudo-classes)<a hidden class=anchor aria-hidden=true href=#4-伪类选择器-pseudo-classes>#</a></h4><p>根据元素的状态或位置来选择。</p><p>语法</p><p>例子</p><p>解释</p><p><code>:nth-child(n)</code></p><p><code>li:nth-child(3)</code></p><p>选取作为其父元素的第3个子元素的 <code>li</code>。</p><p><code>:first-child</code></p><p><code>li:first-child</code></p><p>选取作为其父元素的第一个子元素的 <code>li</code>。</p><p><code>:last-child</code></p><p><code>li:last-child</code></p><p>选取作为其父元素的最后一个子元素的 <code>li</code>。</p><p><code>:not(selector)</code></p><p><code>li:not(.active)</code></p><p>选取所有<strong>不包含</strong> <code>.active</code> 类的 <code>li</code> 元素（超级有用！）。</p><hr><h3 id=实战演练与最佳实践>实战演练与最佳实践<a hidden class=anchor aria-hidden=true href=#实战演练与最佳实践>#</a></h3><p>回到你的需求：“获取导航链接”。</p><p>上次我们用的选择器是：<code>a.terminal-mkdocs-side-nav-item, span.terminal-mkdocs-side-nav-item--active</code></p><ul><li>它使用了 <strong>组合</strong> (用 <code>,</code> 表示“或者”) 和 <strong>类选择器</strong>。这已经是一个很棒的选择了。</li></ul><p>如果你想换一种方式，比如“我想获取‘Core Concepts’下面的所有链接”，你可以这样做：</p><ol><li><p><strong>F12检查</strong>：发现 &ldquo;Core Concepts&rdquo; 所在的 <code>li</code> 有个ID，是 <code>#Core-Concepts</code>。</p></li><li><p><strong>分析结构</strong>：它下面的链接都在一个 <code>&lt;ul></code> 内部。</p></li><li><p><strong>构建选择器</strong>：<code>#Core-Concepts ul a</code></p><ul><li><strong>解读</strong>：找到 <code>id</code> 为 <code>Core-Concepts</code> 的元素，再找它内部的 <code>ul</code>，再找这个 <code>ul</code> 内部所有的 <code>a</code> 标签。</li></ul></li><li><p><strong>在浏览器控制台测试</strong>：输入 <code>document.querySelectorAll('#Core-Concepts ul a')</code>，看看返回的结果是不是你想要的。如果是，再把它用到你的Python脚本里。</p></li></ol><h4 id=编写选择器的心法>编写选择器的“心法”：<a hidden class=anchor aria-hidden=true href=#编写选择器的心法>#</a></h4><ol><li><p><strong>优先用 ID</strong>：如果目标附近有ID，从ID开始找，最快最稳。</p></li><li><p><strong>善用高辨识度的 Class</strong>：选择那些描述功能的class（如 <code>nav-item</code>, <code>article-title</code>），而不是描述样式的（如 <code>red-text</code>, <code>big-font</code>）。</p></li><li><p><strong>避免过度限定</strong>：<code>div > main > div > ul > li > a</code> 这样的选择器太“脆弱”，网页结构稍微一改就失效了。<code>.main-nav a</code> 通常更健壮。</p></li><li><p><strong>保持简洁</strong>：能可靠选中目标的最短、最简单的选择器，就是最好的选择器。</p></li></ol><p><strong>总结一下，<code>css_selector</code> 的参数写法就是上面“速查宝典”里的各种语法。</strong> 你的核心任务是像侦探一样分析HTML，然后组合这些语法，构建出能够精确、稳定地命中目标的“制导指令”。多在浏览器控制台里用 <code>document.querySelectorAll</code> 练习，很快你就能运用自如了！</p></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=next href=https://hugo.123450908.xyz/posts/2025-07-13/><span class=title>下一页 »</span><br><span>n8n使用code节点清洗数据</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on x" href="https://x.com/intent/tweet/?text=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f&amp;hashtags="><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f&amp;title=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3&amp;summary=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3&amp;source=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f&title=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on whatsapp" href="https://api.whatsapp.com/send?text=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3%20-%20https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on telegram" href="https://telegram.me/share/url?text=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share CSS选择器详解 on ycombinator" href="https://news.ycombinator.com/submitlink?t=CSS%e9%80%89%e6%8b%a9%e5%99%a8%e8%af%a6%e8%a7%a3&u=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-07-14%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentcolor" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://hugo.123450908.xyz/>Rain Blog</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="复制";function s(){t.innerHTML="已复制！",setTimeout(()=>{t.innerHTML="复制"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
