@@ -11,8 +11,65 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编译Rust之Stump电子书库</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-20/</link>
+      <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-20/</guid>
+      <description>&lt;p&gt;这就是编译和部署中最经典的困境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;编译时&lt;/strong&gt;：我们需要一个&lt;strong&gt;新环境&lt;/strong&gt;（Debian 12），因为它有程序源码需要的、新的开发工具和库（比如 &lt;code&gt;libglib-2.0 &amp;gt;= 2.70&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;运行时&lt;/strong&gt;：我们需要产物能在一个&lt;strong&gt;旧环境&lt;/strong&gt;（Debian 11）上运行，因为它只有旧版的系统基础库（&lt;code&gt;glibc&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;幸运的是，Rust 语言的工具链非常强大，它提供了一个完美的解决方案来解决这个悖论。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;最终解决方案静态编译-static-compilation-using-musl&#34;&gt;&lt;strong&gt;最终解决方案：静态编译 (Static Compilation using MUSL)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;我们的最终目标是生成一个&lt;strong&gt;不依赖任何系统库&lt;/strong&gt;的、完全独立的“绿色”程序。这样它就不再关心你的 VPS 是 Debian 11、12 还是其他什么系统了。&lt;/p&gt;
+&lt;p&gt;这个技术叫做“静态编译”，我们将使用一个名为 &lt;code&gt;MUSL&lt;/code&gt; 的C语言基础库来替代主流的 &lt;code&gt;GLIBC&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GLIBC (动态链接)&lt;/strong&gt;：程序运行时，需要去“借用”操作系统的基础库。操作系统版本不对，就借不到，程序报错。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MUSL (静态链接)&lt;/strong&gt;：在编译的最后一步，把所有需要的基础库功能，像“干粮”一样，全部打包进最终的程序文件里。程序运行时自给自足，完全不依赖外部系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这完美地契合了你最初“&lt;strong&gt;单文件，占用资源较少，不需要安装依赖&lt;/strong&gt;”的设想。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;终极操作指南编译一个真正的静态程序&#34;&gt;&lt;strong&gt;终极操作指南：编译一个真正的静态程序&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;我们将继续使用 Debian 12 作为我们的编译环境（因为它有我们需要的新版开发工具），但我们会告诉编译器，我们的最终目标是生成一个基于 MUSL 的静态程序。&lt;/p&gt;
+&lt;h4 id=&#34;第一步彻底清理旧环境&#34;&gt;&lt;strong&gt;第一步：彻底清理旧环境&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;和上次一样，我们先删除旧的 &lt;code&gt;stump-builder&lt;/code&gt; 容器，确保从一个干净的状态开始。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如果你还在容器里，请 &lt;code&gt;exit&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在你&lt;strong&gt;本地电脑的终端&lt;/strong&gt;运行：&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stop stump-builder
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker rm stump-builder
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第二步启动-debian-12-编译容器&#34;&gt;&lt;strong&gt;第二步：启动 Debian 12 编译容器&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;这一步和上次完全一样，我们仍然需要 Debian 12 的新环境来满足&lt;strong&gt;编译时&lt;/strong&gt;的依赖。&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --name stump-builder \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v &amp;#34;$(pwd)&amp;#34;:/build \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --env &amp;#34;HTTP_PROXY=http://172.17.0.1:7890&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --env &amp;#34;HTTPS_PROXY=http://172.17.0.1:7890&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  debian:12-slim \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;第三步在-debian-12-容器内执行全新的编译步骤&#34;&gt;&lt;strong&gt;第三步：在 Debian 12 容器内执行全新的编译步骤&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;进入容器后，请一步步执行以下命令。注意，依赖包和编译命令都发生了变化。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>CSS选择器详解</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-14/</link>
