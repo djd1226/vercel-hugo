@@ -15,7 +15,8 @@ Bash
 sudo systemctl restart vaultwarden 再次检查状态
 等待几秒钟，然后再次检查服务状态，这次应该就是 active (running) 了。
 Bash
-sudo systemctl status vaultwarden</p></div><footer class=entry-footer><span title='2025-07-20 00:00:00 +0000 UTC'>七月 20, 2025</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;58 字&nbsp;·&nbsp;Afer_rain</footer><a class=entry-link aria-label="post link to vaultwarden直接deb文件安装" href=https://hugo.123450908.xyz/posts/2025-07-201/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>编译Rust之Stump电子书库</h2></header><div class=entry-content><p>这就是编译和部署中最经典的困境：
+sudo systemctl status vaultwarden Vaultwarden 的配置通常在 /etc/vaultwarden.cfg（取决于打包方式）。
+打开这个文件，找到并修改 SIGNUPS_ALLOWED=true 为 SIGNUPS_ALLOWED=false，然后重启服务 sudo systemctl restart vaultwarden。</p></div><footer class=entry-footer><span title='2025-07-20 00:00:00 +0000 UTC'>七月 20, 2025</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;69 字&nbsp;·&nbsp;Afer_rain</footer><a class=entry-link aria-label="post link to vaultwarden直接deb文件安装" href=https://hugo.123450908.xyz/posts/2025-07-201/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>编译Rust之Stump电子书库</h2></header><div class=entry-content><p>这就是编译和部署中最经典的困境：
 编译时：我们需要一个新环境（Debian 12），因为它有程序源码需要的、新的开发工具和库（比如 libglib-2.0 >= 2.70）。
 运行时：我们需要产物能在一个旧环境（Debian 11）上运行，因为它只有旧版的系统基础库（glibc）。
 幸运的是，Rust 语言的工具链非常强大，它提供了一个完美的解决方案来解决这个悖论。

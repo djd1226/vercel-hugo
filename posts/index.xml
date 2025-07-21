@@ -54,7 +54,12 @@
 &lt;p&gt;Bash&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl status vaultwarden
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;/ol&gt;
+&lt;h3 id=&#34;vaultwarden-的配置通常在&#34;&gt;Vaultwarden 的配置通常在&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;/etc/vaultwarden.cfg&lt;/code&gt;（取决于打包方式）。&lt;/p&gt;
+&lt;p&gt;打开这个文件，找到并修改
+&lt;code&gt;SIGNUPS_ALLOWED=true 为 SIGNUPS_ALLOWED=false&lt;/code&gt;，然后重启服务
+&lt;code&gt;sudo systemctl restart vaultwarden&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     <item>
       <title>编译Rust之Stump电子书库</title>
