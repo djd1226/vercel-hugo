@@ -11,8 +11,70 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rclone挂载谷歌网盘</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-22/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-22/</guid>
+      <description>&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;运行 Rclone 官方安装脚本：&lt;/strong&gt; 这个脚本会自动检测您的系统架构并下载安装最新稳定版的 Rclone。&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://rclone.org/install.sh | sudo bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;验证安装：&lt;/strong&gt; 运行以下命令查看版本号，如果成功显示版本信息，则表示安装成功。&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;测试配置:&lt;/strong&gt; 运行以下命令，如果能列出您 Google Drive 根目录的文件和文件夹，说明配置成功！&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone lsd gdrive:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(注意：&lt;code&gt;gdrive:&lt;/code&gt; 冒号不能少，&lt;code&gt;gdrive&lt;/code&gt; 是您之前给远程连接起的名字)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;第二阶段挂载-google-drive&#34;&gt;&lt;strong&gt;第二阶段：挂载 Google Drive&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建挂载点:&lt;/strong&gt; 在您的主目录下创建一个文件夹，用来作为挂载点。&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/gdrive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;执行挂载命令:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone mount gdrive: ~/gdrive --daemon
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rclone mount&lt;/code&gt;: 挂载命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gdrive:&lt;/code&gt;: 您配置的远程名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;~/gdrive&lt;/code&gt;: 本地挂载点目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;--daemon&lt;/code&gt;: 让 rclone 在后台运行，这样您关闭 SSH 连接后挂载依然有效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;验证挂载:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用 &lt;code&gt;df -h&lt;/code&gt; 命令，您应该能看到一个类型为 &lt;code&gt;fuse.rclone&lt;/code&gt; 的新文件系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 &lt;code&gt;ls -l ~/gdrive&lt;/code&gt; 命令，您应该能看到您 Google Drive 里的文件。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>vaultwarden直接deb文件安装</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-201/</link>
