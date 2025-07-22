@@ -14,6 +14,43 @@
     <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>### ## Armbian 环境下安装并配置 Crawl4</title>
+      <link>https://hugo.123450908.xyz/posts/2025-07-221/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-07-221/</guid>
+      <description>&lt;h4 id=&#34;-前言为什么-armbian-与众不同&#34;&gt;### 前言：为什么 Armbian 与众不同？&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Crawl4AI&lt;/code&gt; 是一个强大的网页抓取工具，但它依赖的底层浏览器自动化库 Playwright 官方主要提供为普通电脑/服务器（x86_64 架构）编译的浏览器。我们的 Armbian 系统运行在 &lt;strong&gt;ARM 架构&lt;/strong&gt;上，因此无法使用官方的自动安装程序。本指南的核心就是绕过这个限制，手动配置，让 &lt;code&gt;Crawl4AI&lt;/code&gt; 在 Armbian 上完美运行。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-第一步系统环境准备-安装系统版浏览器&#34;&gt;### 第一步：系统环境准备 (安装系统版浏览器)&lt;/h4&gt;
+&lt;p&gt;我们不使用 &lt;code&gt;Crawl4AI&lt;/code&gt; 自带的安装脚本，而是直接从 Armbian 的软件库中安装已经为 ARM 架构编译好的 Chromium 浏览器。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更新软件列表并安装 Chromium&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y chromium-browser
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取浏览器路径:&lt;/p&gt;
+&lt;p&gt;安装完成后，运行以下命令找到它的可执行文件路径，并复制这个路径以备后用。&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;which chromium-browser
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;(通常路径为 &lt;code&gt;/usr/bin/chromium-browser&lt;/code&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;-第二步安装-python-包并初始化环境&#34;&gt;### 第二步：安装 Python 包并初始化环境&lt;/h4&gt;
+&lt;p&gt;接下来，我们安装 &lt;code&gt;Crawl4AI&lt;/code&gt; 的 Python 包，并进行一个关键的环境初始化步骤。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用 pip 安装 Crawl4AI&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Bash&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install crawl4ai
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化 Playwright 环境 (但不下载浏览器):&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>rclone挂载谷歌网盘</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-22/</link>
       <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
