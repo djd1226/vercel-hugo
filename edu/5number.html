@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五班学号</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #output {
+            margin-top: 20px;
+            overflow-x: auto; /* 让宽度超出窗口的表格能横向滚动 */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>五班学籍号信息表</h1>
+    <div id="output"></div>
+
+    <!-- 引入SheetJS库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        // 使用 fetch 来获取 Excel 文件
+        fetch('5num.xlsx')
+            .then(response => response.arrayBuffer())
+            .then(data => {
+                var workbook = XLSX.read(data, { type: 'array' });
+
+                // 假设读取第一个工作表
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // 将工作表转换为HTML表格
+                var htmlTable = XLSX.utils.sheet_to_html(worksheet, { header: 1 });
+
+                // 将表格插入到页面中
+                document.getElementById('output').innerHTML = htmlTable;
+            })
+            .catch(error => console.error('Error loading the Excel file:', error));
+    </script>
+</body>
+</html>
+
