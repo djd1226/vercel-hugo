@@ -9,11 +9,110 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* 侧边导航栏样式 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100vh;
+            background-color: #2c3e50;
+            transition: left 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .sidebar.active {
+            left: 0;
+        }
+        
+        .sidebar-header {
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        .sidebar-nav {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .sidebar-nav li {
+            border-bottom: 1px solid #34495e;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .sidebar-nav a:hover {
+            background-color: #34495e;
+        }
+        
+        .sidebar-nav a.active {
+            background-color: #3498db;
+        }
+        
+        /* 遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            transition: margin-left 0.3s ease;
         }
+        
+        .main-content.shifted {
+            margin-left: 250px;
+        }
+        
+        /* 汉堡菜单按钮 */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .menu-toggle:hover {
+            background-color: #2980b9;
+        }
+        
         h1, h2, h3 {
             color: #2c3e50;
         }
@@ -21,6 +120,7 @@
             text-align: center;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
+            margin-top: 60px;
         }
         h2 {
             border-bottom: 1px solid #bdc3c7;
@@ -65,12 +165,54 @@
             color: #7f8c8d;
             margin-top: 20px;
         }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content.shifted {
+                margin-left: 0;
+            }
+            
+            .sidebar {
+                width: 280px;
+                left: -280px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>我的导航</h1>
+    <!-- 汉堡菜单按钮 -->
+    <button class="menu-toggle" id="menuToggle">☰ 菜单</button>
+    
+    <!-- 侧边导航栏 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>快速导航</h3>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#common" class="nav-link">🏠 常用网站</a></li>
+            <li><a href="#learning" class="nav-link">📚 学习资源</a></li>
+            <li><a href="#tools" class="nav-link">🛠️ 工具</a></li>
+            <li><a href="#box" class="nav-link">🛠️ 盒子</a></li>
+            <li><a href="#ipv4" class="nav-link">🛠️ IPV4</a></li>
+            <li><a href="#vps" class="nav-link">💻 VPS</a></li>
+            <li><a href="#blog" class="nav-link">📲 我的博客</a></li>
+            <li><a href="#apps" class="nav-link">📰 我的应用</a></li>
+            <li><a href="#news" class="nav-link">📰 新闻与阅读</a></li>
+            <li><a href="#english" class="nav-link">📰 英语学习</a></li>
+            <li><a href="#memo" class="nav-link">📰 备忘链接</a></li>
+            <li><a href="#entertainment" class="nav-link">🎵 娱乐</a></li>
+            <li><a href="#todo" class="nav-link">📅 每周待办事项</a></li>
+        </ul>
+    </div>
+    
+    <!-- 遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- 主内容区域 -->
+    <div class="main-content" id="mainContent">
+        <h1>我的导航</h1>
 
-    <div class="section">
+        <div class="section" id="common">
         <h2><span class="emoji">🏠</span>常用网站</h2>
         <ul>
             <li><a href="https://www.google.com" target="_blank">Google</a></li>
@@ -83,7 +225,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="learning">
         <h2><span class="emoji">📚</span>学习资源</h2>
         <h3><span class="emoji">💡</span>AI</h3>
         <ul>
@@ -118,7 +260,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="tools">
         <h2><span class="emoji">🛠️</span>工具</h2>
         <ul>
             <li><a href="https://vercel.com" target="_blank">Vercel</a></li>
@@ -131,7 +273,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="box">
         <h2><span class="emoji">🛠️</span>盒子</h2>
         <ul>
             <li><a href="https://ddns.123450908.xyz:8090" target="_blank">X96MAX主页</a></li>
@@ -146,7 +288,7 @@
     </div>
 
 
-    <div class="section">
+    <div class="section" id="ipv4">
         <h2><span class="emoji">🛠️</span>IPV4</h2>
         <ul>
             <li><a href="https://dd.odquzd.eu.org:8090" target="_blank">X96MAX主页</a></li>
@@ -163,7 +305,7 @@
           
         </ul>
     </div>
-    <div class="section">
+    <div class="section" id="vps">
         <h2><span class="emoji">💻</span>VPS</h2>
         <ul>
             <li><a href="https://eu.123450908.xyz:8085" target="_blank">EU-books_stump</a></li>
@@ -172,7 +314,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="blog">
         <h2><span class="emoji">📲</span>我的博客</h2>
         <ul>
             <li><a href="https://ddns.123450908.xyz:8111" target="_blank">X96-Hugo</a></li>
@@ -191,7 +333,7 @@
         </ul>
     </div>
     
-    <div class="section">
+    <div class="section" id="apps">
         <h2><span class="emoji">📰</span>我的应用</h2>
         <ul>
             <li><a href="https://piwigo.123450908.xyz" target="_blank">Serv-piwigo</a></li>
@@ -210,7 +352,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="news">
         <h2><span class="emoji">📰</span>新闻与阅读</h2>
         <https://sv66.123450908.xyz/ul>
             <li><a href="https://news.ycombinator.com" target="_blank">BBC-News</a></li>
@@ -219,7 +361,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="english">
         <h2><span class="emoji">📰</span> 英语学习</h2>
         <ul>
             <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC-学习</a></li>
@@ -228,7 +370,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="memo">
         <h2><span class="emoji">📰</span>备忘链接</h2>
         <ul>
             <li><a href="https://tianyiso.com" target="_blank">天逸搜</a></li>
@@ -240,14 +382,14 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="entertainment">
         <h2><span class="emoji">🎵</span>娱乐</h2>
         <ul>
             <li><a href="https://asd135.ct8.pl" target="_blank">老王音乐</a></li>
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="todo">
         <h2><span class="emoji">📅</span>每周待办事项</h2>
         <ul class="todo-list">
             <li><input type="checkbox"> 学习新技能</li>
@@ -258,5 +400,86 @@
     </div>
 
     <p class="update-time">最后更新时间：2024年8月16日</p>
+    </div>
+    
+    <script>
+        // 获取DOM元素
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const mainContent = document.getElementById('mainContent');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // 切换侧边栏显示/隐藏
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            mainContent.classList.toggle('shifted');
+        }
+        
+        // 关闭侧边栏
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            mainContent.classList.remove('shifted');
+        }
+        
+        // 点击菜单按钮切换侧边栏
+        menuToggle.addEventListener('click', toggleSidebar);
+        
+        // 点击遮罩层关闭侧边栏
+        overlay.addEventListener('click', closeSidebar);
+        
+        // 点击导航链接滚动到对应区域并关闭侧边栏
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // 更新活动链接状态
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 关闭侧边栏
+                    closeSidebar();
+                }
+            });
+        });
+        
+        // 监听滚动事件，更新活动链接状态
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+                const id = section.getAttribute('id');
+                
+                if (scrollPos >= top && scrollPos < bottom) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // ESC键关闭侧边栏
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    </script>
 </body>
 </html>

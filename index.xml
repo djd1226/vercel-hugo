@@ -11,8 +11,82 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 22 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>提升PR剪辑效率的二十二个必备技巧</title>
+      <link>https://hugo.123450908.xyz/posts/2025-08-24/</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2025-08-24/</guid>
+      <description>&lt;p&gt;在之前的文章中，已经向大家介绍了PR的小技巧，许多小伙伴直呼需要更多这样的干货，pr软件是自带很多小工具，可以为制作提升很高的效率。这些小工具如果能全部掌握，就相当于十八般兵器，随便拿出来一两个，都能让剪辑工作如虎添翼。如果不能全部掌握，随便几个小技巧也能让你感叹软件的流畅。&lt;/p&gt;
+&lt;h1 id=&#34;技巧一快速波纹剪辑shiftwq&#34;&gt;&lt;strong&gt;技巧一：快速波纹剪辑（Shift+W/Q）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;许多小伙伴，在剪辑素材时，通常会通过C剃刀工具将要剪辑的内容给剪切开，或者使用Ctrl+K来切割素材，然后使用D选中素材并删除，这样会比较麻烦，其实直接按下Q或者W就可以使用波纹剪辑效果自动剪辑素材并且与之前的素材相连。如果你想相应延长一段素材至空白区域，只需要按下Shift+Q或者W即可。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/png/799872/1581513230440-e2493184-d67e-4135-a429-2bc418d28e97.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧二快速设置工作区io-&#34;&gt;&lt;strong&gt;技巧二：快速设置工作区（I/O ）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;如果你想从素材中删除或者抽取某一素材的中间部分时，你可以通过I和O键选择工作区，随后使用（；）来删除工作区内的片段，如果你想抽取这个片段，只需要按下引号键（‘’）就可以完成。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230456-ac56a44e-50c0-49cf-a0a7-df800a9f1698.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧三快捷导入素材&#34;&gt;&lt;strong&gt;技巧三：快捷导入素材&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;通常我们导入素材，是双击项目窗口，选中相应素材点击打开进行导入，如果导入的素材很多，都在同一个文件夹内，是无法双击导入进去的，可以将素材文件夹直接拖入项目窗口，导入之后也是你自己分好类的文件夹，这样就可以完成，比单独一个个拖拽效率要高不少。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/png/799872/1581513230413-00ad7eb1-8f99-4aee-9f4b-c5b1a0d74411.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧四快速替换素材&#34;&gt;&lt;strong&gt;技巧四：快速替换素材&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当我们剪辑时发现想将时间轨道上的某一段素材替换成另一段素材时，很多小伙伴的做法是先删除这段素材，然后再将另一段素材拖入被删除素材的位置，极为麻烦，快捷的方式：选择要替换的素材，直接将素材拖入窗口，这样就完成了替换。同样插入、覆盖等功能也可以快速实现。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230434-c332dc65-9f4c-4719-a70b-7c0f8c12e8be.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧五批量添加转场&#34;&gt;&lt;strong&gt;技巧五：批量添加转场&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;很多时候我们都需要为多个素材添加转场，使用鼠标挨个添加的话，效率会非常低下，直接选中所有的你需要添加转场的素材，快捷键：Shift+D可以快速为你加上音频和视频的转场，如果单独为视频添加转场，快捷键：Ctrl+D，如果你想为音频添加转场，&lt;/p&gt;
+&lt;p&gt;快捷键：Ctrl+Shift+D。如果你想修改转场的类型，你可以进入到效果面板，选择你需要设置为默认的转场，右键，点击设置为默认，接下来你按下快捷键就能迅速添加这个转场。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230942-e87ef31c-a32d-4c95-9c0a-472083462b9a.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧六自动选中素材&#34;&gt;&lt;strong&gt;技巧六：自动选中素材&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;很多情况下在我们拖动时间线的时候，需要点击一下素材才可以选中，很麻烦，点击“序列”窗口，选择点击跟随播放指示器，可以直接实现指针拖到那个素材就自动选择该素材，大大提升剪辑效率。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230913-8d8ca50e-a222-4f1b-8116-e71125e47950.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧七平行时间轴&#34;&gt;&lt;strong&gt;技巧七：平行时间轴&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;做剪辑会有不同的序列，根据内容不同会分为主序列与子序列，主序列一般就是我们最终的输出序列，点击子序列将其拖入主序列下方，得到两个平行的时间轴，下方子序列可以为上方的主序列提供素材，素材可以直接从下方序列中拖入主序列。子序列可以不止一个，根据自己的需要进行设置。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230819-054f803d-1e6e-4e04-bce8-49ad188051e0.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧八素材间互换位置altctrl拖动&#34;&gt;&lt;strong&gt;技巧八：素材间互换位置（Alt+ctrl+拖动）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你要把两段素材互换位置的时候，按住Ctrl+alt+鼠标左键拖动素材可以快速调换素材位置并且自动对正。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/png/799872/1581513231041-0f2297ad-4964-433c-8008-01d9d1e41043.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧九快速预览l&#34;&gt;&lt;strong&gt;技巧九：快速预览（L）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;如果我们使用空格来预览素材，那么速度很慢。序列窗口按“L键”可以快速预览，多按几次L我们视频播放的速度会更加的快，按一次“空格键”我们视频播放会停止，再按一次“空格键”视频的播放速度会回归正常。在素材很多的情况下可以这样预览。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230953-371973c6-5393-435a-99f0-dab3ca1bf4f0.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十标记素材标识帧&#34;&gt;&lt;strong&gt;技巧十：标记素材（标识帧）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;使用标识帧设置关键的画面，方便在素材库里面查找，素材窗口拖动素材时间轴预览，选择合适位置后右键设置标识帧（方便区分素材）&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230434-ee886ff9-0c6c-4803-9d43-394f5e492b7a.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十一在轨道上复制素材alt拖动&#34;&gt;&lt;strong&gt;技巧十一：在轨道上复制素材（Alt+拖动）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你想要在时间轨道上复制素材的时候，如果一个一个的复制，感觉好慢呀，许多人使用ctrl+c对素材进行复制，但是在拖动的时候可能会把原有的素材覆盖，其实只要按住Alt+拖动，就可以快速复制。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230485-786aea4a-7327-4ac4-9e64-662924313303.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十二一次性剪切全部轨道shiftc&#34;&gt;&lt;strong&gt;技巧十二：一次性剪切全部轨道（shift+c）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你使用了多个轨道的时候，需要进行裁切的时候，一般只能一次裁切一个素材，这个时候只要按住Shift+c键就可以对视频与音频上的所有轨道进行裁切。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230950-f6f1b72a-e80b-4437-803a-fb86d852094c.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十三从素材库中插入素材英文键&#34;&gt;&lt;strong&gt;技巧十三：从素材库中插入素材（英文“，”键）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你已经剪辑完一段素材的时候，如果想在其中某个位置插入另一段素材，只要把时间标尺放在要插入的位置，选中素材按，然后在英文输入法下按“，”键，这样就可以快速插入轨道。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230586-37beb213-c053-4928-b875-c206d351ce97.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十四快速全选右侧素材a键&#34;&gt;&lt;strong&gt;技巧十四：快速全选右侧素材（A键）&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;这个可以快速选择一大段素材，不用鼠标先把素材缩小再全选，直接一键搞定。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513230599-cf8bbaf2-432e-4416-bc7c-cb1b58273549.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十五批量调色&#34;&gt;&lt;strong&gt;技巧十五：批量调色&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;可以在素材窗口右键新建“调整图层”，将调整图层放在素材上面，只对调整图层调色。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/gif/799872/1581513231026-0c2b1e0d-792c-422e-8e95-4dfdf9b9867f.gif&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十六匹配帧&#34;&gt;&lt;strong&gt;技巧十六：匹配帧&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;如果你经常想在素材箱里找到对应时间线上的素材但是却不知道怎么做，那么F键就会是你的救星，只需要按下F键，你就能够在素材监视器上找到对应的帧，这样可以有效的帮助你进行素材的替换或者修改。如果你想从素材监视器上找到时间线上对应的帧，只需要按下Shift+R就可以实现。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230804-3e9d88e4-62cb-4dc2-9c42-e46e277a4ad7.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十七时间轴放大&#34;&gt;&lt;strong&gt;技巧十七，时间轴放大&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;通常我们使用+/-号缩放时间轴，但是你也可以使用反斜杠来进行快速缩放，只需要按一下你就可以缩放到整个序列的长度，再按一下就可以回到之前的状态，相对效率会比加减号高很多。你也可以按下Ctrl+反斜杠来隐藏顶部的项目信息，对于屏幕较小的朋友这一点会很有用。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230478-97389677-e16e-433d-9729-1678b9fd91db.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十八移动剪辑&#34;&gt;&lt;strong&gt;技巧十八：移动剪辑&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;通常我们都需要鼠标移动剪辑，但是当你按下D选中对应素材以后其实你是可以按住Alt和上下左右键移动素材位置的，需要注意的是需要激活相应的轨道才能够进行移动，如果你想用更快的速度移动素材，那你可以按住Alt+Shift+方向键来快速拖动素材&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230483-df67370e-626c-4d46-ac62-cde2b579824c.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧十九抽取与删除&#34;&gt;&lt;strong&gt;技巧十九：抽取与删除&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你想删除或者抽取一段素材的中间部分时，你可以通过i和o键设定工作区，随后使用分号键来删除工作区内的片段，如果你想抽取这个片段，只需要按下引号键就可以轻松实现。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230503-d6af9342-dd57-4baa-98e5-aec9c064dd08.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧二十轨道扩展&#34;&gt;&lt;strong&gt;技巧二十：轨道扩展&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;如果视频轨道太窄，通常你会需要使用鼠标滚轮放大相应的轨道，但是这样会花费不少时间，所以你可以选择使用Ctrl+加减号来缩放单个轨道的宽度，如果你想一次性扩展或者缩小所有轨道，那你可以使用Shift+加减号。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230896-fefdfa88-a2d4-4721-8769-5ddccdcf3d33.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧二十一迅速切换窗口&#34;&gt;&lt;strong&gt;技巧二十一：迅速切换窗口&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;当你选中一个窗口的时候，你就没法操控另一个窗口，传统的切换方法是使用鼠标点击，但是很少有人知道通过按住Shift+123你可以自由切换你所需要前往的窗口，这个可以大大提升你的工作效率，例如你可以迅速切换到素材监视器，设定出入点后将素材插入到时间线上来进行进一步的处理，这是我最经常使用的快捷键。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://cdn.nlark.com/yuque/0/2020/jpeg/799872/1581513230633-870834d5-924e-423d-8829-2077030c8ad3.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧二十二快速选择输出范围&#34;&gt;&lt;strong&gt;技巧二十二：快速选择输出范围&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;剪辑完成后，需要选择整体的输出范围，这个时候，常规的做法是用鼠标拖动入点和出点，以确定范围，但经常容易漏帧。&lt;/p&gt;
+&lt;p&gt;快捷的方法是英文输入法下，点击键盘的“/” 反斜杠，和问号是同一个键。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Armbian 环境下安装并配置 Crawl4</title>
       <link>https://hugo.123450908.xyz/posts/2025-07-221/</link>
