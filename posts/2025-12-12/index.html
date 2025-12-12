@@ -1,0 +1,190 @@
+<!doctype html><html lang=zh dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Debian 系统精簡 | Rain Blog</title>
+<meta name=keywords content><meta name=description content='这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。
+
+1. /usr 目录清理建议
+/usr 主要存放系统程序和共享资源，通常包含：
+
+/usr/share/doc：软件说明文档
+/usr/share/man：手册页
+/usr/share/locale：多语言本地化文件
+/usr/share/fonts：字体文件
+/usr/lib：库文件和程序文件
+/usr/bin、/usr/sbin：可执行文件
+
+清理重点
+
+
+删除说明文档和手册页
+rm -rf /usr/share/doc/*
+rm -rf /usr/share/man/*
+rm -rf /usr/share/info/*
+
+
+删除不需要的语言文件
+如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：
+find /usr/share/locale -mindepth 1 -maxdepth 1 ! -name "zh_CN" ! -name "en" -exec rm -rf {} +
+
+
+字体清理
+同之前脚本，保留简体中文和英文字体，删除其他字体。
+
+
+检查大文件
+你可以用如下命令列出 /usr 下大于 10MB 的文件，确认是否有可删文件：
+find /usr -type f -size +10M -exec ls -lh {} \;
+
+
+
+2. /var 目录清理建议
+/var 目录通常包含：
+
+/var/cache：缓存文件
+/var/log：日志文件
+/var/lib：应用程序数据
+/var/tmp：临时文件
+
+清理重点
+
+
+清理 apt 缓存'><meta name=author content="Afer_rain"><link rel=canonical href=https://hugo.123450908.xyz/posts/2025-12-12/><link crossorigin=anonymous href=/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF+13Dyqob6ASlTrTye8=" rel="preload stylesheet" as=style><link rel=icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh href=https://hugo.123450908.xyz/posts/2025-12-12/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://hugo.123450908.xyz/posts/2025-12-12/"><meta property="og:site_name" content="Rain Blog"><meta property="og:title" content="Debian 系统精簡"><meta property="og:description" content='这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。
+1. /usr 目录清理建议 /usr 主要存放系统程序和共享资源，通常包含：
+/usr/share/doc：软件说明文档 /usr/share/man：手册页 /usr/share/locale：多语言本地化文件 /usr/share/fonts：字体文件 /usr/lib：库文件和程序文件 /usr/bin、/usr/sbin：可执行文件 清理重点 删除说明文档和手册页
+rm -rf /usr/share/doc/* rm -rf /usr/share/man/* rm -rf /usr/share/info/* 删除不需要的语言文件
+如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：
+find /usr/share/locale -mindepth 1 -maxdepth 1 ! -name "zh_CN" ! -name "en" -exec rm -rf {} + 字体清理
+同之前脚本，保留简体中文和英文字体，删除其他字体。
+检查大文件
+你可以用如下命令列出 /usr 下大于 10MB 的文件，确认是否有可删文件：
+find /usr -type f -size +10M -exec ls -lh {} \; 2. /var 目录清理建议 /var 目录通常包含：
+/var/cache：缓存文件 /var/log：日志文件 /var/lib：应用程序数据 /var/tmp：临时文件 清理重点 清理 apt 缓存'><meta property="og:locale" content="zh"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-12T00:00:00+00:00"><meta property="article:modified_time" content="2025-12-12T00:00:00+00:00"><meta property="og:image" content="https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Debian 系统精簡"><meta name=twitter:description content='这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。
+
+1. /usr 目录清理建议
+/usr 主要存放系统程序和共享资源，通常包含：
+
+/usr/share/doc：软件说明文档
+/usr/share/man：手册页
+/usr/share/locale：多语言本地化文件
+/usr/share/fonts：字体文件
+/usr/lib：库文件和程序文件
+/usr/bin、/usr/sbin：可执行文件
+
+清理重点
+
+
+删除说明文档和手册页
+rm -rf /usr/share/doc/*
+rm -rf /usr/share/man/*
+rm -rf /usr/share/info/*
+
+
+删除不需要的语言文件
+如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：
+find /usr/share/locale -mindepth 1 -maxdepth 1 ! -name "zh_CN" ! -name "en" -exec rm -rf {} +
+
+
+字体清理
+同之前脚本，保留简体中文和英文字体，删除其他字体。
+
+
+检查大文件
+你可以用如下命令列出 /usr 下大于 10MB 的文件，确认是否有可删文件：
+find /usr -type f -size +10M -exec ls -lh {} \;
+
+
+
+2. /var 目录清理建议
+/var 目录通常包含：
+
+/var/cache：缓存文件
+/var/log：日志文件
+/var/lib：应用程序数据
+/var/tmp：临时文件
+
+清理重点
+
+
+清理 apt 缓存'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://hugo.123450908.xyz/posts/"},{"@type":"ListItem","position":2,"name":"Debian 系统精簡","item":"https://hugo.123450908.xyz/posts/2025-12-12/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Debian 系统精簡","name":"Debian 系统精簡","description":"这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。\n1. /usr 目录清理建议 /usr 主要存放系统程序和共享资源，通常包含：\n/usr/share/doc：软件说明文档 /usr/share/man：手册页 /usr/share/locale：多语言本地化文件 /usr/share/fonts：字体文件 /usr/lib：库文件和程序文件 /usr/bin、/usr/sbin：可执行文件 清理重点 删除说明文档和手册页\nrm -rf /usr/share/doc/* rm -rf /usr/share/man/* rm -rf /usr/share/info/* 删除不需要的语言文件\n如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：\nfind /usr/share/locale -mindepth 1 -maxdepth 1 ! -name \u0026#34;zh_CN\u0026#34; ! -name \u0026#34;en\u0026#34; -exec rm -rf {} + 字体清理\n同之前脚本，保留简体中文和英文字体，删除其他字体。\n检查大文件\n你可以用如下命令列出 /usr 下大于 10MB 的文件，确认是否有可删文件：\nfind /usr -type f -size +10M -exec ls -lh {} \\; 2. /var 目录清理建议 /var 目录通常包含：\n/var/cache：缓存文件 /var/log：日志文件 /var/lib：应用程序数据 /var/tmp：临时文件 清理重点 清理 apt 缓存\n","keywords":[],"articleBody":"这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。\n1. /usr 目录清理建议 /usr 主要存放系统程序和共享资源，通常包含：\n/usr/share/doc：软件说明文档 /usr/share/man：手册页 /usr/share/locale：多语言本地化文件 /usr/share/fonts：字体文件 /usr/lib：库文件和程序文件 /usr/bin、/usr/sbin：可执行文件 清理重点 删除说明文档和手册页\nrm -rf /usr/share/doc/* rm -rf /usr/share/man/* rm -rf /usr/share/info/* 删除不需要的语言文件\n如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：\nfind /usr/share/locale -mindepth 1 -maxdepth 1 ! -name \"zh_CN\" ! -name \"en\" -exec rm -rf {} + 字体清理\n同之前脚本，保留简体中文和英文字体，删除其他字体。\n检查大文件\n你可以用如下命令列出 /usr 下大于 10MB 的文件，确认是否有可删文件：\nfind /usr -type f -size +10M -exec ls -lh {} \\; 2. /var 目录清理建议 /var 目录通常包含：\n/var/cache：缓存文件 /var/log：日志文件 /var/lib：应用程序数据 /var/tmp：临时文件 清理重点 清理 apt 缓存\napt-get clean rm -rf /var/cache/apt/archives/* 清理日志\njournalctl --vacuum-size=50M || true rm -rf /var/log/*.gz /var/log/*.1 find /var/log -type f -name \"*.log\" -exec truncate -s 0 {} \\; 清理临时文件\nrm -rf /var/tmp/* rm -rf /tmp/* 清理备份\nrm -rf /var/backups/* 删除残留旧配置\ndpkg -l | grep '^rc' | awk '{print $2}' | xargs -r dpkg --purge 3. 综合清理脚本示例（针对 /usr 和 /var） #!/bin/bash set -e echo \"=== 针对 /usr 和 /var 的清理开始 ===\" # 清理说明文档和手册页 echo \"删除 /usr/share/doc、man、info...\" rm -rf /usr/share/doc/* rm -rf /usr/share/man/* rm -rf /usr/share/info/* # 删除非简体中文和英文语言包 echo \"删除非 zh_CN 和 en 的语言包...\" find /usr/share/locale -mindepth 1 -maxdepth 1 ! -name \"zh_CN\" ! -name \"en\" -exec rm -rf {} + # 清理字体，保留简体中文和英文字体 echo \"清理字体...\" FONT_DIRS=(\"/usr/share/fonts\" \"/usr/local/share/fonts\") CHINESE_FONT_KEYWORDS=(\"NotoSansCJK\" \"WenQuanYi\" \"AR PL\" \"SourceHan\" \"DroidSansFallback\") EN_FONT_KEYWORDS=(\"DejaVu\" \"Liberation\" \"Nimbus\" \"FreeSans\" \"Arial\" \"Times\" \"Courier\") for dir in \"${FONT_DIRS[@]}\"; do if [ -d \"$dir\" ]; then find \"$dir\" -type f \\( -name \"*.ttf\" -o -name \"*.otf\" \\) | while read -r fontfile; do keep_font=false for keyword in \"${CHINESE_FONT_KEYWORDS[@]}\" \"${EN_FONT_KEYWORDS[@]}\"; do if echo \"$fontfile\" | grep -qi \"$keyword\"; then keep_font=true break fi done if [ \"$keep_font\" = false ]; then echo \"删除字体: $fontfile\" rm -f \"$fontfile\" fi done fi done # 清理 apt 缓存 echo \"清理 apt 缓存...\" apt-get clean rm -rf /var/cache/apt/archives/* # 清理日志文件 echo \"清理日志文件...\" journalctl --vacuum-size=50M || true rm -rf /var/log/*.gz /var/log/*.1 find /var/log -type f -name \"*.log\" -exec truncate -s 0 {} \\; # 清理临时文件 echo \"清理临时文件...\" rm -rf /var/tmp/* rm -rf /tmp/* # 删除备份文件 echo \"删除备份文件...\" rm -rf /var/backups/* # 删除残留旧配置文件 echo \"删除残留旧配置文件...\" dpkg -l | grep '^rc' | awk '{print $2}' | xargs -r dpkg --purge echo \"=== 清理完成 ===\" 4. 进一步建议 可以安装并使用 ncdu 交互式查看 /usr 和 /var 的具体子目录占用，找到最大的目录或文件：\nsudo apt-get install ncdu sudo ncdu /usr sudo ncdu /var 如果有不常用的软件包，考虑卸载以释放空间。\n如果系统中安装了多个内核，删除旧内核。\n","wordCount":"363","inLanguage":"zh","image":"https://hugo.123450908.xyz/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-12-12T00:00:00Z","dateModified":"2025-12-12T00:00:00Z","author":{"@type":"Person","name":"Afer_rain"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://hugo.123450908.xyz/posts/2025-12-12/"},"publisher":{"@type":"Organization","name":"Rain Blog","logo":{"@type":"ImageObject","url":"https://hugo.123450908.xyz/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://hugo.123450908.xyz/ accesskey=h title="Home (Alt + H)"><img src=https://hugo.123450908.xyz/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://hugo.123450908.xyz/posts/ title=学习><span>学习</span></a></li><li><a href=https://hugo.123450908.xyz/live/ title=生活><span>生活</span></a></li><li><a href=https://hugo.123450908.xyz/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=logo><a href=/><img src=/images/dd01.webp alt=网站Logo></a></div><h1 class="post-title entry-hint-parent">Debian 系统精簡</h1><div class=post-meta><span title='2025-12-12 00:00:00 +0000 UTC'>十二月 12, 2025</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;363 字&nbsp;·&nbsp;Afer_rain&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2025-12-12.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>目录</span></summary><div class=inner><nav id=TableOfContents><ul><li><ul><li><a href=#清理重点>清理重点</a></li></ul></li></ul><ul><li><ul><li><a href=#清理重点-1>清理重点</a></li></ul></li></ul></nav></div></details></div><div class=post-content><p>这两个目录是 Debian 系统中常见的大户，进一步清理可以重点针对它们。</p><hr><h1 id=1-usr-目录清理建议>1. <code>/usr</code> 目录清理建议<a hidden class=anchor aria-hidden=true href=#1-usr-目录清理建议>#</a></h1><p><code>/usr</code> 主要存放系统程序和共享资源，通常包含：</p><ul><li><code>/usr/share/doc</code>：软件说明文档</li><li><code>/usr/share/man</code>：手册页</li><li><code>/usr/share/locale</code>：多语言本地化文件</li><li><code>/usr/share/fonts</code>：字体文件</li><li><code>/usr/lib</code>：库文件和程序文件</li><li><code>/usr/bin</code>、<code>/usr/sbin</code>：可执行文件</li></ul><h3 id=清理重点>清理重点<a hidden class=anchor aria-hidden=true href=#清理重点>#</a></h3><ul><li><p><strong>删除说明文档和手册页</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>rm -rf /usr/share/doc/*
+</span></span><span class=line><span class=cl>rm -rf /usr/share/man/*
+</span></span><span class=line><span class=cl>rm -rf /usr/share/info/*
+</span></span></code></pre></div></li><li><p><strong>删除不需要的语言文件</strong></p><p>如果只需要简体中文（zh_CN）和英文（en），可以删除其他语言的本地化文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>find /usr/share/locale -mindepth <span class=m>1</span> -maxdepth <span class=m>1</span> ! -name <span class=s2>&#34;zh_CN&#34;</span> ! -name <span class=s2>&#34;en&#34;</span> -exec rm -rf <span class=o>{}</span> +
+</span></span></code></pre></div></li><li><p><strong>字体清理</strong></p><p>同之前脚本，保留简体中文和英文字体，删除其他字体。</p></li><li><p><strong>检查大文件</strong></p><p>你可以用如下命令列出 <code>/usr</code> 下大于 10MB 的文件，确认是否有可删文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>find /usr -type f -size +10M -exec ls -lh <span class=o>{}</span> <span class=se>\;</span>
+</span></span></code></pre></div></li></ul><hr><h1 id=2-var-目录清理建议>2. <code>/var</code> 目录清理建议<a hidden class=anchor aria-hidden=true href=#2-var-目录清理建议>#</a></h1><p><code>/var</code> 目录通常包含：</p><ul><li><code>/var/cache</code>：缓存文件</li><li><code>/var/log</code>：日志文件</li><li><code>/var/lib</code>：应用程序数据</li><li><code>/var/tmp</code>：临时文件</li></ul><h3 id=清理重点-1>清理重点<a hidden class=anchor aria-hidden=true href=#清理重点-1>#</a></h3><ul><li><p><strong>清理 apt 缓存</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>apt-get clean
+</span></span><span class=line><span class=cl>rm -rf /var/cache/apt/archives/*
+</span></span></code></pre></div></li><li><p><strong>清理日志</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>journalctl --vacuum-size<span class=o>=</span>50M <span class=o>||</span> <span class=nb>true</span>
+</span></span><span class=line><span class=cl>rm -rf /var/log/*.gz /var/log/*.1
+</span></span><span class=line><span class=cl>find /var/log -type f -name <span class=s2>&#34;*.log&#34;</span> -exec truncate -s <span class=m>0</span> <span class=o>{}</span> <span class=se>\;</span>
+</span></span></code></pre></div></li><li><p><strong>清理临时文件</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>rm -rf /var/tmp/*
+</span></span><span class=line><span class=cl>rm -rf /tmp/*
+</span></span></code></pre></div></li><li><p><strong>清理备份</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>rm -rf /var/backups/*
+</span></span></code></pre></div></li><li><p><strong>删除残留旧配置</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>dpkg -l <span class=p>|</span> grep <span class=s1>&#39;^rc&#39;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $2}&#39;</span> <span class=p>|</span> xargs -r dpkg --purge
+</span></span></code></pre></div></li></ul><hr><h1 id=3-综合清理脚本示例针对-usr-和-var>3. 综合清理脚本示例（针对 <code>/usr</code> 和 <code>/var</code>）<a hidden class=anchor aria-hidden=true href=#3-综合清理脚本示例针对-usr-和-var>#</a></h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/bash
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=nb>set</span> -e
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;=== 针对 /usr 和 /var 的清理开始 ===&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 清理说明文档和手册页</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;删除 /usr/share/doc、man、info...&#34;</span>
+</span></span><span class=line><span class=cl>rm -rf /usr/share/doc/*
+</span></span><span class=line><span class=cl>rm -rf /usr/share/man/*
+</span></span><span class=line><span class=cl>rm -rf /usr/share/info/*
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除非简体中文和英文语言包</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;删除非 zh_CN 和 en 的语言包...&#34;</span>
+</span></span><span class=line><span class=cl>find /usr/share/locale -mindepth <span class=m>1</span> -maxdepth <span class=m>1</span> ! -name <span class=s2>&#34;zh_CN&#34;</span> ! -name <span class=s2>&#34;en&#34;</span> -exec rm -rf <span class=o>{}</span> +
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 清理字体，保留简体中文和英文字体</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;清理字体...&#34;</span>
+</span></span><span class=line><span class=cl><span class=nv>FONT_DIRS</span><span class=o>=(</span><span class=s2>&#34;/usr/share/fonts&#34;</span> <span class=s2>&#34;/usr/local/share/fonts&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=nv>CHINESE_FONT_KEYWORDS</span><span class=o>=(</span><span class=s2>&#34;NotoSansCJK&#34;</span> <span class=s2>&#34;WenQuanYi&#34;</span> <span class=s2>&#34;AR PL&#34;</span> <span class=s2>&#34;SourceHan&#34;</span> <span class=s2>&#34;DroidSansFallback&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=nv>EN_FONT_KEYWORDS</span><span class=o>=(</span><span class=s2>&#34;DejaVu&#34;</span> <span class=s2>&#34;Liberation&#34;</span> <span class=s2>&#34;Nimbus&#34;</span> <span class=s2>&#34;FreeSans&#34;</span> <span class=s2>&#34;Arial&#34;</span> <span class=s2>&#34;Times&#34;</span> <span class=s2>&#34;Courier&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> dir in <span class=s2>&#34;</span><span class=si>${</span><span class=nv>FONT_DIRS</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=o>[</span> -d <span class=s2>&#34;</span><span class=nv>$dir</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>    find <span class=s2>&#34;</span><span class=nv>$dir</span><span class=s2>&#34;</span> -type f <span class=se>\(</span> -name <span class=s2>&#34;*.ttf&#34;</span> -o -name <span class=s2>&#34;*.otf&#34;</span> <span class=se>\)</span> <span class=p>|</span> <span class=k>while</span> <span class=nb>read</span> -r fontfile<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>      <span class=nv>keep_font</span><span class=o>=</span><span class=nb>false</span>
+</span></span><span class=line><span class=cl>      <span class=k>for</span> keyword in <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CHINESE_FONT_KEYWORDS</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span> <span class=s2>&#34;</span><span class=si>${</span><span class=nv>EN_FONT_KEYWORDS</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$fontfile</span><span class=s2>&#34;</span> <span class=p>|</span> grep -qi <span class=s2>&#34;</span><span class=nv>$keyword</span><span class=s2>&#34;</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>          <span class=nv>keep_font</span><span class=o>=</span><span class=nb>true</span>
+</span></span><span class=line><span class=cl>          <span class=nb>break</span>
+</span></span><span class=line><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=cl>      <span class=k>done</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$keep_font</span><span class=s2>&#34;</span> <span class=o>=</span> <span class=nb>false</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>        <span class=nb>echo</span> <span class=s2>&#34;删除字体: </span><span class=nv>$fontfile</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>        rm -f <span class=s2>&#34;</span><span class=nv>$fontfile</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>      <span class=k>fi</span>
+</span></span><span class=line><span class=cl>    <span class=k>done</span>
+</span></span><span class=line><span class=cl>  <span class=k>fi</span>
+</span></span><span class=line><span class=cl><span class=k>done</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 清理 apt 缓存</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;清理 apt 缓存...&#34;</span>
+</span></span><span class=line><span class=cl>apt-get clean
+</span></span><span class=line><span class=cl>rm -rf /var/cache/apt/archives/*
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 清理日志文件</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;清理日志文件...&#34;</span>
+</span></span><span class=line><span class=cl>journalctl --vacuum-size<span class=o>=</span>50M <span class=o>||</span> <span class=nb>true</span>
+</span></span><span class=line><span class=cl>rm -rf /var/log/*.gz /var/log/*.1
+</span></span><span class=line><span class=cl>find /var/log -type f -name <span class=s2>&#34;*.log&#34;</span> -exec truncate -s <span class=m>0</span> <span class=o>{}</span> <span class=se>\;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 清理临时文件</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;清理临时文件...&#34;</span>
+</span></span><span class=line><span class=cl>rm -rf /var/tmp/*
+</span></span><span class=line><span class=cl>rm -rf /tmp/*
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除备份文件</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;删除备份文件...&#34;</span>
+</span></span><span class=line><span class=cl>rm -rf /var/backups/*
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 删除残留旧配置文件</span>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;删除残留旧配置文件...&#34;</span>
+</span></span><span class=line><span class=cl>dpkg -l <span class=p>|</span> grep <span class=s1>&#39;^rc&#39;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $2}&#39;</span> <span class=p>|</span> xargs -r dpkg --purge
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;=== 清理完成 ===&#34;</span>
+</span></span></code></pre></div><hr><h1 id=4-进一步建议>4. 进一步建议<a hidden class=anchor aria-hidden=true href=#4-进一步建议>#</a></h1><ul><li><p>可以安装并使用 <code>ncdu</code> 交互式查看 <code>/usr</code> 和 <code>/var</code> 的具体子目录占用，找到最大的目录或文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo apt-get install ncdu
+</span></span><span class=line><span class=cl>sudo ncdu /usr
+</span></span><span class=line><span class=cl>sudo ncdu /var
+</span></span></code></pre></div></li><li><p>如果有不常用的软件包，考虑卸载以释放空间。</p></li><li><p>如果系统中安装了多个内核，删除旧内核。</p></li></ul></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=next href=https://hugo.123450908.xyz/posts/2025-08-24/><span class=title>下一页 »</span><br><span>提升PR剪辑效率的二十二个必备技巧</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on x" href="https://x.com/intent/tweet/?text=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f&amp;hashtags="><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f&amp;title=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1&amp;summary=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1&amp;source=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f&title=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on whatsapp" href="https://api.whatsapp.com/send?text=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1%20-%20https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on telegram" href="https://telegram.me/share/url?text=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1&amp;url=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Debian 系统精簡 on ycombinator" href="https://news.ycombinator.com/submitlink?t=Debian%20%e7%b3%bb%e7%bb%9f%e7%b2%be%e7%b0%a1&u=https%3a%2f%2fhugo.123450908.xyz%2fposts%2f2025-12-12%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentcolor" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://hugo.123450908.xyz/>Rain Blog</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="复制";function s(){t.innerHTML="已复制！",setTimeout(()=>{t.innerHTML="复制"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
