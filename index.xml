@@ -11,8 +11,29 @@
     </image>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Termux 中使用 `pure-ftpd` 搭建FTP</title>
+      <link>https://hugo.123450908.xyz/posts/2026-03-04/</link>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-03-04/</guid>
+      <description>&lt;h2 id=&#34;如何在-termux-中使用-pure-ftpd-搭建一个安全的-ftp-服务&#34;&gt;如何在 Termux 中使用 &lt;code&gt;pure-ftpd&lt;/code&gt; 搭建一个安全的 FTP 服务。&lt;/h2&gt;
+&lt;h3 id=&#34;1-安装-pure-ftpd&#34;&gt;1. 安装 &lt;code&gt;pure-ftpd&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;在 Termux 中使用 &lt;code&gt;pkg install&lt;/code&gt; 命令安装 &lt;code&gt;pure-ftpd&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pkg install pure-ftpd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-创建-ftp-用户并设置密码&#34;&gt;2. 创建 FTP 用户并设置密码&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;pure-pw&lt;/code&gt; 命令创建一个新的 FTP 用户。以下是命令的含义：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pure-pw useradd tianya -u &lt;span class=&#34;m&#34;&gt;1001&lt;/span&gt; -g &lt;span class=&#34;m&#34;&gt;1001&lt;/span&gt; -d /sdcard/Download
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pure-pw useradd tianya&lt;/code&gt;：添加用户名为 &lt;code&gt;tianya&lt;/code&gt; 的 FTP 用户。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-u 1001 -g 1001&lt;/code&gt;：指定此用户的 UID 和 GID。通常，Termux 中默认用户的 UID 和 GID 是 &lt;code&gt;1001&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-d /sdcard/Download&lt;/code&gt;：设置该用户的主目录为 &lt;code&gt;/sdcard/Download&lt;/code&gt;，即该用户登录 FTP 后只能访问这个目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;执行后系统会提示输入密码&lt;/strong&gt;。输入你希望为 &lt;code&gt;djd1226&lt;/code&gt; 用户设置的 FTP 密码，并确认密码。&amp;mdash;781226djd&lt;/p&gt;
+&lt;h3 id=&#34;3-生成-pure-ftpd-用户数据库&#34;&gt;3. 生成 &lt;code&gt;pure-ftpd&lt;/code&gt; 用户数据库&lt;/h3&gt;
+&lt;p&gt;每次添加或更新用户后，都需要使用以下命令更新数据库：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>在 Debian 服务器上部署 `frps`（服务端）</title>
       <link>https://hugo.123450908.xyz/posts/2026-02-01/</link>
