@@ -30,7 +30,7 @@
 &lt;li&gt;&lt;code&gt;-u 1001 -g 1001&lt;/code&gt;：指定此用户的 UID 和 GID。通常，Termux 中默认用户的 UID 和 GID 是 &lt;code&gt;1001&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-d /sdcard/Download&lt;/code&gt;：设置该用户的主目录为 &lt;code&gt;/sdcard/Download&lt;/code&gt;，即该用户登录 FTP 后只能访问这个目录。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;执行后系统会提示输入密码&lt;/strong&gt;。输入你希望为 &lt;code&gt;djd1226&lt;/code&gt; 用户设置的 FTP 密码，并确认密码。&amp;mdash;781226djd&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;执行后系统会提示输入密码&lt;/strong&gt;。输入你希望为 &lt;code&gt;djd1226&lt;/code&gt; 用户设置的 FTP 密码，并确认密码。&lt;/p&gt;
 &lt;h3 id=&#34;3-生成-pure-ftpd-用户数据库&#34;&gt;3. 生成 &lt;code&gt;pure-ftpd&lt;/code&gt; 用户数据库&lt;/h3&gt;
 &lt;p&gt;每次添加或更新用户后，都需要使用以下命令更新数据库：&lt;/p&gt;</description>
     </item>
