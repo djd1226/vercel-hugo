@@ -43,15 +43,15 @@
 &lt;h3 id=&#34;5-websearch联网搜索路由&#34;&gt;5. &lt;code&gt;webSearch&lt;/code&gt;（联网搜索路由）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;如何触发：&lt;/strong&gt; 全自动。当你问的问题需要最新的互联网知识（比如“查一下最新的 React 官方文档关于某个 API 的用法”），Claude Code 决定调用联网搜索工具时。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;原理：&lt;/strong&gt; 这个搜索的动作会被路由到你指定的模型去执行。
-&amp;ldquo;Router&amp;rdquo;: {
-&amp;ldquo;default&amp;rdquo;: &amp;ldquo;openrouter-channel,anthropic/claude-3.5-sonnet&amp;rdquo;,  // 默认日常敲代码的主力模型
-&amp;ldquo;background&amp;rdquo;: &amp;ldquo;official-anthropic,claude-3-5-haiku-20241022&amp;rdquo;, // 后台轻量级任务（如总结、快速分析）
-&amp;ldquo;think&amp;rdquo;: &amp;ldquo;openrouter-channel,deepseek/deepseek-r1&amp;rdquo;,           // 专门处理复杂思考 (thinking) 模式
-&amp;ldquo;longContext&amp;rdquo;: &amp;ldquo;my-custom-proxy,gemini-2.5-pro&amp;rdquo;               // 遇到超长上下文（如大文件读取）时自动切换
-}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原理：&lt;/strong&gt; 这个搜索的动作会被路由到你指定的模型去执行。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;Router&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;default&amp;#34;: &amp;#34;openrouter-channel,anthropic/claude-3.5-sonnet&amp;#34;,  // 默认日常敲代码的主力模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;background&amp;#34;: &amp;#34;official-anthropic,claude-3-5-haiku-20241022&amp;#34;, // 后台轻量级任务（如总结、快速分析）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;think&amp;#34;: &amp;#34;openrouter-channel,deepseek/deepseek-r1&amp;#34;,           // 专门处理复杂思考 (thinking) 模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;longContext&amp;#34;: &amp;#34;my-custom-proxy,gemini-2.5-pro&amp;#34;               // 遇到超长上下文（如大文件读取）时自动切换
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;总结一下：&lt;/strong&gt;
 在实际使用中，你的操作方式没有任何改变，依然是和 AI 正常聊天下指令。&lt;code&gt;Router&lt;/code&gt; 配置的意义在于帮你&lt;strong&gt;省钱和提效&lt;/strong&gt;——它把简单的杂活分给便宜快速的模型，把核心代码交给主力模型，遇到超大文件自动换能支持长文本的模型。&lt;/p&gt;</description>
     </item>
