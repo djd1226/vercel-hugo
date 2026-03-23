@@ -11,8 +11,48 @@
     </image>
     <generator>Hugo -- 0.157.0</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大模型标准计费解读</title>
+      <link>https://hugo.123450908.xyz/posts/2026-03-23/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-03-23/</guid>
+      <description>&lt;p&gt;这类计费被称为“按量计费”（Pay-as-you-go），即&lt;strong&gt;按使用量付费，没有月租&lt;/strong&gt;。为了让你直观理解，我们可以把 Token 类比成“字数”（通常 1M Tokens 约为 75 万个英文单词或 50 万个汉字）。&lt;/p&gt;
+&lt;p&gt;以下是四个维度的详细解读：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-基础计费输入与补全&#34;&gt;1. 基础计费：输入与补全&lt;/h3&gt;
+&lt;p&gt;这是最核心的部分，每次对话都会产生这两项费用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;输入价格 ($0.80 / 1M Tokens)：&lt;/strong&gt;
+指的是你发送给 AI 的指令、背景资料或之前的对话历史。
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;例子：&lt;/em&gt; 你发送了一个 1 万 Tokens 的长文档，费用就是 $0.008。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;补全价格 ($4.00 / 1M Tokens)：&lt;/strong&gt;
+指的是 AI 回复给你的内容。由于生成内容需要消耗更多算力，所以&lt;strong&gt;回复的价格是输入的 5 倍&lt;/strong&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;例子：&lt;/em&gt; AI 回复了 5000 个 Tokens，费用就是 $0.02。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-高级功能提示词缓存-prompt-caching&#34;&gt;2. 高级功能：提示词缓存 (Prompt Caching)&lt;/h3&gt;
+&lt;p&gt;这是为了降低成本、提高速度推出的功能。如果你经常发送重复的大段背景资料（如代码库、法律条文），这个功能非常省钱。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;缓存创建价格 ($1.00 / 1M Tokens)：&lt;/strong&gt;
+当你&lt;strong&gt;第一次&lt;/strong&gt;把一段长文本存入缓存时，价格会比普通输入贵 25%（从 $0.8 变为 $1.0）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缓存读取价格 ($0.08 / 1M Tokens)：&lt;/strong&gt;
+当你&lt;strong&gt;第二次及以后&lt;/strong&gt;使用这段已缓存的内容时，价格会骤降。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;划算在哪里？&lt;/strong&gt; 读取缓存的价格仅为普通输入的 &lt;strong&gt;1/10&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-场景模拟计算&#34;&gt;3. 场景模拟计算&lt;/h3&gt;
+&lt;p&gt;假设你正在开发一个 AI 助手，系统内置了 &lt;strong&gt;2 万 Tokens&lt;/strong&gt; 的背景知识库。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude Code Router (CCR)路由配置指南</title>
       <link>https://hugo.123450908.xyz/posts/2026-03-17/</link>
