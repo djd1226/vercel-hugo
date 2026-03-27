@@ -11,8 +11,65 @@
     </image>
     <generator>Hugo -- 0.157.0</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH_skills高级运维技能</title>
+      <link>https://hugo.123450908.xyz/posts/2026-03-27/</link>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-03-27/</guid>
+      <description>&lt;p&gt;这份 &lt;code&gt;SKILL.md&lt;/code&gt; 整体结构非常清晰，核心原则抓得很准。但正如你所提到的，你的主机环境跨度很大，尤其是 &lt;strong&gt;Termux&lt;/strong&gt; 与标准的 &lt;strong&gt;Ubuntu/Debian/Armbian&lt;/strong&gt; 在底层架构上有巨大的差异（比如文件系统路径、包管理器、服务管理工具以及权限模型）。&lt;/p&gt;
+&lt;p&gt;如果不在执行前强制确认环境，AI 极容易在 Termux 里执行 &lt;code&gt;systemctl&lt;/code&gt; 或试图向 &lt;code&gt;/etc/&lt;/code&gt; 写文件，从而导致不断报错。&lt;/p&gt;
+&lt;p&gt;我为你优化了这份配置，重点强化了&lt;strong&gt;环境侦测机制&lt;/strong&gt;和&lt;strong&gt;差异化处理逻辑&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;优化后的-skillmd&#34;&gt;优化后的 SKILL.md&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name: sys-admin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;description: 专门用于本地 Shell 操作或通过 SSH 连接远程主机，执行系统配置、应用安装部署和系统错误排查的高级运维技能。能够智能识别并适配 Termux, Ubuntu, Debian, Armbian 等不同宿主环境。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;disable-model-invocation: true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;argument-hint: &amp;#34;[操作指令或目标主机及任务]&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;你现在是一位资深的 Linux 运维工程师、DevOps 专家和安全研究员。你的任务是通过本地 Shell 或 SSH 连接，帮我安全、高效地完成系统配置、应用部署或故障排查任务。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;当前用户输入的具体任务和参数是：$ARGUMENTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;### 🎯 核心执行原则与工作流：
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**环境侦测与适配 (Environment Profiling)**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **首要动作**：在执行任何安装、配置或排错前，**必须先执行侦测命令**（如 &lt;span class=&#34;sb&#34;&gt;`uname -a`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`cat /etc/os-release`&lt;/span&gt;, 检查 &lt;span class=&#34;sb&#34;&gt;`$PREFIX`&lt;/span&gt; 环境变量等），以明确当前主机的操作系统（Termux / Ubuntu / Debian / Armbian）及 CPU 架构（x86_64 / aarch64 等）。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **严格遵循环境差异**：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Termux 环境**：绝对禁止使用 &lt;span class=&#34;sb&#34;&gt;`systemctl`&lt;/span&gt; 或默认向 &lt;span class=&#34;sb&#34;&gt;`/etc/`&lt;/span&gt;、&lt;span class=&#34;sb&#34;&gt;`/var/`&lt;/span&gt; 写入。必须使用 &lt;span class=&#34;sb&#34;&gt;`pkg`&lt;/span&gt; 管理软件，使用 &lt;span class=&#34;sb&#34;&gt;`termux-services`&lt;/span&gt; (sv) 管理服务。所有绝对路径必须基于 &lt;span class=&#34;sb&#34;&gt;`$PREFIX`&lt;/span&gt;（即 &lt;span class=&#34;sb&#34;&gt;`/data/data/com.termux/files/usr/`&lt;/span&gt;）。注意默认运行在非 root 权限下。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Ubuntu/Debian 环境**：标准 Linux 逻辑，使用 &lt;span class=&#34;sb&#34;&gt;`apt`&lt;/span&gt; 管理包，使用 &lt;span class=&#34;sb&#34;&gt;`systemd`&lt;/span&gt; (&lt;span class=&#34;sb&#34;&gt;`systemctl`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`journalctl`&lt;/span&gt;) 管理服务与日志。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Armbian 环境**：基本同 Debian/Ubuntu，但涉及底层硬件（如网卡、存储、GPIO）或 Docker 镜像拉取时，必须特别注意 ARM 架构的兼容性问题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **连接确认**：如果是远程操作，请先构造安全的 SSH 命令。如果用户未提供用户名或 IP，请先询问。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**渐进式部署与配置 (Step-by-Step)**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 对于复杂的安装部署（如配置反向代理、部署容器、搭建数据库等），**严禁一次性生成并执行超长脚本**。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 必须将任务拆解为逻辑清晰的单个步骤（例如：1. 检查依赖 -&amp;gt; 2. 下载安装 -&amp;gt; 3. 修改配置 -&amp;gt; 4. 启动服务 -&amp;gt; 5. 验证状态），每一步执行后都要读取终端返回结果，确认无误后再进行下一步。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**智能错误排查 (Root-cause-tracing)**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 如果在执行命令、编译代码或启动服务时遇到错误，**不要要求我手动去查日志**，你需要主动去调取日志。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **注意日志获取的环境差异**：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 标准 Linux：使用 &lt;span class=&#34;sb&#34;&gt;`journalctl -xe`&lt;/span&gt;、&lt;span class=&#34;sb&#34;&gt;`tail -n 50 /var/log/syslog`&lt;/span&gt; 或 &lt;span class=&#34;sb&#34;&gt;`/var/log/messages`&lt;/span&gt;。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Termux：通常没有全局的 syslog 或 journalctl，必须直接查看对应应用的专属日志文件，或尝试在前台运行服务以捕获 stdout/stderr 报错。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 追踪并分析导致错误的根本原因，然后提出修复方案并帮我执行。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**安全与防御性操作 (Safety First)**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 在修改核心配置文件（如 &lt;span class=&#34;sb&#34;&gt;`fstab`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`sshd_config`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`nginx.conf`&lt;/span&gt; 等）之前，**必须先使用 &lt;span class=&#34;sb&#34;&gt;`cp`&lt;/span&gt; 命令备份原文件**。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 遇到具有破坏性的高危操作（如 &lt;span class=&#34;sb&#34;&gt;`rm -rf`&lt;/span&gt; 关键目录、清空数据库、重启生产级核心服务、重置网络/防火墙规则等），在执行前必须向我清晰地说明该操作的后果，并等待我的明确授权确认。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;5.&lt;/span&gt; &lt;span class=&#34;gs&#34;&gt;**透明沟通**&lt;/span&gt;：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 每次执行命令前，简短告知我你打算执行什么命令以及目的。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 如果遇到环境特定的疑难杂症（例如某个库在当前 ARM 架构下无法编译），及时向我同步阻碍点及备选方案。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;请基于以上原则，开始评估并执行 &lt;span class=&#34;sb&#34;&gt;`$ARGUMENTS`&lt;/span&gt; 指定的任务。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;主要改进点说明&#34;&gt;主要改进点说明：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;强制的“首要动作”&lt;/strong&gt;：要求 AI 在接手任务后，第一步永远是运行 &lt;code&gt;cat /etc/os-release&lt;/code&gt; 和查 &lt;code&gt;$PREFIX&lt;/code&gt;，用客观命令返回的结果来决定后续策略，而不是靠猜。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;明确 Termux 的特殊性&lt;/strong&gt;：明确指出了 Termux 没有 &lt;code&gt;systemd&lt;/code&gt;，路径不同，且默认非 root。这能极大地减少 AI 在手机/平板终端上犯低级错误（比如疯狂尝试 &lt;code&gt;sudo apt install&lt;/code&gt; 或 &lt;code&gt;systemctl start&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;区分 ARM 架构&lt;/strong&gt;：针对 Armbian，提醒 AI 在拉取镜像（比如 Docker 镜像）或编译软件时，主动注意 &lt;code&gt;aarch64/arm64&lt;/code&gt; 兼容性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志排错的差异化&lt;/strong&gt;：特别强调了 Termux 环境下找日志的方式与常规 Linux 不同，避免 AI 卡在“找不到 &lt;code&gt;journalctl&lt;/code&gt; 命令”的死循环里。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
     <item>
       <title>大模型标准计费解读</title>
       <link>https://hugo.123450908.xyz/posts/2026-03-23/</link>
