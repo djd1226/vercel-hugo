@@ -11,8 +11,46 @@
     </image>
     <generator>Hugo -- 0.157.0</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 27 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>supabase 免费版</title>
+      <link>https://hugo.123450908.xyz/posts/2026-03-30/</link>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-03-30/</guid>
+      <description>&lt;p&gt;官方规则： Supabase 免费版通常在 1 周（7 天） 没有任何活动后会将项目设为“暂停（Paused）”。
+Supabase 的保活机制监测的是 API 活跃度。只要你的脚本向数据库发送了请求，并且数据库返回了响应（即便只是返回一个空数组或一行数据），系统就会判定你的项目处于“活跃”状态。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-supabase-url-项目地址&#34;&gt;1. Supabase URL (项目地址)&lt;/h3&gt;
+&lt;p&gt;这是最基础的。API Key 是钥匙，URL 就是&lt;strong&gt;门牌号&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;位置：&lt;/strong&gt; 就在 API Key 页面上方，或者 Settings -&amp;gt; API -&amp;gt; Project URL。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;样子：&lt;/strong&gt; &lt;code&gt;https://xxxxxx.supabase.co&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-对应的-sdk翻译官&#34;&gt;2. 对应的 SDK（“翻译官”）&lt;/h3&gt;
+&lt;p&gt;你不能直接用嘴跟数据库说话，得用它的语言。Supabase 官方提供了非常好用的库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;如果你用 Python：&lt;/strong&gt; 需要安装 &lt;code&gt;supabase&lt;/code&gt; 库。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip install supabase&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果你用 Node.js (Vercel/Armbian)：&lt;/strong&gt; 需要安装 &lt;code&gt;@supabase/supabase-js&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install @supabase/supabase-js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-表名和字段名-table--columns&#34;&gt;3. 表名和字段名 (Table &amp;amp; Columns)&lt;/h3&gt;
+&lt;p&gt;你需要知道你要操作哪张表，以及表里有哪些“格子”（列）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如你的保活脚本操作的是 &lt;code&gt;keep_alive&lt;/code&gt; 表。&lt;/li&gt;
+&lt;li&gt;如果你要存用户，你得知道字段是叫 &lt;code&gt;username&lt;/code&gt; 还是 &lt;code&gt;user_name&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-rls-策略-row-level-security--最容易踩坑的地方&#34;&gt;4. RLS 策略 (Row Level Security) —— &lt;strong&gt;最容易踩坑的地方&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;这是 Supabase 的“保安”。即便你拿到了 &lt;code&gt;anon&lt;/code&gt; 钥匙，如果没有配置 RLS，你的脚本&lt;strong&gt;依然读不到数据&lt;/strong&gt;（返回空数组或报错）。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>SSH_skills高级运维技能</title>
       <link>https://hugo.123450908.xyz/posts/2026-03-27/</link>
