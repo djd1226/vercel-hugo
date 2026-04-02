@@ -11,8 +11,82 @@
     </image>
     <generator>Hugo -- 0.157.0</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 30 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python/PHP 服务适配sv66容器</title>
+      <link>https://hugo.123450908.xyz/posts/2026-04-02/</link>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-04-02/</guid>
+      <description>&lt;h2 id=&#34;1-方案目标&#34;&gt;1. 方案目标&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;sv66&lt;/code&gt;（无 root、共享容器环境）上部署轻量 Python/PHP 服务，并通过 Cloudflare 反向代理/CDN 对外提供稳定访问。&lt;/p&gt;
+&lt;p&gt;核心链路：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;用户 -&amp;gt; Cloudflare(反向代理/CDN/WAF) -&amp;gt; cloudflared 隧道 -&amp;gt; 127.0.0.1:本地服务端口&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;该方案不依赖公网高位端口直连，通常比直接开放端口更稳定。&lt;/p&gt;
+&lt;h2 id=&#34;2-架构与端口规划&#34;&gt;2. 架构与端口规划&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;api.yourdomain.com&lt;/code&gt; -&amp;gt; Python 服务 &lt;code&gt;127.0.0.1:18080&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;php.yourdomain.com&lt;/code&gt; -&amp;gt; PHP 服务 &lt;code&gt;127.0.0.1:18081&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloudflared&lt;/code&gt; 以普通用户方式常驻运行（无需 root）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-部署-python-轻服务示例&#34;&gt;3. 部署 Python 轻服务（示例）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/apps/py-api
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;gt; ~/apps/py-api/server.py &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;&amp;#39;PY&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;#!/usr/bin/env python3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;# 简单健康检查接口
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;from http.server import BaseHTTPRequestHandler, HTTPServer
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;class H(BaseHTTPRequestHandler):
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;    def do_GET(self):
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;        if self.path == &amp;#34;/health&amp;#34;:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            body = b&amp;#39;{&amp;#34;ok&amp;#34;:true,&amp;#34;service&amp;#34;:&amp;#34;py-api&amp;#34;}&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.send_response(200)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.send_header(&amp;#34;Content-Type&amp;#34;, &amp;#34;application/json&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.send_header(&amp;#34;Content-Length&amp;#34;, str(len(body)))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.end_headers()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.wfile.write(body)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;        else:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.send_response(404)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;            self.end_headers()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;HTTPServer((&amp;#34;127.0.0.1&amp;#34;, 18080), H).serve_forever()
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;PY&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nohup python3 ~/apps/py-api/server.py &amp;gt; ~/apps/py-api/run.log 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -sS http://127.0.0.1:18080/health
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-部署-php-轻服务示例&#34;&gt;4. 部署 PHP 轻服务（示例）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/apps/php-web/public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;gt; ~/apps/php-web/public/index.php &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;&amp;#39;PHP&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;&amp;lt;?php
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;header(&amp;#39;Content-Type: application/json; charset=utf-8&amp;#39;);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;echo json_encode([&amp;#39;ok&amp;#39;=&amp;gt;true,&amp;#39;service&amp;#39;=&amp;gt;&amp;#39;php-web&amp;#39;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;PHP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nohup php -S 127.0.0.1:18081 -t ~/apps/php-web/public &amp;gt; ~/apps/php-web/run.log 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -sS http://127.0.0.1:18081/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-接入-cloudflare-tunnel推荐&#34;&gt;5. 接入 Cloudflare Tunnel（推荐）&lt;/h2&gt;
+&lt;h3 id=&#34;方式a最快&#34;&gt;方式A（最快）&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在 Cloudflare Zero Trust 后台创建 Tunnel，获取 &lt;code&gt;token&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;sv66&lt;/code&gt; 下载并运行 &lt;code&gt;cloudflared&lt;/code&gt;（用户态）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/bin ~/cloudflared
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L -o cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x cloudflared
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nohup ~/bin/cloudflared tunnel --no-autoupdate run --token &lt;span class=&#34;s1&#34;&gt;&amp;#39;你的TOKEN&amp;#39;&lt;/span&gt; &amp;gt; ~/cloudflared/run.log 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在 Cloudflare 后台给 Tunnel 绑定 Hostname：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;api.yourdomain.com&lt;/code&gt; -&amp;gt; &lt;code&gt;http://127.0.0.1:18080&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;php.yourdomain.com&lt;/code&gt; -&amp;gt; &lt;code&gt;http://127.0.0.1:18081&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;6-保活已验证-sv66-的-crontab-可用&#34;&gt;6. 保活（已验证 sv66 的 crontab 可用）&lt;/h2&gt;
+&lt;p&gt;编辑 crontab：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>supabase 免费版</title>
       <link>https://hugo.123450908.xyz/posts/2026-03-30/</link>
