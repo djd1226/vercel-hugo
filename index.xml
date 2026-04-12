@@ -11,8 +11,56 @@
     </image>
     <generator>Hugo -- 0.157.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title># Hugo → WordPress 自动同步方案总结</title>
+      <link>https://hugo.123450908.xyz/posts/2026-04-12/</link>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-04-12/</guid>
+      <description>&lt;h2 id=&#34;一目标&#34;&gt;一、目标&lt;/h2&gt;
+&lt;p&gt;每次运行 Hugo 博客脚本发布新文章时，&lt;strong&gt;自动将该文章同步到 WordPress&lt;/strong&gt; 作为备份。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二整体流程&#34;&gt;二、整体流程&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;note.txt → 生成 MD 文件 → 复制到 Hugo content/posts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                              ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    Hugo 生成静态网站 (public / public2 / public3)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                              ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    Git push 到 GitHub / Git FTP 上传
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                              ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    WordPress 自动同步（新增模块）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;三核心原理&#34;&gt;三、核心原理&lt;/h2&gt;
+&lt;h3 id=&#34;1-同步入口&#34;&gt;1. 同步入口&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;all_fpt_ok.py&lt;/code&gt; 脚本末尾追加 WordPress 同步模块，每次运行 Hugo 发布脚本时&lt;strong&gt;自动触发&lt;/strong&gt;，无需额外操作。&lt;/p&gt;
+&lt;h3 id=&#34;2-文件定位&#34;&gt;2. 文件定位&lt;/h3&gt;
+&lt;p&gt;每次只同步&lt;strong&gt;今天生成的一篇文章&lt;/strong&gt;（&lt;code&gt;YYYY-MM-DD.md&lt;/code&gt;），通过当前日期匹配文件名。&lt;/p&gt;
+&lt;h3 id=&#34;3-解析-frontmatter&#34;&gt;3. 解析 Frontmatter&lt;/h3&gt;
+&lt;p&gt;读取 MD 文件开头的 frontmatter，提取：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;字段&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;&amp;quot;Debian 系统精簡&amp;quot;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;WordPress 文章标题&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;2025-12-12&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;WordPress 文章发布日期&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;4-markdown--html&#34;&gt;4. Markdown → HTML&lt;/h3&gt;
+&lt;p&gt;使用 Python 的 &lt;code&gt;markdown&lt;/code&gt; 库将 MD 正文转为 HTML，支持：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Python/PHP 服务适配sv66容器</title>
       <link>https://hugo.123450908.xyz/posts/2026-04-02/</link>
