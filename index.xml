@@ -14,14 +14,11 @@
     <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>https://accounts.google.com/o/</title>
+      <title>测试</title>
       <link>https://hugo.123450908.xyz/posts/2026-09-01/</link>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://hugo.123450908.xyz/posts/2026-09-01/</guid>
-      <description>&lt;p&gt;LGWg1mxfaeypdHI8jVwMDTBftxI3V3r6Y&amp;amp;code_challenge_method=S256&amp;amp;prompt=consent&amp;amp;redirect_uri=https%3A%2F%2Fantigravity.google%2Foauth-callback&amp;amp;response_type=code&amp;amp;scope=https%3
-A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https
-%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcclog+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fexperimentsandconfigs+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faicode+openid&amp;amp;state=Br
-iaMQ43SexRP-awpj8_C&lt;/p&gt;</description>
+      <description></description>
     </item>
     <item>
       <title>cc-connect &#43; Claude Code Route</title>
