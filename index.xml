@@ -11,8 +11,40 @@
     </image>
     <generator>Hugo -- 0.165.0</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试</title>
+      <link>https://hugo.123450908.xyz/posts/2026-09-03/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-09-03/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Google 精准分流（WARP）总结文档&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;适用于被 Google “送中”的 VPS，需要正常使用 Google 服务（尤其是 Antigravity CLI &lt;code&gt;agy&lt;/code&gt;），同时不影响其他业务（如 x-ui 代理节点）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-原理说明&#34;&gt;1. 原理说明&lt;/h3&gt;
+&lt;p&gt;Cloudflare WARP 把流量通过 Cloudflare 网络出口。&lt;br&gt;
+&lt;strong&gt;精准分流&lt;/strong&gt;只把命中 Google 官方 IP 段（CIDR）的流量（IPv4/IPv6、TCP/UDP/QUIC）路由到 WARP，其他所有流量继续使用 VPS 原生 IP。&lt;/p&gt;
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google 看到的是 Cloudflare 干净 IP，解除“送中”。&lt;/li&gt;
+&lt;li&gt;x-ui 面板、节点出站、其他业务完全不受影响。&lt;/li&gt;
+&lt;li&gt;资源占用极低（内存通常几十 MB，CPU 几乎可忽略）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-适用环境&#34;&gt;2. 适用环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统：Ubuntu&lt;/li&gt;
+&lt;li&gt;虚拟化：KVM（支持 TUN，完美兼容）&lt;/li&gt;
+&lt;li&gt;已安装：x-ui / 3x-ui（不冲突，脚本明确不改代理配置）&lt;/li&gt;
+&lt;li&gt;目标：正常使用 &lt;code&gt;agy&lt;/code&gt;、Gemini、YouTube、Gmail 等 Google 服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-推荐安装方式已验证成功&#34;&gt;3. 推荐安装方式（已验证成功）&lt;/h3&gt;
+&lt;p&gt;使用专门的 &lt;strong&gt;warp-vps-manager&lt;/strong&gt; 脚本（Google 精准分流 + WireGuard 模式）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 以 root 执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash &amp;lt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/mqfut123/warp-vps-manager/main/install.sh&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装过程选择：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>测试</title>
       <link>https://hugo.123450908.xyz/posts/2026-09-01/</link>
