@@ -11,8 +11,39 @@
     </image>
     <generator>Hugo -- 0.165.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谷歌邮箱（Gmail）“自动清理30天前邮件”</title>
+      <link>https://hugo.123450908.xyz/posts/2026-09-09/</link>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-09-09/</guid>
+      <description>&lt;h3 id=&#34;1-个人-gmail-账号最常见情况&#34;&gt;1. &lt;strong&gt;个人 Gmail 账号（最常见情况）&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Gmail &lt;strong&gt;没有内置的完全自动按时间删除功能&lt;/strong&gt;（无法设置“所有邮件满30天就自动删”）。过滤器主要对&lt;strong&gt;新邮件&lt;/strong&gt;生效，时间搜索（如 &lt;code&gt;older_than:30d&lt;/code&gt;）无法用于长期自动运行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推荐实用方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;手动批量清理（最简单）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 Gmail 搜索框输入：&lt;code&gt;older_than:30d&lt;/code&gt;（30天前）或 &lt;code&gt;older_than:1m&lt;/code&gt;（1个月前）。&lt;/li&gt;
+&lt;li&gt;点击“全选” → “选择所有符合此搜索条件的对话” → 删除。&lt;/li&gt;
+&lt;li&gt;删除的邮件会进入&lt;strong&gt;已删除邮件&lt;/strong&gt;（垃圾箱），&lt;strong&gt;30天后系统自动永久删除&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用过滤器针对特定邮件&lt;/strong&gt;（例如广告、订阅邮件）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置过滤器时，在“有以下字词”中加入 &lt;code&gt;older_than:30d&lt;/code&gt;，结合其他条件（如发件人）。&lt;/li&gt;
+&lt;li&gt;动作选择“删除邮件”。&lt;/li&gt;
+&lt;li&gt;注意：此方式对&lt;strong&gt;新邮件&lt;/strong&gt;更有效，老邮件仍需手动触发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;高级自动方式&lt;/strong&gt;：使用 &lt;strong&gt;Google Apps Script&lt;/strong&gt; 编写脚本定时运行删除（免费，但需要一点设置）。
+很多人用这个实现真正的“自动清理”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Google 精准分流（WARP）总结文档</title>
       <link>https://hugo.123450908.xyz/posts/2026-09-03/</link>
