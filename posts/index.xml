@@ -11,8 +11,16 @@
     </image>
     <generator>Hugo -- 0.165.0</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hugo.123450908.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迁移验证测试笔记</title>
+      <link>https://hugo.123450908.xyz/posts/2026-09-27/</link>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://hugo.123450908.xyz/posts/2026-09-27/</guid>
+      <description>&lt;p&gt;这是 2026-09-27 把 hugo 发布工作流从 x96 迁移到本机(armbian)后的端到端验证文章。
+测试完成后会被删除。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>B4试卷PDF切分与重排指南</title>
       <link>https://hugo.123450908.xyz/posts/2026-09-15/</link>
